@@ -1,0 +1,41 @@
+import re
+
+# 测试表格解析
+wiki_table = """{| class="wikitable sortable"
+! Building !! First appearance !! Health
+|-
+| [[File:dropcapsule.png|link=Drop capsule|14px]] [[Drop capsule]] || [[Gravel lands]] || 2500
+|-
+| [[File:lifepodchest.png|link=Life-pod chest|20px]] [[Life-pod chest]] || [[Gravel lands]] || 2000
+|}"""
+
+print("=== Testing Table Parsing ===")
+print("\nOriginal wiki:")
+print(wiki_table)
+
+# 测试正则匹配
+pattern = r'\{\|\s*(.*?)\|\}'
+match = re.search(pattern, wiki_table, re.DOTALL)
+if match:
+    print("\n=== Match found ===")
+    content = match.group(1)
+    print("Captured content:")
+    print(repr(content))
+    
+    # 测试按 |- 分割
+    rows = content.split('|-')
+    print(f"\nNumber of rows: {len(rows)}")
+    for i, row in enumerate(rows):
+        print(f"\nRow {i}: {repr(row)}")
+        
+        # 检查是否包含表头
+        if '!' in row:
+            print(f"  -> Contains header marker '!'")
+            
+        # 检查是否是属性行
+        if re.match(r'^\s*(class|style)=', row):
+            print(f"  -> Matches property pattern")
+            if '!' not in row:
+                print(f"  -> Would be skipped")
+            else:
+                print(f"  -> Would NOT be skipped (contains '!')")

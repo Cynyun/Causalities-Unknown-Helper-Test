@@ -1,0 +1,21 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="TTS" />
+          <option value="transformers" />
+          <option value="torch" />
+          <option value="torchaudio" />
+          <option value="fastapi" />
+          <option value="uvicorn" />
+          <option value="pydantic" />
+          <option value="pysbd" />
+          <option value="scipy" />
+          <option value="soundfile" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

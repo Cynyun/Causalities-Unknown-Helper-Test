@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodles - Scav Prototype Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #00d4ff, #7b2fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+        
+        h2 {
+            color: #00d4ff;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            font-size: 1.5em;
+        }
+        
+        h3 {
+            color: #7b2fff;
+            margin: 18px 0 8px;
+        }
+        
+        .wiki-link {
+            color: #00d4ff;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(0, 212, 255, 0.5);
+        }
+        
+        .wiki-link:hover {
+            color: #7b2fff;
+            border-bottom-color: #7b2fff;
+        }
+        
+        .wiki-image {
+            max-width: 50px;
+            height: auto;
+            border-radius: 4px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .moodle-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .moodle-table caption {
+            text-align: left;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #00d4ff;
+            padding: 15px;
+            background: rgba(0, 212, 255, 0.1);
+        }
+        
+        .moodle-table th, .moodle-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            vertical-align: top;
+        }
+        
+        .moodle-table th {
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.15), rgba(123, 47, 255, 0.1));
+            color: #00d4ff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        
+        .moodle-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transition: background 0.2s ease;
+        }
+        
+        .moodle-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .moodle-name {
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .moodle-name.critical {
+            color: #ff4444;
+        }
+        
+        .status-tag {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+        
+        .note-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid #00d4ff;
+        }
+        
+        .checkmark {
+            color: #4ade80;
+            font-weight: bold;
+        }
+        
+        .nomark {
+            color: #9ca3af;
+        }
+        
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        em {
+            color: #aaa;
+            font-style: italic;
+        }
+        
+        strong {
+            color: #fff;
+        }
+        
+        .side-moodle-header {
+            background: rgba(123, 47, 255, 0.15) !important;
+            text-align: center !important;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .moodle-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .moodle-table th, .moodle-table td {
+                padding: 10px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Moodles</h1>
+            <p>Status effects that describe the player's condition in the game</p>
+        </header>
+        
+        <div class="content">
+            <p><em>Not to be confused with <a href="https://scavprototype.wiki.gg/wiki/Mood" class="wiki-link" target="_blank">Mood</a>, which is a value that describes the player's mental state.</em></p>
+            
+            <p><strong>Moodles</strong> are statuses that describe the player's condition as they descend through the caves. Various actions and events will make different moodles appear.</p>
+            
+            <p>Several simply tell you of a need that the player character has, but others have more impact, ranging from being soaked in water, bleeding from a wound, and many other such events.</p>
+            
+            <p>Moodles that are positive or whose effects don't stem from a negative event (other than Adrenaline from severe injuries, and Last Stand) will be outlined in a <em>rectangular</em> frame instead of <em>circular</em>.</p>
+            
+            <p>All moodles here are sorted in the way they appear to the player. Moodles near the bottom are considered side moodles, which only appear in the <a href="https://scavprototype.wiki.gg/wiki/Health_panel" class="wiki-link" target="_blank">health panel</a> or when the moodle bar is hovered over.</p>
+
+            <h2>Positive Moodles</h2>
+            <table class="moodle-table">
+                <caption>List of positive moodles</caption>
+                <thead>
+                    <tr>
+                        <th>Moodle</th>
+                        <th>Description</th>
+                        <th>Unchipped</th>
+                        <th>Cause</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/fb/Moodlast.png/48px-Moodlast.png" class="wiki-image" alt="Last stand">Last stand</td>
+                        <td>You're not going down that easily. Something deep inside you compels you to push through.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Last_stand" class="wiki-link" target="_blank">Last stand</a> activated</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/94/Stimulated.png/48px-Stimulated.png" class="wiki-image" alt="Stimulated">Stimulated</td>
+                        <td>Hard stimulant drugs in the bloodstream. You feel ready to tackle anything thrown at you... For now, at least.</td>
+                        <td class="nomark">✗</td>
+                        <td>Duration of any Stimulant > 0s</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f5/Asleep_Moodle.png/48px-Asleep_Moodle.png" class="wiki-image" alt="Sleeping">Sleeping</td>
+                        <td>Just taking a nap.</td>
+                        <td class="checkmark">✓</td>
+                        <td><abbr title="Consciousness &lt; 20%">Unconscious</abbr> while <a href="https://scavprototype.wiki.gg/wiki/Energy#Sleep" class="wiki-link" target="_blank">sleeping</a></td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/d/d0/Moodle_hunger_4.webp/48px-Moodle_hunger_4.webp" class="wiki-image" alt="Satiated">Satiated</td>
+                        <td>Eating good today! Lowered weight loss rate and mobility. Slight happiness increase.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Hunger" class="wiki-link" target="_blank">Hunger</a> > 100%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e9/Moodle_hunger_5.webp/48px-Moodle_hunger_5.webp" class="wiki-image" alt="Full">Full</td>
+                        <td>Stomach totally stuffed with food! Any more and you'll be sick. Greatly lowered weight loss rate and mobility. Happiness increase.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Hunger > 120%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e4/Happy_1.png/48px-Happy_1.png" class="wiki-image" alt="Satisfied">Satisfied</td>
+                        <td>Content with your current predicament.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Mood" class="wiki-link" target="_blank">Mood</a> > 10%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/96/Happy_2.png/48px-Happy_2.png" class="wiki-image" alt="Excited">Excited</td>
+                        <td>Looking forward to what's around the corner.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Mood > 30%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e3/Happy_3.png/48px-Happy_3.png" class="wiki-image" alt="Happy">Happy</td>
+                        <td>You've found peace in this strange land.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Mood > 50%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/8/81/Happy_4.png/48px-Happy_4.png" class="wiki-image" alt="Gleeful">Gleeful</td>
+                        <td>You're at the top of the world, shaping the way forward at your will. Nothing can stop you!</td>
+                        <td class="checkmark">✓</td>
+                        <td>Mood > 75%</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="side-moodle-header">Side Moodles (appear in health panel or when hovering)</th>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/72/HighImmunity_Moodle.png/48px-HighImmunity_Moodle.png" class="wiki-image" alt="Immunocompetent">Immunocompetent</td>
+                        <td>Your immune system is working at high capacity, likely due to antibiotics. Infections are much less dangerous, and might even regress on their own if near 200%.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Immunity" class="wiki-link" target="_blank">Immunity</a> > 150%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/3/36/BoostedRegrowth_Moodle.png/48px-BoostedRegrowth_Moodle.png" class="wiki-image" alt="Boosted regrowth">Boosted regrowth</td>
+                        <td>Your claws regrow three times as fast. (&lt;Time remaining&gt;)</td>
+                        <td class="nomark">✗</td>
+                        <td>Using <a href="https://scavprototype.wiki.gg/wiki/Keratin_booster" class="wiki-link" target="_blank">Keratin booster</a></td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/ad/Energized.png/48px-Energized.png" class="wiki-image" alt="Energized">Energized</td>
+                        <td>Stamina loss and sleepiness decreased. (&lt;Time remaining&gt;)</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Energized" class="wiki-link" target="_blank">Caffeinated</a></td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f2/FightOrFlight_Moodle.gif/48px-FightOrFlight_Moodle.gif" class="wiki-image" alt="Adrenaline">Adrenaline</td>
+                        <td>Pain numbed. You're on high alert.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Adrenaline" class="wiki-link" target="_blank">Adrenaline</a> > 20%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Negative Moodles</h2>
+            <table class="moodle-table">
+                <caption>List of negative moodles</caption>
+                <thead>
+                    <tr>
+                        <th>Moodle</th>
+                        <th>Description</th>
+                        <th>Unchipped</th>
+                        <th>Cause</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/b/b9/ImpendingDoom_Moodle.png/48px-ImpendingDoom_Moodle.png" class="wiki-image" alt="Sense of impending doom">Sense of impending doom</td>
+                        <td>You can't help but feel sudden, overwhelming fear. Your skin has goosebumps all over. It's as if the nature around you abruptly fell silent...</td>
+                        <td class="checkmark">✓</td>
+                        <td>An <a href="https://scavprototype.wiki.gg/wiki/Elder_thornback" class="wiki-link" target="_blank">Elder thornback</a> is within 101.25 tiles of distance</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/c/c1/HorrifiedMoodle.png/48px-HorrifiedMoodle.png" class="wiki-image" alt="HORRIFIED">HORRIFIED</td>
+                        <td>CAN'T FOCUS. CAN'T THINK. NOTHING ELSE MATTERS. RUN FOR YOUR LIFE OR FIGHT FOR IT!</td>
+                        <td class="checkmark">✓</td>
+                        <td>An Elder thornback is within 45 tiles (stage 1)</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/2/29/Moodle_focused_8_critical.webp/48px-Moodle_focused_8_critical.webp" class="wiki-image" alt="FOCUSED">FOCUSED</td>
+                        <td>''Both of us die today. One, just a little later than the other.''</td>
+                        <td class="checkmark">✓</td>
+                        <td>An Elder thornback is within 45 tiles (not stage 1)</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/fb/Moodle_tachycardia_anim.webp/48px-Moodle_tachycardia_anim.webp" class="wiki-image" alt="Tachycardia">Tachycardia</td>
+                        <td>Your heart rate feels abnormally high.</td>
+                        <td class="checkmark">✓ (Exclusive)</td>
+                        <td>Heart rate > 110</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/5/5d/Bradycardia_Moodle_Animated.gif/48px-Bradycardia_Moodle_Animated.gif" class="wiki-image" alt="Bradycardia">Bradycardia</td>
+                        <td>Your heart rate feels abnormally low.</td>
+                        <td class="checkmark">✓ (Exclusive)</td>
+                        <td>Heart rate < 60</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/47/Palpitations.png/48px-Palpitations.png" class="wiki-image" alt="Palpitations">Palpitations</td>
+                        <td>You feel your heart pounding out of your chest. Are you just anxious, or is something horribly wrong?</td>
+                        <td class="checkmark">✓ (Exclusive)</td>
+                        <td>Fibrillation > 50% or Heart rate > 240</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a9/Braindamage_Moodle_1.png/48px-Braindamage_Moodle_1.png" class="wiki-image" alt="Cognitive impairment">Cognitive impairment</td>
+                        <td>Mentally impaired from damage to the brain. You feel weirdly confused...</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Brain_health" class="wiki-link" target="_blank">Brain health</a> < 95%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c7/Braindamage_Moodle_2.png/48px-Braindamage_Moodle_2.png" class="wiki-image" alt="Neurological damage">Neurological damage</td>
+                        <td>Strong mental deficit. Ability to think intelligently and self-sustain is limited. Serious brain damage present.</td>
+                        <td class="nomark">✗</td>
+                        <td>Brain health < 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/2/22/Braindamage_Moodle_3.png/48px-Braindamage_Moodle_3.png" class="wiki-image" alt="Severe neurophysiological deterioration">Severe neurophysiological deterioration</td>
+                        <td>reality .. stops making sense</td>
+                        <td class="nomark">✗</td>
+                        <td>Brain health < 60%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/1/1c/Braindamage_Moodle_4_Crit.png/48px-Braindamage_Moodle_4_Crit.png" class="wiki-image" alt="Comatose">Comatose</td>
+                        <td>...</td>
+                        <td class="nomark">✗</td>
+                        <td>Brain health < 30%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/b/b3/Stroke.png/48px-Stroke.png" class="wiki-image" alt="Stroke">Stroke</td>
+                        <td>Bleeding in the brain, likely caused by severe hypertension. Already in its advanced stages, chances of survival are nil unless you have Braingrow or a procoagulant.</td>
+                        <td class="nomark">✗</td>
+                        <td>Stroke Amount > 70%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/f/f8/Cardiacarrest_Moodle_New.png/48px-Cardiacarrest_Moodle_New.png" class="wiki-image" alt="Cardiac arrest">Cardiac arrest</td>
+                        <td>Asystole. If you're somehow conscious, this has a low chance of being treated via defibrillation. Otherwise, cerebral hypoxia and death is soon to follow.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Heart stopped</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/96/Arrhythmia_1.png/48px-Arrhythmia_1.png" class="wiki-image" alt="Arrhythmia">Arrhythmia</td>
+                        <td>Abnormal heart rhythm, likely caused by severe strain to the body. May progress further if the cause isn't addressed. Can be defibrillated.</td>
+                        <td class="nomark">✗</td>
+                        <td>Fibrillation > 15%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/e/e5/Moodle_arrythmia_2_critical.webp/48px-Moodle_arrythmia_2_critical.webp" class="wiki-image" alt="Ventricular tachycardia">Ventricular tachycardia</td>
+                        <td>Severe irregular heartbeat, preventing effective blood pumping. Will progress into lethal V-fib if not treated. Can be defibrillated.</td>
+                        <td class="nomark">✗</td>
+                        <td>Fibrillation > 50%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/a/a7/Arrhythmia_3.png/48px-Arrhythmia_3.png" class="wiki-image" alt="Ventricular fibrillation">Ventricular fibrillation</td>
+                        <td>Life threatening, chaotic heart rhythm. Asystole is soon to follow. Things have gone horribly wrong.</td>
+                        <td class="nomark">✗</td>
+                        <td>Fibrillation > 75%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/2/2e/Moodle_hypotension_0.webp/48px-Moodle_hypotension_0.webp" class="wiki-image" alt="Mild hypotension">Mild hypotension</td>
+                        <td>Slightly decreased blood pressure. You feel slightly dizzy.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure < 110/73</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/5/5e/Moodle_hypotension_1.webp/48px-Moodle_hypotension_1.webp" class="wiki-image" alt="Hypotension">Hypotension</td>
+                        <td>Moderately decreased blood pressure. You look pale and have clammy skin. Something is wrong - check your vitals.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure < 96/63</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/b/be/Moodle_hypotension_2_anim.webp/48px-Moodle_hypotension_2_anim.webp" class="wiki-image" alt="Severe hypotension">Severe hypotension</td>
+                        <td>Severely decreased blood pressure, you're on the edge of fainting. Treatment needed. This might start fibrillation.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure < 83/55</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/f/f8/Moodle_hypotension_3_critical.webp/48px-Moodle_hypotension_3_critical.webp" class="wiki-image" alt="Circulatory collapse">Circulatory collapse</td>
+                        <td>Lethally low blood pressure. Blood is not getting to your organs. Cerebral hypoxia and death is imminent.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure < 60/40</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a8/Moodle_hypertension_0.webp/48px-Moodle_hypertension_0.webp" class="wiki-image" alt="Mild hypertension">Mild hypertension</td>
+                        <td>Slightly elevated blood pressure.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure > 130/86</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c1/Moodle_hypertension_1.webp/48px-Moodle_hypertension_1.webp" class="wiki-image" alt="Hypertension">Hypertension</td>
+                        <td>Moderately elevated blood pressure. You have a headache, you're dizzy and your nose is bleeding. Check your vitals.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure > 145/96</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/0/00/Moodle_hypertension_2.webp/48px-Moodle_hypertension_2.webp" class="wiki-image" alt="Severe hypertension">Severe hypertension</td>
+                        <td>Severely elevated blood pressure, dangerously close to having severe health complications. You feel terrible.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure > 162/107</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/b/b4/Moodle_hypertension_3_critical.webp/48px-Moodle_hypertension_3_critical.webp" class="wiki-image" alt="Hypertensive crisis">Hypertensive crisis</td>
+                        <td>Life-threatening blood pressure. Risk of hemorrhagic stroke. Check your vitals urgently.</td>
+                        <td class="nomark">✗</td>
+                        <td>Blood pressure > 180/119</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a8/hypoventilation_1.png/48px-hypoventilation_1.png" class="wiki-image" alt="Mild hypoventilation">Mild hypoventilation</td>
+                        <td>Lowered respiratory rate.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Respiratory rate < 22.5/min</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e5/hypoventilation_2.png/48px-hypoventilation_2.png" class="wiki-image" alt="Hypoventilation">Hypoventilation</td>
+                        <td>Highly lowered respiratory rate, enough to slowly lower blood oxygen concentration.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Respiratory rate < 12.5/min</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/2/2a/Respfailure.png/48px-Respfailure.png" class="wiki-image" alt="Respiratory arrest">Respiratory arrest</td>
+                        <td>Suffocating! Loss of consciousness and death imminent if untreated.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Respiratory rate < 2.5/min</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/4/44/Thoraxdestroyed_Moodle.png/48px-Thoraxdestroyed_Moodle.png" class="wiki-image" alt="Lung failure">Lung failure</td>
+                        <td>Your lungs are too damaged to function, caused by critically low thorax muscle health.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Limb_health" class="wiki-link" target="_blank">Thorax health</a> < 4%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/5/5d/Moodle_hemothorax_1_anim.webp/48px-Moodle_hemothorax_1_anim.webp" class="wiki-image" alt="Hemothorax">Hemothorax</td>
+                        <td>Blood is accumulating in the pleural cavity due to internal bleeding. Your chest hurts... Treatment needed.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Hemothorax" class="wiki-link" target="_blank">Hemothorax</a> > 40%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/8/80/Moodle_pulmonaryembolism_3_critical.webp/48px-Moodle_pulmonaryembolism_3_critical.webp" class="wiki-image" alt="Pulmonary embolism">Pulmonary embolism</td>
+                        <td>A large blood clot has broken off and lodged itself in the lungs, blocking an artery. Rapid lung damage and suffocation incoming.</td>
+                        <td class="nomark">✗</td>
+                        <td>Has a pulmonary embolism (1.66% chance/s when >90% blood viscosity)</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/75/Oxygen_Moodle_1.png/48px-Oxygen_Moodle_1.png" class="wiki-image" alt="Mild hypoxemia">Mild hypoxemia</td>
+                        <td>SpO2 below 90%. While not dangerous, it could be a sign of an underlying condition.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Oxygen" class="wiki-link" target="_blank">SpO2</a> < 90%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e1/Oxygen_Moodle_2.png/48px-Oxygen_Moodle_2.png" class="wiki-image" alt="Hypoxemia">Hypoxemia</td>
+                        <td>SpO2 below 75%, causing tachycardia and slowly depriving the brain of oxygen.</td>
+                        <td class="nomark">✗</td>
+                        <td>SpO2 < 75%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c4/Oxygen_Moodle_3.png/48px-Oxygen_Moodle_3.png" class="wiki-image" alt="Severe hypoxemia">Severe hypoxemia</td>
+                        <td>SpO2 below 60%, depriving tissues of oxygen and likely causing heart arrhythmia. Lethal if left to progress.</td>
+                        <td class="nomark">✗</td>
+                        <td>SpO2 < 60%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/75/Oxygen_Moodle_4.png/48px-Oxygen_Moodle_4.png" class="wiki-image" alt="Critical hypoxemia">Critical hypoxemia</td>
+                        <td>SpO2 below 45%. Something in your body has gone horribly, horribly wrong. Lethal if left to progress.</td>
+                        <td class="nomark">✗</td>
+                        <td>SpO2 < 45%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e5/Irradiated_1.png/48px-Irradiated_1.png" class="wiki-image" alt="Uncomfortable">Uncomfortable</td>
+                        <td>Feeling weirdly irritated and uncomfortable.</td>
+                        <td class="nomark">✗</td>
+                        <td>Absorbed <a href="https://scavprototype.wiki.gg/wiki/Radiation" class="wiki-link" target="_blank">radiation</a> > 3.0 Gy</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/5/5d/Irradiated_Moodle_2.png/48px-Irradiated_Moodle_2.png" class="wiki-image" alt="Radiation sickness">Radiation sickness</td>
+                        <td>Feverish and nauseous. Your skin feels hot and painful. Something is very wrong.</td>
+                        <td class="nomark">✗</td>
+                        <td>Absorbed radiation > 9.0 Gy</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/c/c9/Irradiated_Moodle_3_Crit.png/48px-Irradiated_Moodle_3_Crit.png" class="wiki-image" alt="Severe radiation sickness">Severe radiation sickness</td>
+                        <td>Horribly sick and aching all over. Breathing and thinking is extremely difficult.</td>
+                        <td class="nomark">✗</td>
+                        <td>Absorbed radiation > 15.0 Gy</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/a/a9/Irradiated_Moodle_4_Crit.png/48px-Irradiated_Moodle_4_Crit.png" class="wiki-image" alt="Chernobyl wannabe">Chernobyl wannabe</td>
+                        <td>''Not going gently into that good night...''</td>
+                        <td class="nomark">✗</td>
+                        <td>Absorbed radiation > 24.0 Gy</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/ab/Pain_1.png/48px-Pain_1.png" class="wiki-image" alt="Discomfort">Discomfort</td>
+                        <td>Feeling mild pain.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Pain" class="wiki-link" target="_blank">Total pain</a> > 10%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f6/Pain_2.png/48px-Pain_2.png" class="wiki-image" alt="Pain">Pain</td>
+                        <td>Hurting a decent bit. Unhappiness rising slowly.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Total pain > 30%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/4a/Pain_3.png/48px-Pain_3.png" class="wiki-image" alt="Severe pain">Severe pain</td>
+                        <td>Half-conscious, mind fogged by intense pain. Unhappiness rising.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Total pain > 55%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/e/e5/Moodle_pain_3_critical.webp/48px-Moodle_pain_3_critical.webp" class="wiki-image" alt="Agony">Agony</td>
+                        <td>Mind-shattering pain. Movement compromised. Death sounds preferable right about now.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Total pain > 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f8/Shock.png/48px-Shock.png" class="wiki-image" alt="Shock">Shock</td>
+                        <td>Going into shock from agony.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Shock" class="wiki-link" target="_blank">Shock</a> > 30%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c0/Overdose_Moodle_1.png/48px-Overdose_Moodle_1.png" class="wiki-image" alt="Opiated">Opiated</td>
+                        <td>Relaxed and calm. Your body feels numb.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Opiates" class="wiki-link" target="_blank">Opiate</a> reception > 5%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/b/b4/Overdose_Moodle_2.png/48px-Overdose_Moodle_2.png" class="wiki-image" alt="Drugged">Drugged</td>
+                        <td>Very relaxed and calm, but your lungs feel heavy. A little more tired than usual.</td>
+                        <td class="nomark">✗</td>
+                        <td>Opiate reception > 20%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/42/Overdose_Moodle_3.png/48px-Overdose_Moodle_3.png" class="wiki-image" alt="Highly drugged">Highly drugged</td>
+                        <td>Breathing is difficult, but your mind is in euphoria. This definitely isn't healthy.</td>
+                        <td class="nomark">✗</td>
+                        <td>Opiate reception > 50%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/e/e1/Overdose_Moodle_4.png/48px-Overdose_Moodle_4.png" class="wiki-image" alt="Opioid overdose">Opioid overdose</td>
+                        <td>Respiratory failure. You are experiencing a drug-filled euphoria. Asphyxiation imminent.</td>
+                        <td class="nomark">✗</td>
+                        <td>Opiate reception > 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/9a/Withdrawal_1.png/48px-Withdrawal_1.png" class="wiki-image" alt="Opioid craving">Opioid craving</td>
+                        <td>You really want another shot.</td>
+                        <td class="nomark">✗</td>
+                        <td>Opiate reception < -5%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/cd/Withdrawal_2.png/48px-Withdrawal_2.png" class="wiki-image" alt="Withdrawal">Withdrawal</td>
+                        <td>Your body is desperate for another hit. You want to vomit... This feels really bad.</td>
+                        <td class="nomark">✗</td>
+                        <td>Opiate reception < -15%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/8/81/Withdrawal_3.png/48px-Withdrawal_3.png" class="wiki-image" alt="Severe withdrawal">Severe withdrawal</td>
+                        <td>You are struggling to hold yourself together, shaking, desperate for any sort of relief.</td>
+                        <td class="nomark">✗</td>
+                        <td>Opiate reception < -25%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/f/f3/Withdrawal_4.png/48px-Withdrawal_4.png" class="wiki-image" alt="Dying of withdrawal">Dying of withdrawal</td>
+                        <td>Your body is failing to sustain itself without the opiates it became so reliant on.</td>
+                        <td class="nomark">✗</td>
+                        <td>Opiate reception < -34%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/b/b5/Concussion_moodle.png/48px-Concussion_moodle.png" class="wiki-image" alt="Concussed">Concussed</td>
+                        <td>Rendered unconscious by low head vitality - you will wake up when your head heals.</td>
+                        <td class="nomark">✗</td>
+                        <td>Head <a href="https://scavprototype.wiki.gg/wiki/Muscle_health" class="wiki-link" target="_blank">muscle health</a> < 14.4</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/5/55/Faint_1.png/48px-Faint_1.png" class="wiki-image" alt="Confused">Confused</td>
+                        <td>Feeling disoriented and slightly dizzy.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Consciousness" class="wiki-link" target="_blank">Consciousness</a> < 90%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c9/Faint_2.png/48px-Faint_2.png" class="wiki-image" alt="Very confused">Very confused</td>
+                        <td>Confused and dizzy, struggling to keep up with the world around you.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Consciousness < 72%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e8/Faint_3.png/48px-Faint_3.png" class="wiki-image" alt="Fainting">Fainting</td>
+                        <td>Barely conscious, feeling like you could collapse at any moment.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Consciousness < 55%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/9c/Faint_4.png/48px-Faint_4.png" class="wiki-image" alt="Incapacitated">Incapacitated</td>
+                        <td>Can't stand or think. You barely feel anything.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Consciousness < 30%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e0/Unconscious_Moodle.png/48px-Unconscious_Moodle.png" class="wiki-image" alt="Unconscious">Unconscious</td>
+                        <td>Not responding to any external stimuli. Lights out.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Consciousness < 20%, not sleeping or concussed</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/8/83/Drugoverdose_Moodle.png/48px-Drugoverdose_Moodle.png" class="wiki-image" alt="Drug overdose">Drug overdose</td>
+                        <td>You have overdosed on a non-opioid drug. Health complications likely.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Injuries#Drug_overdose" class="wiki-link" target="_blank">Drug overdose</a></td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/e/e2/Moodle_internalbleed_anim.webp/48px-Moodle_internalbleed_anim.webp" class="wiki-image" alt="Internal bleeding">Internal bleeding</td>
+                        <td>Turns out your guts and lungs are NOT where the blood is supposed to be. Treatment recommended.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Internal_bleeding" class="wiki-link" target="_blank">Internal bleeding</a> > 0.04275 L/min</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/b/b4/Moodle_smallbleeding_0.webp/48px-Moodle_smallbleeding_0.webp" class="wiki-image" alt="Minor bleeding">Minor bleeding</td>
+                        <td>Blood is oozing out of a relatively small wound. There is no immediate danger.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Total <a href="https://scavprototype.wiki.gg/wiki/Bleeding" class="wiki-link" target="_blank">bleeding</a> > 0 L/m</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f3/Moodle_bleeding_1.webp/48px-Moodle_bleeding_1.webp" class="wiki-image" alt="Bleeding">Bleeding</td>
+                        <td>Blood is flowing out of a decently sized wound. Unlikely to be fatal if you're healthy.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Total bleeding > 0.09 L/m</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/a/a5/Moodle_heavybleeding_2_critical.webp/48px-Moodle_heavybleeding_2_critical.webp" class="wiki-image" alt="Heavy bleeding">Heavy bleeding</td>
+                        <td>A large volume of blood is haemorrhaging out of your body. Likely lethal if untreated.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Total bleeding > 0.225 L/m</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/a/a6/Moodle_maxbleeding_3_critical.webp/64px-Moodle_maxbleeding_3_critical.webp" class="wiki-image" alt="Catastrophic bleeding">Catastrophic bleeding</td>
+                        <td>''As your life gushes out behind you, you remember that you are mortal.''</td>
+                        <td class="checkmark">✓</td>
+                        <td>Total bleeding > 0.45 L/m</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c2/Endurance_1.png/48px-Endurance_1.png" class="wiki-image" alt="Slightly exerted">Slightly exerted</td>
+                        <td>Mildly physically strained. (&lt;Stamina&gt;%)</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Stamina" class="wiki-link" target="_blank">Stamina</a> < 70%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f5/Endurance_2.png/48px-Endurance_2.png" class="wiki-image" alt="Exerted">Exerted</td>
+                        <td>Uncomfortably exerted, struggling to move and work.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Stamina < 50%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a0/Endurance_3.png/48px-Endurance_3.png" class="wiki-image" alt="Highly exerted">Highly exerted</td>
+                        <td>Barely able to move, highly physically exerted.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Stamina < 35%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/e/e9/Endurance_4.png/48px-Endurance_4.png" class="wiki-image" alt="Totally exhausted">Totally exhausted</td>
+                        <td>Barely able to breathe.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Stamina < 15%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f8/Moodle_brokenbone_anim.webp/48px-Moodle_brokenbone_anim.webp" class="wiki-image" alt="Fractured bone">Fractured bone</td>
+                        <td>You broke something. Try not to use the affected limb, and rest as much as possible.</td>
+                        <td class="nomark">✗</td>
+                        <td>Any bone <a href="https://scavprototype.wiki.gg/wiki/Fracture" class="wiki-link" target="_blank">fractured</a></td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a5/Moodle_dislocation_anim.webp/48px-Moodle_dislocation_anim.webp" class="wiki-image" alt="Dislocated joint">Dislocated joint</td>
+                        <td>You dislocated something. Try not to use the affected limb, and find a way to fix it.</td>
+                        <td class="nomark">✗</td>
+                        <td>Any joint <a href="https://scavprototype.wiki.gg/wiki/Dislocation" class="wiki-link" target="_blank">dislocated</a></td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/48/Moodle_brokenneck_anim.webp/48px-Moodle_brokenneck_anim.webp" class="wiki-image" alt="Fractured neck">Fractured neck</td>
+                        <td>Your neck is broken. Your spinal cord isn't severed, but any amount of moving around will be agonizing.</td>
+                        <td class="nomark">✗</td>
+                        <td>Neck (head) fractured</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/3/3d/Moodle_brokenribs_anim.webp/48px-Moodle_brokenribs_anim.webp" class="wiki-image" alt="Fractured ribs">Fractured ribs</td>
+                        <td>Your ribs are broken, making breathing painful and much harder. Hope none of them punctured your lungs.</td>
+                        <td class="nomark">✗</td>
+                        <td>Ribs (thorax) fractured</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e8/Moodle_dislocatedjaw_anim.webp/48px-Moodle_dislocatedjaw_anim.webp" class="wiki-image" alt="Dislocated jaw">Dislocated jaw</td>
+                        <td>Your jaw is dislocated, impairing your speech and making eating anything extremely painful.</td>
+                        <td class="nomark">✗</td>
+                        <td>Jaw (head) dislocated</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/96/Moodle_dislocatedspine_anim.webp/48px-Moodle_dislocatedspine_anim.webp" class="wiki-image" alt="Dislocated spine">Dislocated spine</td>
+                        <td>Your spine is dislocated. Your spinal cord isn't severed, but moving your body at all is really painful.</td>
+                        <td class="nomark">✗</td>
+                        <td>Spine (thorax) dislocated</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a4/Infection_1.png/48px-Infection_1.png" class="wiki-image" alt="Infection">Infection</td>
+                        <td>The infection site is swollen and warm. Treatment needed. Find something that can kill off foreign bodies.</td>
+                        <td class="nomark">✗</td>
+                        <td>Any limb is visibly <a href="https://scavprototype.wiki.gg/wiki/Infection" class="wiki-link" target="_blank">infected</a></td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e4/Infection_2.png/48px-Infection_2.png" class="wiki-image" alt="Painful infection">Painful infection</td>
+                        <td>The infection site is leaking dark pus, and is swelling more. Treatment needed.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Highest infection > 40%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/44/Infection_3.png/48px-Infection_3.png" class="wiki-image" alt="Severe infection">Severe infection</td>
+                        <td>The infection is spreading across the limb quickly and painfully. Chances of going into sepsis.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Highest infection > 60%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c0/Infection_4.png/48px-Infection_4.png" class="wiki-image" alt="Life-threatening infection">Life-threatening infection</td>
+                        <td>The infection is spreading to other limbs, and the infected limb is starting to undergo necrosis. Sepsis is setting in.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Highest infection > 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a7/Sepsis_1.png/48px-Sepsis_1.png" class="wiki-image" alt="Sepsis">Sepsis</td>
+                        <td>A widespread infection is causing your body to react badly. You feel confused, with lowered blood pressure and a fever.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Sepsis" class="wiki-link" target="_blank">Septic shock</a> > 10%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e8/Sepsis_2.png/48px-Sepsis_2.png" class="wiki-image" alt="Severe sepsis">Severe sepsis</td>
+                        <td>Increased heart rate, lowered blood pressure, lightheadedness and a strong fever. Signs of organ dysfunction.</td>
+                        <td class="nomark">✗</td>
+                        <td>Septic shock > 50%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/5/53/Sepsis_3.png/48px-Sepsis_3.png" class="wiki-image" alt="Septic shock">Septic shock</td>
+                        <td>''You couldn't stop for death, so death has kindly stopped by for you.'' Circulatory collapse imminent.</td>
+                        <td class="nomark">✗</td>
+                        <td>Septic shock > 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/0/0d/Toxicosis_1.png/48px-Toxicosis_1.png" class="wiki-image" alt="Mild toxicosis">Mild toxicosis</td>
+                        <td>Slight hemotoxin presence in the bloodstream. Did something bite you?</td>
+                        <td class="checkmark">✓</td>
+                        <td>Current <a href="https://scavprototype.wiki.gg/wiki/Venom" class="wiki-link" target="_blank">venom</a> > 2%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/70/Toxicosis_2.png/48px-Toxicosis_2.png" class="wiki-image" alt="Toxicosis">Toxicosis</td>
+                        <td>Hemotoxin present in the bloodstream, impairing blood clotting and destroying blood cells.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Current venom > 25%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/0/0d/Toxicosis_3.png/48px-Toxicosis_3.png" class="wiki-image" alt="Severe toxicosis">Severe toxicosis</td>
+                        <td>Large amount of hemotoxin present in the bloodstream, clogging your blood and destroying blood cells.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Current venom > 55%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/9/97/Toxicosis_4.png/48px-Toxicosis_4.png" class="wiki-image" alt="Toxic crisis">Toxic crisis</td>
+                        <td>Your blood more closely resembles marmalade than something that can upkeep life.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Current venom > 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e0/Sleep_1.png/48px-Sleep_1.png" class="wiki-image" alt="Drowsy">Drowsy</td>
+                        <td>Getting sleepy.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Energy" class="wiki-link" target="_blank">Energy</a> < 35%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f0/Sleep_2.png/48px-Sleep_2.png" class="wiki-image" alt="Tired">Tired</td>
+                        <td>It's nap time.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Energy < 25%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c8/Sleep_3.png/48px-Sleep_3.png" class="wiki-image" alt="Very tired">Very tired</td>
+                        <td>It's REALLY nap time.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Energy < 15%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/9/93/Sleep_4.png/48px-Sleep_4.png" class="wiki-image" alt="Half-asleep">Half-asleep</td>
+                        <td>Barely awake, about to collapse from exhaustion.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Energy < 7%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c3/Moodle_hunger_0.webp/48px-Moodle_hunger_0.webp" class="wiki-image" alt="Peckish">Peckish</td>
+                        <td>Could do with a bite to eat.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Hunger" class="wiki-link" target="_blank">Hunger</a> < 75</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e5/Moodle_hunger_1.webp/48px-Moodle_hunger_1.webp" class="wiki-image" alt="Hungry">Hungry</td>
+                        <td>Uncomfortably hungry. Slightly weaker than usual.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Hunger < 50</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f3/Moodle_hunger_2.webp/48px-Moodle_hunger_2.webp" class="wiki-image" alt="Very hungry">Very hungry</td>
+                        <td>Extremely hungry, desperate for satiation. Weaker than usual.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Hunger < 35</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/f/f3/Moodle_hunger_3_anim.webp/48px-Moodle_hunger_3_anim.webp" class="wiki-image" alt="Starving">Starving</td>
+                        <td>Your entire body, just wasting away... Total organ failure imminent.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Hunger <= 15</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/b/b1/Moodle_thirst_0.webp/48px-Moodle_thirst_0.webp" class="wiki-image" alt="Thirsty">Thirsty</td>
+                        <td>Feeling a little thirsty.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Thirst" class="wiki-link" target="_blank">Thirst</a> < 75</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c9/Moodle_thirst_1.webp/48px-Moodle_thirst_1.webp" class="wiki-image" alt="Dehydrated">Dehydrated</td>
+                        <td>Low body water volume. Very thirsty.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Thirst < 55</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f5/Moodle_thirst_2.webp/48px-Moodle_thirst_2.webp" class="wiki-image" alt="Parched">Parched</td>
+                        <td>Body drying out, in desperate need of water. Mind consumed by thirst.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Thirst < 35</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/2/26/Moodle_thirst_3_anim.webp/48px-Moodle_thirst_3_anim.webp" class="wiki-image" alt="Desiccated">Desiccated</td>
+                        <td>Blood volume dangerously low and thick due to lack of fluids.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Thirst <= 20</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/6/6c/Slaked.png/48px-Slaked.png" class="wiki-image" alt="Slaked">Slaked</td>
+                        <td>Your thirst is fully satiated - you won't need water for a while.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Thirst > 100</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/6/67/Overhydrated.png/48px-Overhydrated.png" class="wiki-image" alt="Overhydrated">Overhydrated</td>
+                        <td>You've drank considerably more than needed. Movement slightly impaired.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Thirst > 125</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/7/74/Waterintoxicated.png/48px-Waterintoxicated.png" class="wiki-image" alt="Water-intoxicated">Water-intoxicated</td>
+                        <td>Excessive water intake. Your cells are swelling, causing high intracranial pressure.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Thirst > 175</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/0/06/Nausea_1.png/48px-Nausea_1.png" class="wiki-image" alt="Queasy">Queasy</td>
+                        <td>Feeling discomfort. Minorly sick.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Sickness" class="wiki-link" target="_blank">Sickness</a> > 10%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c0/Nausea_2.png/48px-Nausea_2.png" class="wiki-image" alt="Nauseous">Nauseous</td>
+                        <td>Confused, uncomfortable around the stomach. Prone to vomiting.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Sickness > 30%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f5/Nausea_3.png/48px-Nausea_3.png" class="wiki-image" alt="Sick">Sick</td>
+                        <td>Lethargic, tired and in major discomfort. Very prone to vomiting.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Sickness > 50%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/a/a2/Moodle_sick_3_anim.webp/48px-Moodle_sick_3_anim.webp" class="wiki-image" alt="Grossly sick">Grossly sick</td>
+                        <td>Dangerously sick. Something is VERY wrong on the inside.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Sickness > 75%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/2/28/Heat_1.png/48px-Heat_1.png" class="wiki-image" alt="Warm">Warm</td>
+                        <td>A little warm for comfort.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Temperature" class="wiki-link" target="_blank">Body temperature</a> > 38°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f0/Heat_2.png/48px-Heat_2.png" class="wiki-image" alt="Hot">Hot</td>
+                        <td>Unpleasantly hot. Thirst increased.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Body temperature > 39°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/95/Heat_3.png/48px-Heat_3.png" class="wiki-image" alt="Hyperthermia">Hyperthermia</td>
+                        <td>Dangerously hot. You're struggling to go on in the heat...</td>
+                        <td class="checkmark">✓</td>
+                        <td>Body temperature > 40.25°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/a/a5/Heat_4.png/48px-Heat_4.png" class="wiki-image" alt="Heatstroke">Heatstroke</td>
+                        <td>Cells are starting to die from the intense heat. Irreversible organ damage imminent.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Body temperature > 41.5°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/6/6e/Cold_1.png/48px-Cold_1.png" class="wiki-image" alt="Chilly">Chilly</td>
+                        <td>A little cold for comfort.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Body temperature < 35.5°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/43/Cold_2.png/48px-Cold_2.png" class="wiki-image" alt="Cold">Cold</td>
+                        <td>Unpleasantly cold. Your body is slowing down.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Body temperature < 34°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/8/82/Cold_3.png/48px-Cold_3.png" class="wiki-image" alt="Hypothermia">Hypothermia</td>
+                        <td>Dangerously low temperature, body and mind taken by the cold.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Body temperature < 32.5°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/4/4d/Cold_4.png/48px-Cold_4.png" class="wiki-image" alt="Freezing to death">Freezing to death</td>
+                        <td>You feel like you're burning up, but you're so tired and confused.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Body temperature < 28°C</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/6/66/Moodle_sad_0.webp/48px-Moodle_sad_0.webp" class="wiki-image" alt="Feeling down">Feeling down</td>
+                        <td>Starting to realize the gravity of your situation.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Mood" class="wiki-link" target="_blank">Mood</a> < -10</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/0/0d/Moodle_gloomy_1.webp/48px-Moodle_gloomy_1.webp" class="wiki-image" alt="Gloomy">Gloomy</td>
+                        <td>Lacking the motivation to go on, struggling with emotions.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Mood < -30</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/f/f6/Moodle_depression_2_anim.webp/48px-Moodle_depression_2_anim.webp" class="wiki-image" alt="Depressed">Depressed</td>
+                        <td>Barely willing to do anything. Your mind, ravaged by desperation.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Mood < -50</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/b/b8/Moodle_miserable_3_anim.webp/68px-Moodle_miserable_3_anim.webp" class="wiki-image" alt="Miserable">Miserable</td>
+                        <td>''How does it feel, knowing you're not coming back up..?''</td>
+                        <td class="checkmark">✓</td>
+                        <td>Mood < -75</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/d/d1/Dulled_Claws_Moodle.png/48px-Dulled_Claws_Moodle.png" class="wiki-image" alt="Dulled claws">Dulled claws</td>
+                        <td>Your claws are worn down from continuous use, reducing your damage output.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Claw health < 60%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/6/67/Broken_Claws_Moodle.png/48px-Broken_Claws_Moodle.png" class="wiki-image" alt="Broken claws">Broken claws</td>
+                        <td>Your claws are severely damaged from excessive use.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Claw health < 25%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c6/Deaf_1.png/48px-Deaf_1.png" class="wiki-image" alt="Impaired hearing">Impaired hearing</td>
+                        <td>You can't hear those high frequencies as well as before.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Hearing_loss" class="wiki-link" target="_blank">Hearing loss</a> > 15%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/2/29/Deaf_2.png/48px-Deaf_2.png" class="wiki-image" alt="Hearing loss">Hearing loss</td>
+                        <td>Everything sounds very muffled and echo-y.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Hearing loss > 40%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/91/Deaf_3.png/48px-Deaf_3.png" class="wiki-image" alt="Severe hearing loss">Severe hearing loss</td>
+                        <td>You can barely hear anything. You feel very irritated.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Hearing loss > 70%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f3/Dirty_Moodle_1.png/48px-Dirty_Moodle_1.png" class="wiki-image" alt="Dirty">Dirty</td>
+                        <td>Consider taking a quick bath.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dirtiness" class="wiki-link" target="_blank">Dirtiness</a> > 50%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c3/Dirty_Moodle_2.png/48px-Dirty_Moodle_2.png" class="wiki-image" alt="Very dirty">Very dirty</td>
+                        <td>While you don't particularly mind the lack of hygiene, your immune system certainly will.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Dirtiness > 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/47/Encumbered_Moodle_1.png/48px-Encumbered_Moodle_1.png" class="wiki-image" alt="Heavy load">Heavy load</td>
+                        <td>Carrying a bit much for comfort.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Encumbrance#Overencumbrance" class="wiki-link" target="_blank">Over-encumbrance</a> > 0%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f8/Encumbered_Moodle_2.png/48px-Encumbered_Moodle_2.png" class="wiki-image" alt="Encumbered">Encumbered</td>
+                        <td>Carrying too much. Stamina and mobility decreased.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Over-encumbrance > 30%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/5/5c/Encumbered_Moodle_3.png/48px-Encumbered_Moodle_3.png" class="wiki-image" alt="Very encumbered">Very encumbered</td>
+                        <td>Carrying way too much. Stamina and mobility highly decreased.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Over-encumbrance > 55%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/f/f0/Encumbered_Moodle_4_Crit.png/48px-Encumbered_Moodle_4_Crit.png" class="wiki-image" alt="Hampered">Hampered</td>
+                        <td>Practically unable to move. Carrying WAY, way too much.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Over-encumbrance > 85%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/6/61/Wet_Moodle_1.png/48px-Wet_Moodle_1.png" class="wiki-image" alt="Damp">Damp</td>
+                        <td>Your fur feels slightly wet.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wetness" class="wiki-link" target="_blank">Wetness</a> > 5%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/b/b8/Wet_Moodle_2.png/48px-Wet_Moodle_2.png" class="wiki-image" alt="Wet">Wet</td>
+                        <td>Considerably wet. Temperature and comfort decreased.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Wetness > 20%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/76/Wet_Moodle_3.png/48px-Wet_Moodle_3.png" class="wiki-image" alt="Soaked">Soaked</td>
+                        <td>Dripping wet. Temperature and comfort considerably decreased.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Wetness > 45%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f4/Wet_Moodle_4.png/48px-Wet_Moodle_4.png" class="wiki-image" alt="Water-logged">Water-logged</td>
+                        <td>Completely drenched! The water is weighing you down.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Wetness > 70%</td>
+                    </tr>
+                    <tr>
+                        <th colspan="4" class="side-moodle-header">Side Moodles (appear in health panel or when hovering)</th>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/73/Lowimmunity_Moodle.png/48px-Lowimmunity_Moodle.png" class="wiki-image" alt="Immunocompromised">Immunocompromised</td>
+                        <td>Your immune system is severely weakened, be it due to dirtyness, hunger, thirst or more.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Immunity" class="wiki-link" target="_blank">Immunity</a> < 55%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/7e/Underweight_Moodle_1.png/48px-Underweight_Moodle_1.png" class="wiki-image" alt="Underweight">Underweight</td>
+                        <td>Try to pack on a few kilos.</td>
+                        <td class="nomark">✗</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Weight" class="wiki-link" target="_blank">Weight</a> < 44.9kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/8/86/Underweight_Moodle_2.png/48px-Underweight_Moodle_2.png" class="wiki-image" alt="Skinny">Skinny</td>
+                        <td>Unhealthily underweight considering your species. Weaker than normal.</td>
+                        <td class="nomark">✗</td>
+                        <td>Weight < 39.8kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e6/Underweight_Moodle_3.png/48px-Underweight_Moodle_3.png" class="wiki-image" alt="Malnourished">Malnourished</td>
+                        <td>You're dangerously thin and frail. Way weaker than normal.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Weight < 36.4kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/8/86/Underweight_Moodle_4.png/48px-Underweight_Moodle_4.png" class="wiki-image" alt="Emaciated">Emaciated</td>
+                        <td>You're excessively skinny. You can easily see and feel your bones through your fur.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Weight < 33kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/8/88/Overweight_Moodle_1.png/48px-Overweight_Moodle_1.png" class="wiki-image" alt="Chubby">Chubby</td>
+                        <td>Try to lose a few kilos.</td>
+                        <td class="nomark">✗</td>
+                        <td>Weight > 55kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c0/Overweight_Moodle_2.png/48px-Overweight_Moodle_2.png" class="wiki-image" alt="Overweight">Overweight</td>
+                        <td>Unhealthily overweight, though you look about average compared to other species.</td>
+                        <td class="nomark">✗</td>
+                        <td>Weight > 60.2kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e3/Overweight_Moodle_3.png/48px-Overweight_Moodle_3.png" class="wiki-image" alt="Fat">Fat</td>
+                        <td>Dangerously wide and soft. Way clumsier and more prone to exhaustion.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Weight > 63.6kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e8/Overweight_Moodle_4.png/48px-Overweight_Moodle_4.png" class="wiki-image" alt="Obese">Obese</td>
+                        <td>Life-threatenigly obese. It's like you stuffed a bag of fur with pure fat and hunger.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Weight > 67kg</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e4/Trauma_Moodle_2.png/48px-Trauma_Moodle_2.png" class="wiki-image" alt="Scared">Scared</td>
+                        <td>Recent events have left you uneasy and scarred. You feel shaky.</td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Trauma" class="wiki-link" target="_blank">Trauma</a> > 25%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/48/Trauma_Moodle_3.png/48px-Trauma_Moodle_3.png" class="wiki-image" alt="Traumatized">Traumatized</td>
+                        <td>You feel panicked and horrified. Visions of past horrors flash before your eyes.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Trauma > 45%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/9/95/Trauma_Moodle_4.png/48px-Trauma_Moodle_4.png" class="wiki-image" alt="Shell shocked">Shell shocked</td>
+                        <td>Horrified. Helpless. Hopeless. You can't muster a single word.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Trauma > 80%</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e8/Badsleep_Moodle.png/48px-Badsleep_Moodle.png" class="wiki-image" alt="Bad sleep">Bad sleep</td>
+                        <td>Your back really isn't appreciating your choice of where you slept.</td>
+                        <td class="nomark">✗</td>
+                        <td>Waking up from Mediocre or Bad <a href="https://scavprototype.wiki.gg/wiki/Sleep" class="wiki-link" target="_blank">sleep</a> quality</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/a/a1/Speechless.png/48px-Speechless.png" class="wiki-image" alt="Impaired speech">Impaired speech</td>
+                        <td>Something is making speaking difficult... You might have trouble communicating with others.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Conscious while item in mouth, dislocated jaw, or disfigured</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/b/b5/Rnrs_Moodle.png/48px-Rnrs_Moodle.png" class="wiki-image" alt="Rapid neuron regeneration sickness">Rapid neuron regeneration sickness</td>
+                        <td>Neural shock caused by a sudden and rapid regeneration of brain tissue.</td>
+                        <td class="nomark">✗</td>
+                        <td>Consumed <a href="https://scavprototype.wiki.gg/wiki/Braingrow" class="wiki-link" target="_blank">braingrow</a> or Neural Booster</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/e/e5/Rippedjaw_Moodle.png/48px-Rippedjaw_Moodle.png" class="wiki-image" alt="Disfigured">Disfigured</td>
+                        <td>Your lower jaw has been ripped off due severe trauma to the head.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Jaw missing</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/7/7a/Amputation_Moodle.png/48px-Amputation_Moodle.png" class="wiki-image" alt="Amputated">Amputated</td>
+                        <td>One of your extremities has been dismembered. Traumatizing.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Any limb missing</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f9/Rippedeye_Moodle_3.png/48px-Rippedeye_Moodle_3.png" class="wiki-image" alt="Half-blind">Half-blind</td>
+                        <td>One of your eyes has been ripped out, halving your field of view.</td>
+                        <td class="checkmark">✓</td>
+                        <td>One eye missing</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/c/c8/Rippedeye_Moodle_4.png/48px-Rippedeye_Moodle_4.png" class="wiki-image" alt="Blind">Blind</td>
+                        <td>Both of your eyes have been ripped out. You can only get by using feel and sound.</td>
+                        <td class="checkmark">✓</td>
+                        <td>Both eyes missing</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/b/b6/Hollow.png/48px-Hollow.png" class="wiki-image" alt="Hollow">Hollow</td>
+                        <td></td>
+                        <td class="checkmark">✓</td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Mindwipe" class="wiki-link" target="_blank">Mindwipe</a> used, or Braingrow/Neural Booster with RNRS</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Unused Moodles</h2>
+            <p>These moodles are present in the lang file, but are not referenced in code and do not appear in-game.</p>
+            <table class="moodle-table">
+                <caption>List of unused moodles</caption>
+                <thead>
+                    <tr>
+                        <th>Moodle</th>
+                        <th>Description</th>
+                        <th>Cause</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/4/44/Deceased.png/48px-Deceased.png" class="wiki-image" alt="Deceased">Deceased</td>
+                        <td>Permanent, irreversible, and complete loss of brain function.</td>
+                        <td>Dead, brain health is at 0</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/3/3c/Trauma_Moodle_1.png/48px-Trauma_Moodle_1.png" class="wiki-image" alt="Anxious">Anxious</td>
+                        <td>Something bad has happened to you, and your brain does NOT want to experience it again.</td>
+                        <td>Unknown, likely would appear around ~10-15% Trauma</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/8/80/Hypervolemic_1.png/48px-Hypervolemic_1.png" class="wiki-image" alt="Bloated">Bloated</td>
+                        <td>Feeling uncomfortable. Increased blood pressure.</td>
+                        <td>Blood volume > 5 L</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/1/14/Hypervolemic_2.png/48px-Hypervolemic_2.png" class="wiki-image" alt="Hypervolemic">Hypervolemic</td>
+                        <td>Body bloated, blood pressure high, feeling dizzy with a headache.</td>
+                        <td>Blood volume > 5.25 L</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name"><img src="https://scavprototype.wiki.gg/images/thumb/f/f4/Hypervolemic_3.png/48px-Hypervolemic_3.png" class="wiki-image" alt="Critically hypervolemic">Critically hypervolemic</td>
+                        <td>Grossly bloated. Extremely high blood pressure. Can barely stand, or think.</td>
+                        <td>Blood volume > 5.5 L</td>
+                    </tr>
+                    <tr>
+                        <td class="moodle-name critical"><img src="https://scavprototype.wiki.gg/images/thumb/4/4c/Hypervolemic_4.png/48px-Hypervolemic_4.png" class="wiki-image" alt="Lethally hypervolemic">Lethally hypervolemic</td>
+                        <td>There's a terrible pain in your chest... Vital signs fading.</td>
+                        <td>Blood volume ≥ 5.625 L</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+'''{{PAGENAME}}''' are structures that make up the majority of the [[layers]] in-game. They can be destroyed from digging, falls, or explosions. Destroyed tiles are permanently removed from the layer.
+<div style="text-align: center; width: 100%">
+{| class="wikitable" style="margin: 0 auto; text-align: left;"
+|+ List of all tiles in the game
+|-
+| ID
+! Sprite
+! style="width: 10em" | Name
+! Hit points
+! <abbr title="Metallic tiles can be dug much faster with a Plasma Cutter">Metallic</abbr>
+! style="min-width: 20em" | Notes
+! [[Sleep quality]]
+|-
+| 0 
+| style="border: none; display: block; min-height: 70px" |
+| Air
+| style="text-align: center" | 0
+| style="text-align: center" | {{No}}
+| Internally considered as a tile by the game
+| style="color: black; font-weight: bold; text-align: center;" | <abbr title="its air you can't sleep on it duh">N/A</abbr>
+|-
+| 1
+| style="text-align: center" | [[File:Rock.png]]
+| Light rock
+| style="text-align: center" | 100
+| style="text-align: center" | {{No}}
+|
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 2
+| style="text-align: center" | [[File:Gravel.png]]
+| Gravel
+| style="text-align: center" | 25
+| style="text-align: center" | {{No}}
+|
+| style="color: grey; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration: No effects">Okay</abbr>
+|-
+| 3
+| style="text-align: center" | [[File:Scrap_pile.png]]
+| Scrap
+| style="text-align: center" | 60
+| style="text-align: center" | {{No}}
+| 50% chance of spawning a [[Scrap metal]] when broken.
+Can be placed with [[Scrap metal]] with 25% condition.
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 4
+| style="text-align: center" | [[File:Trash_pile.png]]
+| Trash
+| style="text-align: center" | 20
+| style="text-align: center" | {{No}}
+|
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 5
+| style="text-align: center" | [[File:Concrete_tile.png]]
+| Concrete
+| style="text-align: center" | 800
+| style="text-align: center" | {{No}}
+|
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 6
+| style="text-align: center" | [[File:Steel_tile.png]]
+| Steel tile
+| style="text-align: center" | 5000
+| style="text-align: center" | {{Yes}}
+|
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 7
+| style="text-align: center" | [[File:Glass.png]]
+| Glass
+| style="text-align: center" | 30
+| style="text-align: center" | {{No}}
+| 40% chance of spawning a [[Glass shard]] when broken.
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 8
+| style="text-align: center" | [[File:Rubber.png]]
+| Rubber
+| style="text-align: center" | 60
+| style="text-align: center" | {{No}}
+|50% chance of spawning a [[Plastic chunk]] when broken.
+| style="color: lime; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration +25%">Good</abbr>
+|-
+| 9
+| style="text-align: center" | [[File:Plastic.png]]
+| Plastic
+| style="text-align: center" | 150
+| style="text-align: center" | {{No}}
+|50% chance of spawning a [[Plastic chunk]] when broken.
+| style="color: grey; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration: No effects">Okay</abbr>
+|-
+| 10
+| style="text-align: center" | [[File:Heat-resistant_alloy.png]]
+| Heat resistant alloy
+| style="text-align: center" | 15000
+| style="text-align: center" | {{Yes}}
+| Most durable tile in the game
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 11
+| style="text-align: center" | [[File:Wood.png]]
+| Wood
+| style="text-align: center" | 150
+| style="text-align: center" | {{No}}
+|Spawns [[Wood scraps]], [[Wood panel]], or [[Stick]] when broken. 
+| style="color: grey; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration: No effects">Okay</abbr>
+|-
+| 12
+| style="text-align: center" | [[File:Sand.png]]
+| Sand
+| style="text-align: center" | 15
+| style="text-align: center" | {{No}}
+|
+| style="color: lime; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration +25%">Good</abbr>
+|-
+| 13
+| style="text-align: center" | [[File:Sandstone.png]]
+| Sandstone
+| style="text-align: center" | 90
+| style="text-align: center" | {{No}}
+|
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 14
+| style="text-align: center" | [[File:Infinirock.png]]
+| Infinirock
+| style="text-align: center" | 1000000000
+| style="text-align: center" | {{No}}
+| The border of all layers. While it technically has finite hit points, it is practically indestructible
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 15
+| style="text-align: center" | [[File:Clay.png]]
+| Clay
+| style="text-align: center" | 25
+| style="text-align: center" | {{No}}
+|
+| style="color: grey; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration: No effects">Okay</abbr>
+|-
+| 16
+| style="text-align: center" | [[File:Soil.png]]
+| Soil
+| style="text-align: center" | 32
+| style="text-align: center" | {{No}}
+|
+| style="color: grey; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration: No effects">Okay</abbr>
+|-
+| 17
+| style="text-align: center" | [[File:Granite.png]]
+| Granite
+| style="text-align: center" | 200
+| style="text-align: center" | {{No}}
+|
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 18
+| style="text-align: center" | [[File:Marble.png]]
+| Marble
+| style="text-align: center" | 150
+| style="text-align: center" | {{No}}
+|
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 19
+| style="text-align: center" | [[File:Limestone.png]]
+| Limestone
+| style="text-align: center" | 135
+| style="text-align: center" | {{No}}
+|
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 20
+| style="text-align: center" | [[File:Bricks.png]]
+| Bricks
+| style="text-align: center" | 650
+| style="text-align: center" | {{No}}
+|
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 21
+| style="text-align: center" | [[File:Scaffolding.png]]
+| Scaffolding
+| style="text-align: center" | 200
+| style="text-align: center" | {{Yes}}
+| Placeable with [[Scaffolding pack]]
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 22
+| style="text-align: center" | [[File:Toxirock.png]]
+| Toxirock
+| style="text-align: center" | 250
+| style="text-align: center" | {{No}}
+| [[Radiation|Irradiates]] the player considerably quickly if stood on (up to +0.75 Gy per second).
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 23
+| style="text-align: center" |[[File:Grass.png|55px]]
+|  Verdure
+| style="text-align: center" | 35
+| style="text-align: center" | {{No}}
+| 
+| style="color: lime; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration +25%">Good</abbr>
+|-
+| 24
+| style="text-align: center" |[[File:Log.png|45px]]
+| Log
+| style="text-align: center" | 150
+| style="text-align: center" | {{No}}
+| Spawns [[Wood scraps]], [[Wood panel]], or [[Stick]] when broken.
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 25
+| style="text-align: center" |[[File:Leaves.png|55px]]
+| Leaves
+| style="text-align: center" | 20
+| style="text-align: center" | {{No}}
+| 
+| style="color: grey; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration: No effects">Okay</abbr>
+|-
+| 26
+| style="text-align: center" | [[File:Snow.png|50px]]
+| Snow
+| style="text-align: center" | 15
+| style="text-align: center" | {{No}}
+| 
+| style="color: lime; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration +25%">Good</abbr>
+|-
+| 27
+| style="text-align: center" | [[File:Ice.png|55px]]
+| Ice
+| style="text-align: center" | 50
+| style="text-align: center" | {{No}}
+| 50% chance of spawning water when broken.
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 28
+| style="text-align: center" |[[File:Thinice.png|45px]]
+| Thin ice
+| style="text-align: center" | 1
+| style="text-align: center" | {{No}}
+| 
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 29
+| style="text-align: center" |[[File:Powdersnow.png|55px]]
+| Powdersnow
+| style="text-align: center" | 1
+| style="text-align: center" | {{No}}
+| 
+| style="color: lime; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration +25%">Good</abbr>
+|-
+| 30
+| style="text-align: center" |[[File:Heavyrock.png|55px]]
+| Heavy rock
+| style="text-align: center" | 200
+| style="text-align: center" | {{No}}
+| 
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 31
+| style="text-align: center" |[[File:Fungus.png|50px]]
+| Fungus
+| style="text-align: center" | 50
+| style="text-align: center" | {{No}}
+| 
+| style="color: grey; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration: No effects">Okay</abbr>
+|-
+| 32
+| style="text-align: center" | [[File:Mushroombody.png|50px]]
+| Mushroom body
+| style="text-align: center" | 80
+| style="text-align: center" | {{No}}
+|
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 33
+| style="text-align: center" |[[File:Mushroomcap.png|50px]]
+| Mushroom cap
+| style="text-align: center" | 60
+| style="text-align: center" | {{No}}
+|
+| style="color: orange; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -15%">Mediocre</abbr>
+|-
+| 34
+| style="text-align: center" |[[File:Copper.png|50px]]
+| Copper
+| style="text-align: center" | 2000
+| style="text-align: center" | {{No}}
+|Spawns [[Raw copper]] when broken
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|-
+| 35
+| style="text-align: center" |[[File:Ilmenite.png|50px]]
+| Ilmenite
+| style="text-align: center" | 4000
+| style="text-align: center" | {{No}}
+|Spawns [[Ilmenite chunk]] when broken
+| style="color: red; font-weight: bold; text-align: center;" | <abbr title="Energy regeneration -30%">Bad</abbr>
+|}
+</div>See also: [[Tile Fluids|Tile fluids]] for the similar liquid tiles placed in the world.
+
+== Trivia ==
+* Each tile represents a 0.3m by 0.3m block.
+
+[[zh:物块]]

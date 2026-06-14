@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items - Scav Prototype Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2em;
+            background: linear-gradient(90deg, #00d4ff, #7b2fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+        
+        h2 {
+            color: #00d4ff;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        h3 {
+            color: #7b2fff;
+            margin: 18px 0 8px;
+        }
+        
+        h4 {
+            color: #a0a0a0;
+            margin: 15px 0 5px;
+        }
+        
+        strong {
+            color: #fff;
+        }
+        
+        em {
+            color: #aaa;
+            font-style: italic;
+        }
+        
+        .wiki-link {
+            color: #00d4ff;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(0, 212, 255, 0.5);
+        }
+        
+        .wiki-link:hover {
+            color: #7b2fff;
+            border-bottom-color: #7b2fff;
+        }
+        
+        .wiki-image {
+            max-width: 50px;
+            height: auto;
+            border-radius: 4px;
+            margin: 5px;
+            vertical-align: middle;
+        }
+        
+        .wiki-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .wiki-table th, .wiki-table td {
+            padding: 10px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .wiki-table th {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        
+        .wiki-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        ul {
+            margin: 10px 0 10px 30px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .wiki-table th, .wiki-table td {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Items</h1>
+        </header>
+        <div class="content">
+            <br><br><strong>Items</strong> are loose objects dropped by most breakable <a href="#/:Category:Building" class="wiki-link">structures</a>, <a href="#/Enemies" class="wiki-link">enemies</a>, and <a href="#/Trader" class="wiki-link">traders</a>. Items can be carried around and thrown. Most can be used in the inventory, health panel, or swung.<br><br>There are currently <strong>432</strong> items (including inaccessible items) in the Itch.io build. <!-- need someone to sort through which ones --><br><br><h2>Item weight</h2><br><br><br><br><a href="#/File:Dressing weight tooltip.png" class="wiki-link">thumb|The bottom of the tooltip description of <a href="#/dressing</a>. Notice the weight tag at the top of the block." class="wiki-link">dressing</a>. Notice the weight tag at the top of the block.</a><br><br>An item's weight determines the cost it imposes on the player's carrying capacity and the <a href="#/Items#Containers" class="wiki-link">containers</a> it can fit in. Weight incentivizes players to make decisions and plan ahead with which items to keep as they encounter more.<br><br>Heavier items give more recoil when thrown. Many items lose weight as they lose condition, a trait named <strong>scale weight</strong>, which linearly goes from full weight at  to 0.1u at .<ref>Item.cs:Item.totalWeight</ref><br><br><h2>Condition</h2><br><br><a href="#/File:Dressing condition tooltip.png" class="wiki-link">thumb|The top of the tooltip description of <a href="#/dressing</a>. Notice the condition, a colored percentage." class="wiki-link">dressing</a>. Notice the condition, a colored percentage.</a><br><br>An item's condition determines the amount of time or uses it has, in the context of decay rate and condition loss on use respectively. Most items are destroyed when their condition reaches 0%. Many items can have their condition transferred onto other identical items, done by dragging the item onto another item.<br><br>The tooltip's condition changes color as it decreases, from  to , , and .<br><br>Items sometimes give their full effect when used from the inventory, regardless of their condition. This means that, for example, a <a href="#/Neural Booster" class="wiki-link">Neural Booster</a> at  and another <a href="#/Neural Booster" class="wiki-link">Neural Booster</a> at  will give the same effects when consumed.<br><br><ul><li>Note that, in general, liquids do scale most of their effects correctly to the actual volume consumed.</li></ul><br><br>Certain items can become wet upon contact with <a href="#/liquids" class="wiki-link">liquids</a>. Wet items passively lose condition 6 times faster<ref>Item.cs:Item.HandleDecay()</ref>.<br>items like the <a href="#/shotgun" class="wiki-link">shotgun</a>, <a href="#/pistol" class="wiki-link">pistol</a>, <a href="#/makeshift rifle" class="wiki-link">makeshift rifle</a>,  <a href="#/rifle" class="wiki-link">rifle</a>, and <a href="#/jetpack" class="wiki-link">jetpack</a> have special interactions with <a href="#/liquids" class="wiki-link">liquids</a>, as upon getting wet they have a flat +4.5% increased chance of malfunctioning.<ref>GunScript.cs:GunScript.JamChance()</ref> <a href="#/Torch" class="wiki-link">Torches</a> and <a href="#/Campfire" class="wiki-link">Campfires</a> are immediately set to  and extinguished upon becoming wet.<ref>CustomItemBehaviour.cs:CustomItemBehaviour.Update()</ref> Items stay wet for 120 seconds.<ref>Item.cs:Item.isWet</ref><br><br><h2>Crafting</h2><br><br><br><br>Certain items can be combined in the inventory to create new items.<br><br>The player can open the crafting menu by pressing C or clicking the button in the bottom left corner of the screen.<br><br>Some items have special qualities that make them useful for certain crafting recipes, such as "Hammering" or "Foliage."<br><br><h2>Items by category</h2><br><br><h3><a href="#/File:Trader medical.png" class="wiki-link">middle|link=</a> Medical</h3><br><strong>Medical items</strong> recover <a href="#/Limb health" class="wiki-link">limb health</a>, treat most physical <a href="#/Injuries" class="wiki-link">injuries</a>, and delay death. Proper usage of them causes minimal consequence.<br><br>Dropped by <a href="#/medical crate" class="wiki-link">medical crates</a>, <a href="#/Container crate" class="wiki-link">container crates</a>, <a href="#/drop capsule" class="wiki-link">drop capsules</a>, and <a href="#/Life-pod chest" class="wiki-link">life pod chests</a>.<br><br><br><br><h3><a href="#/File:Trader drugs.png" class="wiki-link">link=</a> Drugs</h3><br><br><strong>Drugs</strong> are powerful items that influence the body as a whole. They affect <a href="#/Pain" class="wiki-link">pain</a> recovery and change values such as blood viscosity, <a href="#/radiation" class="wiki-link">radiation</a>, <a href="#/sickness" class="wiki-link">sickness</a>, and <a href="#/mood" class="wiki-link">mood</a>.<br><br>Dropped by <a href="#/medical crate" class="wiki-link">medical crates</a>, <a href="#/drop capsule" class="wiki-link">drop capsules</a>, and <a href="#/Life-pod chest" class="wiki-link">life pod chests</a>.<br><br><br><br><h3><a href="#/File:Trader food.png" class="wiki-link">link=</a> Food</h3><br><br><strong>Food items</strong> are consumables that mainly fill the <a href="#/hunger" class="wiki-link">hunger</a> bar and influence permanent <a href="#/mood" class="wiki-link">mood</a>.<br><br>Dropped by <a href="#/Food box" class="wiki-link">Food box</a>, <a href="#/drop capsule" class="wiki-link">drop capsules</a>, and <a href="#/Life-pod chest" class="wiki-link">life pod chests</a>.<br><br><br><br><h3><a href="#/File:Trader water.png" class="wiki-link">link=</a> Water</h3><br><br>Water items are consumables that mainly fill the <a href="#/thirst" class="wiki-link">thirst</a> bar and directly increase permanent <a href="#/mood" class="wiki-link">mood</a>. Some give <a href="#/energized" class="wiki-link">energized</a> or <a href="#/Energized" class="wiki-link">caffeine</a>.<br><br>Dropped by <a href="#/medical crate" class="wiki-link">medical crates</a>, <a href="#/Food box" class="wiki-link">Food box</a>, <a href="#/drop capsule" class="wiki-link">drop capsules</a>, and <a href="#/Life-pod chest" class="wiki-link">life pod chests</a>. <br><br><br><br><h3><a href="#/File:Trader containers.png" class="wiki-link">link=</a> Containers</h3><br><br><strong>Containers</strong> store any amount of items, limited only by their capacities and maximum item weights. Containers other than the <a href="#/Grav-Bag" class="wiki-link">Grav-Bag</a> decay while in use (while holding at least one item).<br><br>Dropped by <a href="#/container crate" class="wiki-link">container crates</a>, <a href="#/drop capsule" class="wiki-link">drop capsules</a>, and <a href="#/Life-pod chest" class="wiki-link">life pod chests</a>.<br><br><br><br><h3><a href="#/File:Trader tools.png" class="wiki-link">link=</a> Tools</h3><br><br><br><br><h3><a href="#/File:Trader utility.png" class="wiki-link">link=</a> Utility</h3><br><ul><li>Some armor can still deal protection even if they aren't equipped/dropped but they still do take damage like normal. (bug)</li></ul><br><br><br><br><h3><a href="#/File:Category plant.png" class="wiki-link">link=</a> Plant drops</h3><br><br><br><h3><a href="#/File:Category materials.png" class="wiki-link">link=</a> Materials</h3><br><strong>Materials</strong> are not very useful on their own, however can be crafted into more usable items.<br><br><br><h3><a href="#/File:Category other.png" class="wiki-link">link=</a> Other</h3><br><br><br><br><a href="#/zh:物品" class="wiki-link">zh:物品</a>
+        </div>
+    </div>
+</body>
+</html>

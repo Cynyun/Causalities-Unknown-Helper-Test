@@ -1,0 +1,54 @@
+import json
+import os
+
+def main():
+    # 读取分析文件获取有效页面列表
+    with open("output/entry_pages_analysis.json", "r", encoding="utf-8") as f:
+        analysis = json.load(f)
+    
+    # 读取原始数据文件
+    with open("output/entry_pages_raw.json", "r", encoding="utf-8") as f:
+        raw_data = json.load(f)
+    
+    # 创建保存目录
+    save_dir = "output/entry_pages"
+    os.makedirs(save_dir, exist_ok=True)
+    
+    print(f"[Creating] Directory: {save_dir}")
+    
+    # 遍历分析结果，找出有效的页面
+    for page_info in analysis:
+        if page_info["status"] == "success":
+            pageid = page_info["pageid"]
+            title = page_info["title"]
+            
+            # 从原始数据中获取对应页面内容
+            pages = raw_data["query"]["pages"]
+            if pageid in pages:
+                revisions = pages[pageid].get("revisions", [])
+                if revisions:
+                    content = revisions[0].get("*", "")
+                    content_format = revisions[0].get("contentformat", "")
+                    
+                    # 根据内容类型选择文件扩展名
+                    if content_format == "text/x-wiki":
+                        ext = ".wiki"
+                    elif content.startswith("#REDIRECT"):
+                        ext = ".redirect.txt"
+                    else:
+                        ext = ".txt"
+                    
+                    # 清理文件名中的特殊字符
+                    filename = title.replace("/", "_").replace(" ", "_") + ext
+                    filepath = os.path.join(save_dir, filename)
+                    
+                    # 保存文件
+                    with open(filepath, "w", encoding="utf-8") as f:
+                        f.write(content)
+                    
+                    print(f"[Saved] {title} -> {filename} ({len(content)} chars)")
+    
+    print("\n[Done] All valid pages saved!")
+
+if __name__ == "__main__":
+    main()

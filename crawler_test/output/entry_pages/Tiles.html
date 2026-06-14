@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiles - Scav Prototype Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #7b2fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        header p {
+            color: #a0a0a0;
+            font-size: 1.1em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        th {
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.2), rgba(123, 47, 255, 0.2));
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+            color: #00d4ff;
+        }
+        
+        tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transition: background 0.2s ease;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .sprite-cell {
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .sprite {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 5px;
+        }
+        
+        .hp-cell {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+        
+        .metallic-cell {
+            text-align: center;
+        }
+        
+        .yes-badge {
+            background: #00ff88;
+            color: #000;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .no-badge {
+            background: #ff4444;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .sleep-bad {
+            color: #ff4444;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .sleep-mediocre {
+            color: #ffaa00;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .sleep-okay {
+            color: #aaaaaa;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .sleep-good {
+            color: #00ff88;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .sleep-na {
+            color: #00d4ff;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .notes-cell {
+            max-width: 250px;
+            white-space: pre-wrap;
+            color: #d0d0d0;
+            font-size: 0.9em;
+        }
+        
+        .trivia {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .trivia h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .trivia ul {
+            list-style: none;
+            color: #a0a0a0;
+        }
+        
+        .trivia li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .trivia li:last-child {
+            border-bottom: none;
+        }
+        
+        @media (max-width: 768px) {
+            th, td {
+                padding: 8px 10px;
+                font-size: 0.85em;
+            }
+            
+            .sprite {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .notes-cell {
+                display: none;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tiles</h1>
+            <p>Tiles are structures that make up the majority of the layers in-game. They can be destroyed from digging, falls, or explosions. Destroyed tiles are permanently removed from the layer.</p>
+        </header>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Sprite</th>
+                    <th>Name</th>
+                    <th>Hit Points</th>
+                    <th>Metallic</th>
+                    <th>Notes</th>
+                    <th>Sleep Quality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td class="sprite-cell"><div class="sprite" style="background: transparent;"></div></td>
+                    <td><strong>Air</strong></td>
+                    <td class="hp-cell">0</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">Internally considered as a tile by the game</td>
+                    <td class="sleep-na">N/A</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/f/f6/Rock.png/50px-Rock.png" class="sprite" alt="Light rock"></td>
+                    <td><strong>Light rock</strong></td>
+                    <td class="hp-cell">100</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/a/a7/Gravel.png/50px-Gravel.png" class="sprite" alt="Gravel"></td>
+                    <td><strong>Gravel</strong></td>
+                    <td class="hp-cell">25</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-okay">Okay</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/4/4a/Scrap_pile.png/50px-Scrap_pile.png" class="sprite" alt="Scrap"></td>
+                    <td><strong>Scrap</strong></td>
+                    <td class="hp-cell">60</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">50% chance of spawning a Scrap metal when broken. Can be placed with Scrap metal with 25% condition.</td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/f/f9/Trash_pile.png/50px-Trash_pile.png" class="sprite" alt="Trash"></td>
+                    <td><strong>Trash</strong></td>
+                    <td class="hp-cell">20</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/2/2d/Concrete_tile.png/50px-Concrete_tile.png" class="sprite" alt="Concrete"></td>
+                    <td><strong>Concrete</strong></td>
+                    <td class="hp-cell">800</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/c/c3/Steel_tile.png/50px-Steel_tile.png" class="sprite" alt="Steel tile"></td>
+                    <td><strong>Steel tile</strong></td>
+                    <td class="hp-cell">5,000</td>
+                    <td class="metallic-cell"><span class="yes-badge">Yes</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/5/57/Glass.png/50px-Glass.png" class="sprite" alt="Glass"></td>
+                    <td><strong>Glass</strong></td>
+                    <td class="hp-cell">30</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">40% chance of spawning a Glass shard when broken.</td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/9/97/Rubber.png/50px-Rubber.png" class="sprite" alt="Rubber"></td>
+                    <td><strong>Rubber</strong></td>
+                    <td class="hp-cell">60</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">50% chance of spawning a Plastic chunk when broken.</td>
+                    <td class="sleep-good">Good</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/8/8e/Plastic.png/50px-Plastic.png" class="sprite" alt="Plastic"></td>
+                    <td><strong>Plastic</strong></td>
+                    <td class="hp-cell">150</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">50% chance of spawning a Plastic chunk when broken.</td>
+                    <td class="sleep-okay">Okay</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/9/92/Heat-resistant_alloy.png/50px-Heat-resistant_alloy.png" class="sprite" alt="Heat resistant alloy"></td>
+                    <td><strong>Heat resistant alloy</strong></td>
+                    <td class="hp-cell">15,000</td>
+                    <td class="metallic-cell"><span class="yes-badge">Yes</span></td>
+                    <td class="notes-cell">Most durable tile in the game</td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/1/1f/Wood.png/50px-Wood.png" class="sprite" alt="Wood"></td>
+                    <td><strong>Wood</strong></td>
+                    <td class="hp-cell">150</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">Spawns Wood scraps, Wood panel, or Stick when broken.</td>
+                    <td class="sleep-okay">Okay</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/0/07/Sand.png/50px-Sand.png" class="sprite" alt="Sand"></td>
+                    <td><strong>Sand</strong></td>
+                    <td class="hp-cell">15</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-good">Good</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/d/d7/Sandstone.png/50px-Sandstone.png" class="sprite" alt="Sandstone"></td>
+                    <td><strong>Sandstone</strong></td>
+                    <td class="hp-cell">90</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/a/a8/Infinirock.png/50px-Infinirock.png" class="sprite" alt="Infinirock"></td>
+                    <td><strong>Infinirock</strong></td>
+                    <td class="hp-cell">1,000,000,000</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">The border of all layers. While it technically has finite hit points, it is practically indestructible</td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/c/c7/Clay.png/50px-Clay.png" class="sprite" alt="Clay"></td>
+                    <td><strong>Clay</strong></td>
+                    <td class="hp-cell">25</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-okay">Okay</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/7/7d/Soil.png/50px-Soil.png" class="sprite" alt="Soil"></td>
+                    <td><strong>Soil</strong></td>
+                    <td class="hp-cell">32</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-okay">Okay</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/5/5f/Granite.png/50px-Granite.png" class="sprite" alt="Granite"></td>
+                    <td><strong>Granite</strong></td>
+                    <td class="hp-cell">200</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/e/e4/Marble.png/50px-Marble.png" class="sprite" alt="Marble"></td>
+                    <td><strong>Marble</strong></td>
+                    <td class="hp-cell">150</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/3/39/Limestone.png/50px-Limestone.png" class="sprite" alt="Limestone"></td>
+                    <td><strong>Limestone</strong></td>
+                    <td class="hp-cell">135</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/f/fc/Bricks.png/50px-Bricks.png" class="sprite" alt="Bricks"></td>
+                    <td><strong>Bricks</strong></td>
+                    <td class="hp-cell">650</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/b/b6/Scaffolding.png/50px-Scaffolding.png" class="sprite" alt="Scaffolding"></td>
+                    <td><strong>Scaffolding</strong></td>
+                    <td class="hp-cell">200</td>
+                    <td class="metallic-cell"><span class="yes-badge">Yes</span></td>
+                    <td class="notes-cell">Placeable with Scaffolding pack</td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/f/f6/Toxirock.png/50px-Toxirock.png" class="sprite" alt="Toxirock"></td>
+                    <td><strong>Toxirock</strong></td>
+                    <td class="hp-cell">250</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">Irradiates the player considerably quickly if stood on (up to +0.75 Gy per second).</td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/9/9d/Grass.png/50px-Grass.png" class="sprite" alt="Verdure"></td>
+                    <td><strong>Verdure</strong></td>
+                    <td class="hp-cell">35</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-good">Good</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/a/a6/Log.png/50px-Log.png" class="sprite" alt="Log"></td>
+                    <td><strong>Log</strong></td>
+                    <td class="hp-cell">150</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">Spawns Wood scraps, Wood panel, or Stick when broken.</td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/c/c9/Leaves.png/50px-Leaves.png" class="sprite" alt="Leaves"></td>
+                    <td><strong>Leaves</strong></td>
+                    <td class="hp-cell">20</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-okay">Okay</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/b/bc/Snow.png/50px-Snow.png" class="sprite" alt="Snow"></td>
+                    <td><strong>Snow</strong></td>
+                    <td class="hp-cell">15</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-good">Good</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/9/9d/Ice.png/50px-Ice.png" class="sprite" alt="Ice"></td>
+                    <td><strong>Ice</strong></td>
+                    <td class="hp-cell">50</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">50% chance of spawning water when broken.</td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/a/a3/Thinice.png/50px-Thinice.png" class="sprite" alt="Thin ice"></td>
+                    <td><strong>Thin ice</strong></td>
+                    <td class="hp-cell">1</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/f/f7/Powdersnow.png/50px-Powdersnow.png" class="sprite" alt="Powdersnow"></td>
+                    <td><strong>Powdersnow</strong></td>
+                    <td class="hp-cell">1</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-good">Good</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/2/29/Heavyrock.png/50px-Heavyrock.png" class="sprite" alt="Heavy rock"></td>
+                    <td><strong>Heavy rock</strong></td>
+                    <td class="hp-cell">200</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/b/b5/Fungus.png/50px-Fungus.png" class="sprite" alt="Fungus"></td>
+                    <td><strong>Fungus</strong></td>
+                    <td class="hp-cell">50</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-okay">Okay</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/c/c0/Mushroombody.png/50px-Mushroombody.png" class="sprite" alt="Mushroom body"></td>
+                    <td><strong>Mushroom body</strong></td>
+                    <td class="hp-cell">80</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/b/b1/Mushroomcap.png/50px-Mushroomcap.png" class="sprite" alt="Mushroom cap"></td>
+                    <td><strong>Mushroom cap</strong></td>
+                    <td class="hp-cell">60</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell"></td>
+                    <td class="sleep-mediocre">Mediocre</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/d/d5/Copper.png/50px-Copper.png" class="sprite" alt="Copper"></td>
+                    <td><strong>Copper</strong></td>
+                    <td class="hp-cell">2,000</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">Spawns Raw copper when broken</td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td class="sprite-cell"><img src="https://scavprototype.wiki.gg/images/thumb/8/8a/Ilmenite.png/50px-Ilmenite.png" class="sprite" alt="Ilmenite"></td>
+                    <td><strong>Ilmenite</strong></td>
+                    <td class="hp-cell">4,000</td>
+                    <td class="metallic-cell"><span class="no-badge">No</span></td>
+                    <td class="notes-cell">Spawns Ilmenite chunk when broken</td>
+                    <td class="sleep-bad">Bad</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="trivia">
+            <h3>Trivia</h3>
+            <ul>
+                <li>Each block represents a 0.3m × 0.3m area.</li>
+                <li>See: Tile fluids for liquid-like tiles placed in the game.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

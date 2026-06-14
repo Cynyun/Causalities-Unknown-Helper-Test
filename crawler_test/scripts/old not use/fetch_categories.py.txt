@@ -1,0 +1,117 @@
+import asyncio
+import aiohttp
+import json
+import os
+
+BASE_URL = "https://scavprototype.wiki.gg/api.php"
+
+async def fetch_categories(session):
+    params = {
+        "action": "query",
+        "list": "allpages",
+        "apnamespace": "14",
+        "aplimit": "500",
+        "format": "json"
+    }
+    
+    print(f"[Fetching] Categories from {BASE_URL}")
+    print(f"[Params] {json.dumps(params, indent=2)}")
+    
+    async with session.get(BASE_URL, params=params) as response:
+        if response.status != 200:
+            print(f"[Error] HTTP status: {response.status}")
+            return None
+        
+        data = await response.json()
+        return data
+
+def analyze_categories(data):
+    if not data or "query" not in data:
+        return None
+    
+    pages = data["query"].get("allpages", [])
+    print(f"\n[Analysis] Total categories found: {len(pages)}")
+    
+    categories = []
+    for page in pages:
+        title = page.get("title", "")
+        ns = page.get("ns", "")
+        pageid = page.get("pageid", "")
+        
+        # 提取分类名称（去掉Category:前缀）
+        if title.startswith("Category:"):
+            category_name = title[9:]
+        else:
+            category_name = title
+        
+        categories.append({
+            "pageid": pageid,
+            "title": title,
+            "name": category_name,
+            "namespace": ns
+        })
+    
+    # 按名称排序
+    categories.sort(key=lambda x: x["name"])
+    
+    # 统计分类数量
+    print(f"[Analysis] Categories in namespace 14 (Category namespace): {len(categories)}")
+    
+    # 显示部分示例
+    print("\n[Sample Categories] First 20 categories:")
+    for i, cat in enumerate(categories[:20], 1):
+        print(f"  {i:2d}. {cat['name']} (pageid: {cat['pageid']})")
+    
+    if len(categories) > 20:
+        print(f"  ... and {len(categories) - 20} more categories")
+    
+    # 统计名称模式
+    patterns = {}
+    for cat in categories:
+        prefix = cat["name"].split(":")[0] if ":" in cat["name"] else "no_prefix"
+        patterns[prefix] = patterns.get(prefix, 0) + 1
+    
+    print("\n[Pattern Analysis] Category name prefixes:")
+    for prefix, count in sorted(patterns.items(), key=lambda x: -x[1])[:10]:
+        print(f"  {prefix}: {count} categories")
+    
+    return categories
+
+async def main():
+    # 创建输出目录
+    os.makedirs("output", exist_ok=True)
+    
+    async with aiohttp.ClientSession() as session:
+        data = await fetch_categories(session)
+        
+        if data:
+            # 保存原始数据
+            raw_file = "output/categories_raw.json"
+            with open(raw_file, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            print(f"\n[Saved] Raw data to {raw_file}")
+            
+            # 分析并保存结构化数据
+            categories = analyze_categories(data)
+            if categories:
+                structured_file = "output/categories_structured.json"
+                with open(structured_file, "w", encoding="utf-8") as f:
+                    json.dump(categories, f, ensure_ascii=False, indent=2)
+                print(f"[Saved] Structured data to {structured_file}")
+                
+                # 生成Markdown报告
+                md_file = "output/categories_report.md"
+                with open(md_file, "w", encoding="utf-8") as f:
+                    f.write("# Wiki Categories Analysis Report\n\n")
+                    f.write(f"## Overview\n\n")
+                    f.write(f"- Total categories: {len(categories)}\n")
+                    f.write(f"- Source: {BASE_URL}\n\n")
+                    f.write("## Category List\n\n")
+                    f.write("| PageID | Category Name |\n")
+                    f.write("|--------|---------------|\n")
+                    for cat in categories:
+                        f.write(f"| {cat['pageid']} | {cat['name']} |\n")
+                print(f"[Saved] Report to {md_file}")
+
+if __name__ == "__main__":
+    asyncio.run(main())

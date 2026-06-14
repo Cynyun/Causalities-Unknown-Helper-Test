@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundtrack - Scav Prototype Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #00d4ff, #7b2fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            color: #a0a0a0;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+        
+        h2 {
+            color: #00d4ff;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            font-size: 1.5em;
+        }
+        
+        h3 {
+            color: #7b2fff;
+            margin: 18px 0 8px;
+        }
+        
+        .wiki-link {
+            color: #00d4ff;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(0, 212, 255, 0.5);
+        }
+        
+        .wiki-link:hover {
+            color: #7b2fff;
+            border-bottom-color: #7b2fff;
+        }
+        
+        .external-link {
+            color: #4ade80;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(74, 222, 128, 0.5);
+        }
+        
+        .external-link:hover {
+            color: #22c55e;
+            border-bottom-color: #22c55e;
+        }
+        
+        .audio-link {
+            color: #fbbf24;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(251, 191, 36, 0.5);
+        }
+        
+        .audio-link:hover {
+            color: #f59e0b;
+            border-bottom-color: #f59e0b;
+        }
+        
+        .wiki-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .wiki-table caption {
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #00d4ff;
+            padding: 15px;
+            background: rgba(0, 212, 255, 0.1);
+        }
+        
+        .wiki-table th, .wiki-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .wiki-table th {
+            background: linear-gradient(90deg, rgba(0, 212, 255, 0.15), rgba(123, 47, 255, 0.1));
+            color: #00d4ff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        
+        .wiki-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transition: background 0.2s ease;
+        }
+        
+        .wiki-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .track-name {
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .notes-cell {
+            max-width: 300px;
+            white-space: pre-wrap;
+            color: #b0b0b0;
+        }
+        
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .category-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+        
+        .category-section h2 {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .wiki-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .wiki-table th, .wiki-table td {
+                padding: 10px 12px;
+                font-size: 0.9em;
+            }
+            
+            .notes-cell {
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Soundtrack</h1>
+            <p>The game has a sizeable amount of ambient tracks and drones. This page lists all music tracks present in the game.</p>
+        </header>
+        
+        <div class="content">
+            <div class="category-section">
+                <h2>Tracks</h2>
+                <p>These tracks play in the background every couple of minutes. Each layer has its own set of tracks it will randomly play. Some tracks here are unique and either aren't used in the game yet, or don't play in a specific biome.</p>
+                
+                <table class="wiki-table">
+                    <caption>List of ambient tracks</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Plays in</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="track-name">Proxy</td><td><a href="https://scavprototype.wiki.gg/wiki/File:ProxyNew.mp3" class="audio-link" target="_blank">ProxyNew.mp3</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link" target="_blank">Gravel lands</a> / Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">Droning Grays</td><td><a href="https://scavprototype.wiki.gg/wiki/File:DroningGrays.ogg" class="audio-link" target="_blank">DroningGrays.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link" target="_blank">Gravel lands</a></td><td></td></tr>
+                        <tr><td class="track-name">Unfriendly Welcome</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Unfriendlywelcome.ogg" class="audio-link" target="_blank">Unfriendlywelcome.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link" target="_blank">Gravel lands</a></td><td></td></tr>
+                        <tr><td class="track-name">Begin Anew</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Strng_3.ogg" class="audio-link" target="_blank">Strng_3.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link" target="_blank">Gravel lands</a></td><td></td></tr>
+                        <tr><td class="track-name">Smooth Sailing</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Smoothsailing.ogg" class="audio-link" target="_blank">Smoothsailing.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link" target="_blank">Deeper gravel lands</a></td><td></td></tr>
+                        <tr><td class="track-name">Odd Place</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Gravel4.ogg" class="audio-link" target="_blank">Gravel4.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link" target="_blank">Deeper gravel lands</a></td><td></td></tr>
+                        <tr><td class="track-name">The Unknown</td><td><a href="https://scavprototype.wiki.gg/wiki/File:TheUnknown.ogg" class="audio-link" target="_blank">TheUnknown.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link" target="_blank">Deeper gravel lands</a></td><td></td></tr>
+                        <tr><td class="track-name">Disturbing Discovery</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Disturbingdiscovery.ogg" class="audio-link" target="_blank">Disturbingdiscovery.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link" target="_blank">Deeper gravel lands</a> / Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">Absolute</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Absolute.ogg" class="audio-link" target="_blank">Absolute.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link" target="_blank">Dried desert</a></td><td></td></tr>
+                        <tr><td class="track-name">What's With the Sand</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Whatswiththesand.ogg" class="audio-link" target="_blank">Whatswiththesand.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link" target="_blank">Dried desert</a></td><td></td></tr>
+                        <tr><td class="track-name">There's Landmines in the Desert</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Thereslandminesinthedesert.ogg" class="audio-link" target="_blank">Thereslandminesinthedesert.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link" target="_blank">Dried desert</a></td><td></td></tr>
+                        <tr><td class="track-name">It's Ionizing</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Itsionizing.ogg" class="audio-link" target="_blank">Itsionizing.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Wasteland" class="wiki-link" target="_blank">Wasteland</a></td><td></td></tr>
+                        <tr><td class="track-name">Fuel Assembly</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Desertmore.ogg" class="audio-link" target="_blank">Desertmore.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Wasteland" class="wiki-link" target="_blank">Wasteland</a></td><td></td></tr>
+                        <tr><td class="track-name">Biological Exclusion Zone</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Biologicalexclusionzone.ogg" class="audio-link" target="_blank">Biologicalexclusionzone.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Wasteland" class="wiki-link" target="_blank">Wasteland</a></td><td></td></tr>
+                        <tr><td class="track-name">The Flora is Moving</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Thefloraismoving.ogg" class="audio-link" target="_blank">Thefloraismoving.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Overgrown_depths" class="wiki-link" target="_blank">Overgrown depths</a></td><td></td></tr>
+                        <tr><td class="track-name">Lush Descent</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Junglesong.ogg" class="audio-link" target="_blank">Junglesong.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Overgrown_depths" class="wiki-link" target="_blank">Overgrown depths</a></td><td></td></tr>
+                        <tr><td class="track-name">Digging From Afar</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Jungle3.ogg" class="audio-link" target="_blank">Jungle3.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Overgrown_depths" class="wiki-link" target="_blank">Overgrown depths</a></td><td></td></tr>
+                        <tr><td class="track-name">It's Chilly in Here</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Itschillyinherecompressed.ogg" class="audio-link" target="_blank">Itschillyinherecompressed.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Frozen_chasm" class="wiki-link" target="_blank">Frozen chasm</a></td><td></td></tr>
+                        <tr><td class="track-name">Thermal Shock</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Thermalshock.ogg" class="audio-link" target="_blank">Thermalshock.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Frozen_chasm" class="wiki-link" target="_blank">Frozen chasm</a></td><td></td></tr>
+                        <tr><td class="track-name">Gaze Into the Pit</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Coldsong.ogg" class="audio-link" target="_blank">Coldsong.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Frozen_chasm" class="wiki-link" target="_blank">Frozen chasm</a> / Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">This Feels Weird</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Thisfeelsweird.ogg" class="audio-link" target="_blank">Thisfeelsweird.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Fungal_Pools" class="wiki-link" target="_blank">Fungal Pools</a></td><td></td></tr>
+                        <tr><td class="track-name">Rainfall Underground</td><td><a href="https://scavprototype.wiki.gg/wiki/File:RainfallUnderground.ogg" class="audio-link" target="_blank">RainfallUnderground.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Fungal_Pools" class="wiki-link" target="_blank">Fungal Pools</a> / Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">Refractions</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Synth.ogg" class="audio-link" target="_blank">Synth.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Crystalline_Hollow" class="wiki-link" target="_blank">Crystalline Hollow</a> / Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">Six Thousand Feet Under</td><td><a href="https://scavprototype.wiki.gg/wiki/File:SixThousandFeetUnder.ogg" class="audio-link" target="_blank">SixThousandFeetUnder.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Crystalline_Hollow" class="wiki-link" target="_blank">Crystalline Hollow</a></td><td></td></tr>
+                        <tr><td class="track-name">Downwards</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Downwards.ogg" class="audio-link" target="_blank">Downwards.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Geothermal_Vents" class="wiki-link" target="_blank">Geothermal Vents</a></td><td></td></tr>
+                        <tr><td class="track-name">Hydraulics</td><td><a href="https://scavprototype.wiki.gg/wiki/File:HydraulicsNew.ogg" class="audio-link" target="_blank">HydraulicsNew.ogg</a></td><td><a href="https://scavprototype.wiki.gg/wiki/Geothermal_Vents" class="wiki-link" target="_blank">Geothermal Vents</a> / Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">DEEP</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Deep.ogg" class="audio-link" target="_blank">Deep.ogg</a></td><td>Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">Other</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Other.ogg" class="audio-link" target="_blank">Other.ogg</a></td><td>Pre-run</td><td></td></tr>
+                        <tr><td class="track-name">Lab Testing</td><td><a href="https://scavprototype.wiki.gg/wiki/File:THETUTORIAL.ogg" class="audio-link" target="_blank">THETUTORIAL.ogg</a></td><td>Basic Course</td><td></td></tr>
+                        <tr><td class="track-name">Unethical Experiments</td><td><a href="https://scavprototype.wiki.gg/wiki/File:UnethicalExperiments.ogg" class="audio-link" target="_blank">UnethicalExperiments.ogg</a></td><td>First Aid Course</td><td class="notes-cell">Starts as soon as the tutorial's robotic arm cuts the Experiment for the first time to demonstrate bleeding.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="category-section">
+                <h2>Combat</h2>
+                <p>These are considered drones, but play only when actively threatened by another creature (or as a result of <a href="https://scavprototype.wiki.gg/wiki/Brain_health#Effects" class="wiki-link" target="_blank">brain damage</a>).</p>
+                
+                <table class="wiki-table">
+                    <caption>List of combat tracks</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Plays during</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="track-name">Spiders in the Dark</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Shadecrawlercombat.ogg" class="audio-link" target="_blank">Shadecrawlercombat.ogg</a></td><td>Plays during active combat with <a href="https://scavprototype.wiki.gg/wiki/Shade_crawler" class="wiki-link" target="_blank">shade crawlers</a>.</td><td></td></tr>
+                        <tr><td class="track-name">Hostile Encounter</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Combatnew.ogg" class="audio-link" target="_blank">Combatnew.ogg</a></td><td>Plays during active combat when no specific threat theme is present.</td><td></td></tr>
+                        <tr><td class="track-name">There's Hundreds</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Cavetickthreat.ogg" class="audio-link" target="_blank">Cavetickthreat.ogg</a></td><td>Plays during active combat with <a href="https://scavprototype.wiki.gg/wiki/Cave_tick" class="wiki-link" target="_blank">cave ticks</a>.</td><td></td></tr>
+                        <tr><td class="track-name">RUN FOR YOUR LIFE</td><td><a href="https://scavprototype.wiki.gg/wiki/File:RUN_FOR_YOUR_LIFE.ogg" class="audio-link" target="_blank">RUN_FOR_YOUR_LIFE.ogg</a></td><td>Plays during active combat with an <a href="https://scavprototype.wiki.gg/wiki/Elder_thornback" class="wiki-link" target="_blank">elder thornback</a>, when it's in stage 1 (&gt;=3750 health).</td><td></td></tr>
+                        <tr><td class="track-name">Combat in the Cold</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Snowstridertheme.ogg" class="audio-link" target="_blank">Snowstridertheme.ogg</a></td><td>Plays during active combat with <a href="https://scavprototype.wiki.gg/wiki/Snow_strider" class="wiki-link" target="_blank">snow striders</a>.</td><td></td></tr>
+                        <tr><td class="track-name">A Murder of Your Own</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Survivorcombat.ogg" class="audio-link" target="_blank">Survivorcombat.ogg</a></td><td>Plays during active combat with <a href="https://scavprototype.wiki.gg/wiki/Trader" class="wiki-link" target="_blank">other survivors</a>.</td><td></td></tr>
+                        <tr><td class="track-name">CHASE IT DOWN</td><td><a href="https://scavprototype.wiki.gg/wiki/File:CHASE_IT_DOWN.ogg" class="audio-link" target="_blank">CHASE_IT_DOWN.ogg</a></td><td>Plays during active combat with an <a href="https://scavprototype.wiki.gg/wiki/Elder_thornback" class="wiki-link" target="_blank">elder thornback</a>, when it's not in stage 1 (&lt;3750 health).</td><td></td></tr>
+                        <tr><td class="track-name">Threat Simulacrum</td><td><a href="https://scavprototype.wiki.gg/wiki/File:THECOMBAT.ogg" class="audio-link" target="_blank">THECOMBAT.ogg</a></td><td>Plays during active combat in the sandbox or tutorial.</td><td></td></tr>
+                        <tr><td class="track-name">Paranormal Threat</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Hollowcombat.ogg" class="audio-link" target="_blank">Hollowcombat.ogg</a></td><td>Plays during active combat with a <a href="https://scavprototype.wiki.gg/wiki/Manifestation" class="wiki-link" target="_blank">Manifestation</a> in <a href="https://scavprototype.wiki.gg/wiki/Crystalline_Hollow" class="wiki-link" target="_blank">Crystalline Hollow</a>.</td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="category-section">
+                <h2>Drones</h2>
+                <p>There are a few ambient drones that play when specific conditions are met. Normal ambient music is silenced when a drone is playing.</p>
+                
+                <table class="wiki-table">
+                    <caption>List of drones</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Plays when</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="track-name">Agony</td><td><a href="https://scavprototype.wiki.gg/wiki/File:PainDrone.ogg" class="audio-link" target="_blank">PainDrone.ogg</a></td><td>Plays when above 60% <a href="https://scavprototype.wiki.gg/wiki/Pain" class="wiki-link" target="_blank">Pain</a>. Gets louder from 60% to 85%.</td></tr>
+                        <tr><td class="track-name">Is this the end..?</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Isthistheend.ogg" class="audio-link" target="_blank">Isthistheend.ogg</a></td><td>Plays when the player is in dire physical health (<a href="https://scavprototype.wiki.gg/wiki/Injuries" class="wiki-link" target="_blank">bleeding out</a>, <a href="https://scavprototype.wiki.gg/wiki/Hunger" class="wiki-link" target="_blank">starving</a>, <a href="https://scavprototype.wiki.gg/wiki/Radiation" class="wiki-link" target="_blank">severely irradiated</a>, <a href="https://scavprototype.wiki.gg/wiki/Fibrillation" class="wiki-link" target="_blank">fibrillation progressing</a>, etc).</td></tr>
+                        <tr><td class="track-name">Exhausted</td><td><a href="https://scavprototype.wiki.gg/wiki/File:ExhaustedLoop.ogg" class="audio-link" target="_blank">ExhaustedLoop.ogg</a></td><td>Plays when the player is below 50% <a href="https://scavprototype.wiki.gg/wiki/Stamina" class="wiki-link" target="_blank">stamina</a>. Gets louder the lower stamina is.</td></tr>
+                        <tr><td class="track-name">Tired</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Tired.ogg" class="audio-link" target="_blank">Tired.ogg</a></td><td>Plays when the player is below 25% energy. Gets louder the lower energy is.</td></tr>
+                        <tr><td class="track-name">Bio-hazard</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Biohazard.ogg" class="audio-link" target="_blank">Biohazard.ogg</a></td><td>Plays when the player is currently getting irradiated (chipped only).</td></tr>
+                        <tr><td class="track-name">despair</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Despair.ogg" class="audio-link" target="_blank">Despair.ogg</a></td><td>Plays when the player's <a href="https://scavprototype.wiki.gg/wiki/Mood" class="wiki-link" target="_blank">Mood</a> is below -81.5.</td></tr>
+                        <tr><td class="track-name">What have I done..?</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Whathaveidone.ogg" class="audio-link" target="_blank">Whathaveidone.ogg</a></td><td>Plays after a suicide cut. Not technically a drone and will be muted by other drones, therefore requires quickly improving your mood and bandaging the cut to be heard.</td></tr>
+                        <tr><td class="track-name">Drowning</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Drowning.ogg" class="audio-link" target="_blank">Drowning.ogg</a></td><td>Plays when the player is underwater without <a href="https://scavprototype.wiki.gg/wiki/Advanced_scuba_diving_gear" class="wiki-link" target="_blank">Advanced scuba diving gear</a> and below 60% SpO2. Gets louder from 60% to 20% SpO2.</td></tr>
+                        <tr><td class="track-name">Draw Your Last Breath (1)</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Dying.ogg" class="audio-link" target="_blank">Dying.ogg</a></td><td>Plays when the player is unconscious and actively dying.</td></tr>
+                        <tr><td class="track-name">Draw Your Last Breath (2)</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Death.ogg" class="audio-link" target="_blank">Death.ogg</a></td><td>Plays on deceased screen.</td></tr>
+                        <tr><td class="track-name">Cave-in</td><td><a href="https://scavprototype.wiki.gg/wiki/File:EarthquakeDrone.ogg" class="audio-link" target="_blank">EarthquakeDrone.ogg</a></td><td>Plays during earthquakes.</td></tr>
+                        <tr><td class="track-name">Radiation pulse</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Radlinepulse.ogg" class="audio-link" target="_blank">Radlinepulse.ogg</a></td><td>Plays when the player is within 22.5 meters of the radiation line. Gets louder the closer the radiation line is.</td></tr>
+                        <tr><td class="track-name">Familiar Face</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Tradertheme.ogg" class="audio-link" target="_blank">Tradertheme.ogg</a></td><td>Plays when the trading menu is open.</td></tr>
+                        <tr><td class="track-name">Critical loop</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Criticalloop.ogg" class="audio-link" target="_blank">Criticalloop.ogg</a></td><td>Plays when the player is in critical condition (but not actively dying) while conscious</td></tr>
+                        <tr><td class="track-name">Critical loop unconscious</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Criticalloop-unconscious.ogg" class="audio-link" target="_blank">Criticalloop-unconscious.ogg</a></td><td>Plays when the player is in critical condition (but not actively dying) while unconscious</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="category-section">
+                <h2>Stings</h2>
+                <p>These aren't considered actual tracks, instead being audio cues for certain events in the game.</p>
+                
+                <table class="wiki-table">
+                    <caption>List of stings</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Plays when</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="track-name">Skill up</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Levelup.ogg" class="audio-link" target="_blank">Levelup.ogg</a></td><td>Plays when any of the player's skills increase.</td></tr>
+                        <tr><td class="track-name">Last stand drone</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Laststanddrone.ogg" class="audio-link" target="_blank">Laststanddrone.ogg</a></td><td>Plays when <a href="https://scavprototype.wiki.gg/wiki/Last_stand" class="wiki-link" target="_blank">Last stand</a> activates.</td></tr>
+                        <tr><td class="track-name">Last stand heartbeat</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Laststandheartbeat.ogg" class="audio-link" target="_blank">Laststandheartbeat.ogg</a></td><td>Plays when <a href="https://scavprototype.wiki.gg/wiki/Last_stand" class="wiki-link" target="_blank">Last stand</a> activates.</td></tr>
+                        <tr><td class="track-name">Self harm</td><td><a href="https://scavprototype.wiki.gg/wiki/File:harmSting.ogg" class="audio-link" target="_blank">harmSting.ogg</a></td><td>Plays when the player cuts themselves. Pitched down for the suicide cut.</td></tr>
+                        <tr><td class="track-name">Cut eye</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Cuteye.ogg" class="audio-link" target="_blank">Cuteye.ogg</a></td><td>Plays when the player cuts their eye.</td></tr>
+                        <tr><td class="track-name">Hunger (Up/Down)</td><td><a href="https://scavprototype.wiki.gg/wiki/File:hungerup.wav" class="audio-link" target="_blank">hungerup.wav</a> / <a href="https://scavprototype.wiki.gg/wiki/File:hungerdown.wav" class="audio-link" target="_blank">hungerdown.wav</a></td><td>Plays when the player's hunger value changes.</td></tr>
+                        <tr><td class="track-name">Thirst (Up/Down)</td><td><a href="https://scavprototype.wiki.gg/wiki/File:thirstup.wav" class="audio-link" target="_blank">thirstup.wav</a> / <a href="https://scavprototype.wiki.gg/wiki/File:thirstdown.wav" class="audio-link" target="_blank">thirstdown.wav</a></td><td>Plays when the player's thirst value changes.</td></tr>
+                        <tr><td class="track-name">Mood (Up/Down)</td><td><a href="https://scavprototype.wiki.gg/wiki/File:moodup.wav" class="audio-link" target="_blank">moodup.wav</a> / <a href="https://scavprototype.wiki.gg/wiki/File:mooddown.wav" class="audio-link" target="_blank">mooddown.wav</a></td><td>Plays when the player's mood value changes.</td></tr>
+                        <tr><td class="track-name">Vomit warning</td><td><a href="https://scavprototype.wiki.gg/wiki/File:vomitwarning.ogg" class="audio-link" target="_blank">vomitwarning.ogg</a></td><td>Plays when the player is about to vomit.</td></tr>
+                        <tr><td class="track-name">Blood vomit warning</td><td><a href="https://scavprototype.wiki.gg/wiki/File:bloodvomitwarning.ogg" class="audio-link" target="_blank">bloodvomitwarning.ogg</a></td><td>Plays when the player is about to vomit blood.</td></tr>
+                        <tr><td class="track-name">Lobotomy</td><td><a href="https://scavprototype.wiki.gg/wiki/File:lobotomy.ogg" class="audio-link" target="_blank">lobotomy.ogg</a></td><td>Plays during the frozen screen visual effect when the player is brain damaged.</td></tr>
+                        <tr><td class="track-name">Thornback Defeat</td><td><a href="https://scavprototype.wiki.gg/wiki/File:ThornbackDefeat.ogg" class="audio-link" target="_blank">ThornbackDefeat.ogg</a></td><td>Plays after an <a href="https://scavprototype.wiki.gg/wiki/Elder_thornback" class="wiki-link" target="_blank">Elder thornback</a> has been defeated.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="category-section">
+                <h2>Bonus tracks</h2>
+                <p>These only appear when using the <a href="https://scavprototype.wiki.gg/wiki/MP3_player" class="wiki-link" target="_blank">MP3 player</a>.</p>
+                
+                <table class="wiki-table">
+                    <caption>List of bonus tracks</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="track-name">Always Watching</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Bonus-Alwayswatching.ogg" class="audio-link" target="_blank">Bonus-Alwayswatching.ogg</a></td><td>Bonus-AlwaysWatching.ogg in files. <a href="https://soundcloud.com/orsoniks/always-watching" class="external-link" target="_blank">Always Watching</a> from Gooey.</td></tr>
+                        <tr><td class="track-name">Blade</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Bonus-Blade.ogg" class="audio-link" target="_blank">Bonus-Blade.ogg</a></td><td>Bonus-Blade.ogg in files. <a href="https://soundcloud.com/orsoniks/blade" class="external-link" target="_blank">Blade</a> from Gooey.</td></tr>
+                        <tr><td class="track-name">Legacy Death</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Bonus-legacydeath.ogg" class="audio-link" target="_blank">Bonus-legacydeath.ogg</a></td><td>Bonus-legacydeath.ogg in files</td></tr>
+                        <tr><td class="track-name">Microchip</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Bonus-microchip.ogg" class="audio-link" target="_blank">Bonus-microchip.ogg</a></td><td>Bonus-microchip.ogg in files. <a href="https://soundcloud.com/orsoniks/microchip" class="external-link" target="_blank">Microchip</a> from Gooey.</td></tr>
+                        <tr><td class="track-name">Old D&B</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Bonus-olddnb.ogg" class="audio-link" target="_blank">Bonus-olddnb.ogg</a></td><td>Bonus-olddnb.ogg in files. Appears to be an older version of RUN FOR YOUR LIFE and CHASE IT DOWN.</td></tr>
+                        <tr><td class="track-name">Scratched Steel</td><td><a href="https://scavprototype.wiki.gg/wiki/File:Bonus-ScratchedSteel.ogg" class="audio-link" target="_blank">Bonus-ScratchedSteel.ogg</a></td><td>Bonus-ScratchedSteel.ogg in files. <a href="https://soundcloud.com/orsoniks/scratched-steel" class="external-link" target="_blank">Scratched Steel</a> from Gooey.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="category-section">
+                <h2>Trivia</h2>
+                <ul>
+                    <li>Several songs in this game share leitmotifs with Orsoniks' previous works.
+                        <ul>
+                            <li><strong>Biological Exclusion Zone</strong> has a leitmotif from <a href="https://soundcloud.com/orsoniks/bio-synthesis" class="external-link" target="_blank">Bio-synthesis</a> from Gooey.</li>
+                            <li><strong>Paranormal Threat</strong> has a leitmotif from <a href="https://soundcloud.com/orsoniks/clear" class="external-link" target="_blank">Clear</a> from Gooey.</li>
+                            <li><strong>Downwards</strong> has a leitmotif from <a href="https://soundcloud.com/orsoniks/scratched-steel" class="external-link" target="_blank">Scratched Steel</a> from Gooey.</li>
+                            <li><strong>Six Thousand Feet Under</strong> has a leitmotif from <a href="https://soundcloud.com/orsoniks/lost-lights" class="external-link" target="_blank">Lost Lights</a> from Gooey.</li>
+                            <li><strong>Combat in the Cold</strong> and <strong>Thermal Shock</strong> have leitmotifs from <a href="https://soundcloud.com/orsoniks/uncertain" class="external-link" target="_blank">Uncertain</a> from Gooey.</li>
+                        </ul>
+                    </li>
+                    <li>Most of the <a href="https://scavprototype.wiki.gg/wiki/Soundtrack#Bonus_tracks" class="wiki-link" target="_blank">bonus tracks</a> are from Orsoniks' previous project, Gooey.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+{{outdated}}
+
+'''Items''' are loose objects dropped by most breakable [[:Category:Building|structures]], [[Enemies|enemies]], and [[Trader|traders]]. Items can be carried around and thrown. Most can be used in the inventory, health panel, or swung.
+
+There are currently '''432''' items (including inaccessible items) in the Itch.io build. <!-- need someone to sort through which ones -->
+
+== Item weight ==
+
+{{Main|Encumbrance}}
+
+[[File:Dressing weight tooltip.png|thumb|The bottom of the tooltip description of [[dressing]]. Notice the weight tag at the top of the block.]]
+
+An item's weight determines the cost it imposes on the player's carrying capacity and the [[Items#Containers|containers]] it can fit in. Weight incentivizes players to make decisions and plan ahead with which items to keep as they encounter more.
+
+Heavier items give more recoil when thrown. Many items lose weight as they lose condition, a trait named '''scale weight''', which linearly goes from full weight at {{SCAV/Condition|100%|label=yes}} to 0.1u at {{SCAV/Condition|0%|label=yes}}.<ref>Item.cs:Item.totalWeight</ref>
+
+== Condition ==
+
+[[File:Dressing condition tooltip.png|thumb|The top of the tooltip description of [[dressing]]. Notice the condition, a colored percentage.]]
+
+An item's condition determines the amount of time or uses it has, in the context of decay rate and condition loss on use respectively. Most items are destroyed when their condition reaches 0%. Many items can have their condition transferred onto other identical items, done by dragging the item onto another item.
+
+The tooltip's condition changes color as it decreases, from {{SCAV/Condition|100%}} to {{SCAV/Condition|50%}}, {{SCAV/Condition|1%}}, and {{SCAV/Condition|0%}}.
+
+Items sometimes give their full effect when used from the inventory, regardless of their condition. This means that, for example, a [[Neural Booster]] at {{SCAV/Condition|1%|label=yes}} and another [[Neural Booster]] at {{SCAV/Condition|15%|label=yes}} will give the same effects when consumed.
+
+* Note that, in general, liquids do scale most of their effects correctly to the actual volume consumed.
+
+{{Anchor|Wetness}}Certain items can become wet upon contact with [[liquids]]. Wet items passively lose condition 6 times faster<ref>Item.cs:Item.HandleDecay()</ref>.
+items like the [[shotgun]], [[pistol]], [[makeshift rifle]],  [[rifle]], and [[jetpack]] have special interactions with [[liquids]], as upon getting wet they have a flat +4.5% increased chance of malfunctioning.<ref>GunScript.cs:GunScript.JamChance()</ref> [[Torch|Torches]] and [[Campfire|Campfires]] are immediately set to {{SCAV/Condition|0%|label=yes}} and extinguished upon becoming wet.<ref>CustomItemBehaviour.cs:CustomItemBehaviour.Update()</ref> Items stay wet for 120 seconds.<ref>Item.cs:Item.isWet</ref>
+
+== Crafting ==
+
+{{Main|Crafting}}
+
+Certain items can be combined in the inventory to create new items.
+
+The player can open the crafting menu by pressing C or clicking the button in the bottom left corner of the screen.
+
+Some items have special qualities that make them useful for certain crafting recipes, such as "Hammering" or "Foliage."
+
+== Items by category ==
+
+=== [[File:Trader medical.png|middle|link=]] Medical ===
+'''Medical items''' recover [[Limb health|limb health]], treat most physical [[Injuries|injuries]], and delay death. Proper usage of them causes minimal consequence.
+
+Dropped by [[medical crate|medical crates]], [[Container crate|container crates]], [[drop capsule|drop capsules]], and [[Life-pod chest|life pod chests]].
+
+<tabber>
+|-| All items = {{Medical items}}
+|-| Summary =
+</tabber>
+
+=== [[File:Trader drugs.png|link=]] Drugs ===
+
+'''Drugs''' are powerful items that influence the body as a whole. They affect [[Pain|pain]] recovery and change values such as blood viscosity, [[radiation]], [[sickness]], and [[mood]].
+
+Dropped by [[medical crate|medical crates]], [[drop capsule|drop capsules]], and [[Life-pod chest|life pod chests]].
+
+<tabber>
+|-| All items = {{Drugs}}
+|-| Summary = {{Drug_items_summary}}
+</tabber>
+
+=== [[File:Trader food.png|link=]] Food ===
+
+'''Food items''' are consumables that mainly fill the [[hunger]] bar and influence permanent [[mood]].
+
+Dropped by [[Food box]], [[drop capsule|drop capsules]], and [[Life-pod chest|life pod chests]].
+
+<tabber>
+|-| All items = {{Food items}}
+|-| Summary = {{Food items summary}}
+</tabber>
+
+=== [[File:Trader water.png|link=]] Water ===
+
+Water items are consumables that mainly fill the [[thirst]] bar and directly increase permanent [[mood]]. Some give [[energized]] or [[Energized|caffeine]].
+
+Dropped by [[medical crate|medical crates]], [[Food box]], [[drop capsule|drop capsules]], and [[Life-pod chest|life pod chests]]. 
+
+<tabber>
+|-| All items = {{Water items}}
+|-| Summary = {{Water items summary}}
+</tabber>
+
+=== [[File:Trader containers.png|link=]] Containers ===
+
+'''Containers''' store any amount of items, limited only by their capacities and maximum item weights. Containers other than the [[Grav-Bag]] decay while in use (while holding at least one item).
+
+Dropped by [[container crate|container crates]], [[drop capsule|drop capsules]], and [[Life-pod chest|life pod chests]].
+
+<tabber>
+|-| All items = {{Container items}}
+|-| Summary = {{Container_items_summary}}
+</tabber>
+
+=== [[File:Trader tools.png|link=]] Tools ===
+
+<tabber>
+|-| All items = {{Tool items}}
+|-| Summary = {{Tool_items_summary}}
+</tabber>
+
+=== [[File:Trader utility.png|link=]] Utility ===
+* Some armor can still deal protection even if they aren't equipped/dropped but they still do take damage like normal. (bug)
+
+<tabber>
+|-| All items = {{Utility items}}
+|-| Summary = {{Utility items summary}}
+</tabber>
+
+=== [[File:Category plant.png|link=]] Plant drops ===
+
+<tabber>
+
+|-| All items = {{Plant drops}}
+|-| Summary = {{Plant drops summary}}
+
+</tabber>
+=== [[File:Category materials.png|link=]] Materials ===
+'''Materials''' are not very useful on their own, however can be crafted into more usable items.
+<tabber>
+|-| All items = {{Materials}}
+|-| Summary = {{Materials summary}}
+</tabber>
+
+=== [[File:Category other.png|link=]] Other ===
+
+<tabber>
+|-| All items = {{Other items}}
+|-| Summary = {{Other items summary}}
+</tabber>
+
+[[zh:物品]]

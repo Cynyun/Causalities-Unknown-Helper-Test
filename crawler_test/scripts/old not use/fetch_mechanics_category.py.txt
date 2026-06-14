@@ -1,0 +1,193 @@
+import asyncio
+import aiohttp
+import json
+import os
+
+BASE_URL = "https://scavprototype.wiki.gg/api.php"
+
+async def fetch_category_members(session, category, cmcontinue=None, continue_token=None):
+    params = {
+        "action": "query",
+        "list": "categorymembers",
+        "cmtitle": category,
+        "cmtype": "subcat|page",
+        "cmlimit": "500",
+        "format": "json"
+    }
+    
+    if cmcontinue:
+        params["cmcontinue"] = cmcontinue
+    if continue_token:
+        params["continue"] = continue_token
+    
+    print(f"[Fetching] Category members: {category} (cmcontinue: {cmcontinue})")
+    
+    async with session.get(BASE_URL, params=params) as response:
+        if response.status != 200:
+            print(f"[Error] HTTP status: {response.status}")
+            return None
+        
+        data = await response.json()
+        return data
+
+async def fetch_page_content(session, titles):
+    params = {
+        "action": "query",
+        "titles": "|".join(titles),
+        "prop": "revisions",
+        "rvprop": "content",
+        "format": "json"
+    }
+    
+    async with session.get(BASE_URL, params=params) as response:
+        if response.status != 200:
+            print(f"[Error] HTTP status: {response.status}")
+            return None
+        
+        data = await response.json()
+        return data
+
+async def main():
+    category = "Category:Mechanics"
+    
+    # 获取分类下所有成员
+    print("=" * 60)
+    print(f"Fetching category members for: {category}")
+    print("=" * 60)
+    
+    async with aiohttp.ClientSession() as session:
+        all_members = []
+        cmcontinue = None
+        continue_token = None
+        page_count = 0
+        
+        # 分页获取所有分类成员
+        while True:
+            data = await fetch_category_members(session, category, cmcontinue, continue_token)
+            
+            if not data:
+                break
+            
+            members = data["query"].get("categorymembers", [])
+            all_members.extend(members)
+            page_count += len(members)
+            print(f"[Found] {len(members)} members (total: {page_count})")
+            
+            # 检查是否需要继续
+            if "continue" in data:
+                cmcontinue = data["continue"].get("cmcontinue")
+                continue_token = data["continue"].get("continue")
+                if not cmcontinue:
+                    break
+            else:
+                break
+        
+        print(f"\n[Complete] Total members found: {len(all_members)}")
+        
+        # 提取页面标题
+        page_titles = [m["title"] for m in all_members if m.get("ns") == 0]
+        subcat_titles = [m["title"] for m in all_members if m.get("ns") == 14]
+        
+        print(f"\n[Pages] {len(page_titles)} pages found:")
+        for title in page_titles[:10]:
+            print(f"  - {title}")
+        if len(page_titles) > 10:
+            print(f"  ... and {len(page_titles) - 10} more")
+        
+        print(f"\n[Subcategories] {len(subcat_titles)} subcategories found:")
+        for title in subcat_titles:
+            print(f"  - {title}")
+        
+        # 获取页面内容（分批获取，每批20个）
+        all_pages_data = {}
+        batch_size = 20
+        
+        for i in range(0, len(page_titles), batch_size):
+            batch = page_titles[i:i+batch_size]
+            print(f"\n[Fetching pages] Batch {i//batch_size + 1}: {len(batch)} pages")
+            
+            data = await fetch_page_content(session, batch)
+            if data and "query" in data and "pages" in data["query"]:
+                all_pages_data.update(data["query"]["pages"])
+        
+        # 构建输出数据
+        output = {
+            "batchcomplete": "",
+            "query": {
+                "pages": all_pages_data
+            }
+        }
+        
+        # 保存原始数据
+        os.makedirs("output", exist_ok=True)
+        raw_file = "output/entry_pages_raw.json"
+        with open(raw_file, "w", encoding="utf-8") as f:
+            json.dump(output, f, ensure_ascii=False, indent=2)
+        print(f"\n[Saved] Raw data to {raw_file}")
+        
+        # 生成分析数据
+        analysis = []
+        for pageid, pageinfo in all_pages_data.items():
+            title = pageinfo.get("title", "Unknown")
+            ns = pageinfo.get("ns", 0)
+            
+            if "missing" in pageinfo:
+                analysis.append({
+                    "pageid": pageid,
+                    "title": title,
+                    "status": "missing",
+                    "ns": ns
+                })
+            else:
+                revisions = pageinfo.get("revisions", [])
+                if revisions:
+                    content = revisions[0].get("*", "")
+                    analysis.append({
+                        "pageid": pageid,
+                        "title": title,
+                        "ns": ns,
+                        "content_length": len(content),
+                        "has_content": len(content) > 0,
+                        "status": "success"
+                    })
+                else:
+                    analysis.append({
+                        "pageid": pageid,
+                        "title": title,
+                        "ns": ns,
+                        "status": "no_revisions"
+                    })
+        
+        analysis_file = "output/entry_pages_analysis.json"
+        with open(analysis_file, "w", encoding="utf-8") as f:
+            json.dump(analysis, f, ensure_ascii=False, indent=2)
+        print(f"[Saved] Analysis to {analysis_file}")
+        
+        # 保存 Mechanics 相关页面到单独文件
+        os.makedirs("output/entry_pages", exist_ok=True)
+        
+        for pageid, pageinfo in all_pages_data.items():
+            if "missing" not in pageinfo:
+                title = pageinfo.get("title", "Unknown")
+                revisions = pageinfo.get("revisions", [])
+                if revisions:
+                    content = revisions[0].get("*", "")
+                    content_format = revisions[0].get("contentformat", "")
+                    
+                    if content_format == "text/x-wiki":
+                        ext = ".wiki"
+                    elif content.startswith("#REDIRECT"):
+                        ext = ".redirect.txt"
+                    else:
+                        ext = ".txt"
+                    
+                    filename = title.replace("/", "_").replace(" ", "_") + ext
+                    filepath = os.path.join("output/entry_pages", filename)
+                    
+                    with open(filepath, "w", encoding="utf-8") as f:
+                        f.write(content)
+                    
+                    print(f"[Saved page] {title} -> {filename}")
+
+if __name__ == "__main__":
+    asyncio.run(main())

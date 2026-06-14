@@ -1,0 +1,1216 @@
+:''Not to be mistaken with [[Tile fluids]]''
+------
+
+Fluids are substances that can be put in [[Fluid Containers|fluid containers]]. 
+
+Dropping a [[Fluid Containers|fluid container]] in a puddle of any [[Tile Fluids|Tile Fluid]] will fill it with the fluid, 200ml of fluid per block of tile fluid.
+
+Fluids can be drank by dragging most fluid containers to the middle of your inventory, same as with eating food, applied (by dragging a fluid container containing the fluid to a limb on the health menu) and injected, by using a handful of special fluid containers that have that ability. (Drag the fluid container to the injection site on the health menu, same as with applying. Some will start the syringe minigame, while others inject a certain predetermined amount.)
+
+Summary table of fluids:
+<tabber>
+|-| All Fluids = {{Liquid items}}
+</tabber>The following tables are valued per mL unless otherwise stated, and are sorted alphabetically:<!-- Note: certain things are left blank or have "Nothing" listed where one may seriously doubt they do nothing, in these cases there has simply not been enough diving in the code to fill them in, and you are obliged to assist in doing so -->
+{| class="wikitable mw-collapsible sortable"
+|+All Fluids
+!Fluid
+!Description
+!Effects if Applied
+!Effects if Drank
+!Effects if Injected
+!Value Per Liter
+!Crafting Qualities
+|-
+|[[Alcohol]]
+|Unlabeled alcohol. While you can't digest it, it is useful for disinfecting wounds.
+| +0.1 Pain
++3.5 Disinfect
+| +0.075 Thirst 
+-0.0025 Temperature
+
++0.07 Sickness
+| +0.263 Sickness
++0.075 Blood Viscosity
+|12
+|Antiseptic(0.4)
+Water(0.7)
+|-
+|[[Blood sac|Alien Blood]]
+|Yellow blood from an alien. While it looks similar to yours, it visibly differs a bit. Shouldn't be too bad to use as replacement blood, though.
+|Can not be applied
+| +0.027 Thirst
+
++0.08 Sickness
+
+-0.0093 Happiness
+| +0.035 Blood Volume
+
++0.027 Sickness
+
++0.014 Septic Shock
+|20
+|Blood(0.8)
+|-
+|[[Amiodarone]]
+|An antiarrhythmic medication used to treat and prevent fibrillation from occurring. Will cause most arrhythmias to slowly regress, but causes mild internal damage. Only works intravenously. 20ml per minute.
+|Can not be applied
+| +0.1 Sickness
+| for 3 ticks per ml:
+-0.25 muscle health in head, thorax and abdomen
+
+Lowers fibrillation by 2 each second
+|185
+|NA
+|-
+|[[Antibiotics]]
+|Pills which increase your immunity for some time, counteracting all infections. Upsetting taste. 
+|Can not be applied
+| -0.05 Happiness
+-0,25 Septic Shock
+
++25 [[Immunity]]
+| +1.75 Sickness
++0.5 Blood Viscosity
+|180
+|NA
+|-
+|[[Antidepressants]]
+|Potent antidepressant pills. Makes you feel everything less for some time, and slowly increases happiness. Might have side effects.
+|Can not be applied
+| +0.05 Happiness
+| +0.35 Sickness
++0.1 Blood Viscosity
+|120
+|NA
+|-
+|[[Antiseptic]]
+|Basic antiseptic fluid. Counteracts infections and stings a little.
+| +1 Pain per ml
+
++24 Disinfect per ml
+| +0.004 Thirst
+
++0.15 Sickness
+
++24 Disinfect per ml on Head
+| +0.438 Sickness
+
++0.125 Blood Viscosity
+|55
+|Antiseptic(1.5)
+|-
+|[[Antiserum]]
+|Blood serum containing antibodies to fight off most common infections. Increases immunity and helps reduce sepsis. Slightly increases blood volume.
+|Can not be applied
+| +0.075 Blood Volume
++1 Immunity
+
++0.3 Sickness
+| -0.2 Septic Shock
++0.06 Blood Volume
+
++6 Immunity
+
++3 Disinfect
+|160
+|NA
+|-
+|Antivenom
+|A treatment for evenomation [sic], it's composed of antibodies that disable hemotoxins in the bloodstream. Works intravenously.
+|Can not be applied
+| +0.24 Sickness
+| -0.8 Total venom
+|130
+|NA
+|-
+|[[Anti-rad|Anti Rad]]
+|Experimental medicine that directly reduces the effects of radiation sickness when taken. Will require higher dosage for severe illness.
+|Can not be applied
+|for 4.5 seconds per ml:
+-0.2 Radiation Sickness (regardless of dosage) every second
+| +0.35 Sickness
++0.1 Blood Viscosity
+|120
+|NA
+|-
+|[[Apple juice|Apple Juice]]
+|Fruit juice made by the maceration and pressing of an apple. Tasty!
+|Can not be applied
+| +0.09 Thirst
++0.001 Weight Gain
+
+-0.003 Temperature
+
++0.01 Happiness
+| +0.14 Sickness
++0.04 Blood Viscosity
+|14
+|NA
+|-
+|Biochem Fluid
+|Advanced chemical compound that greatly promotes chemical reactions and is able to mend certain materials together, or even melt them. Very commonly used in crafting.
+|Can not be applied
+| +0.1 Sickness
+-0.1 Happiness
+
+all limbs:
+
++.05 [[Pain]]
+
+-0.03 [[Muscle health|Muscle Health]]
+
++2 [[Disinfection|Disinfect]] 
+| +0.3 Disinfect
++0.1 Sickness
+
+all limbs:
+
+-0.01 Muscle Health
+
++0.04 pain
+|45
+|NA
+|-
+|[[Bleach]]
+|Chemical product used to remove color from fiber, or to disinfect. Can be used to disinfect wounds. Drinking is lethal.
+| +0.25 Pain
++4 Disinfect          
+
+-0.15 Muscle Health           
+
+-0.2 Skin Healing          
+
+-0.05 [[Infection]] Progress          
+| +0.07 Thirst
+-0.05 Happiness
+
+for 3 ticks per ml:
+
+-0.2 Thirst
+
+-0.1 Skin Health
+
+-0.225 Muscle Health
+
++1.5 Pain if pain <50
+
++0.3 Sickness
+| +1.75 Sickness
++0.5 Blood Viscosity
+|6
+|Antiseptic(0.8)
+|-
+|[[Blood]]
+|Yellow blood. While the color seems normal to you, it's apparently a side effect of the bio-engineering process. Used in treating hypovolemia.
+|Can not be applied
+| +0.027 Thirst
++0.08 Sickness
+
+-0.0093 Happiness
+| +0.04 Blood Volume
+|20
+|Blood(1)
+|-
+|[[Braingrow]]
+|Special orally-taken medicine that stimulates brain regrowth. Increases brain integrity, but often has serious side effects.
+|Can not be applied
+| -0.25 Happiness 
++1 Sickness 
+
+Chance to Vomit
+
+Braingrow Sickness +60 
+
+if any Braingrow Sickness or took more than 40 ml:
+
++0.5 Shock
+
+Ragdoll
+
+Get [[Mindwipe|Mindwiped]]
+
+
+
+for 100 ticks:
+
++0.005 Brain Health
+| +0.35 Sickness
++0.1 Blood Viscosity
+|500
+|NA
+|-
+|Carbonated Water
+|It's spicy water. You like the fizz.
+|Can not be applied
+| +0.09 Thirst
+-0.0025 Body Temperature
+
++0.008 [[Mood|Happiness]]
+
+Causes your Character to burp
+|Nothing
+|17
+|Water(1)
+|-
+|[[Ceftriaxone]]
+|Third-generation cephalosporin antibiotic used for the treatment of infections. Increases body immunity for some time, but causes pain.
+|Can not be applied
+|Nothing
+| +11.25 Immunity
++0.8 pain
+|170
+|Antiseptic(1)
+|-
+|[[Bowl of cereal|Cereal]]
+|The world's greatest invention - milk and cereal. Very tasty and filling.
+|Can not be applied
+| +0.075 Thirst
++0.06 Hunger 
+
++0.004 Weight Gain 
+
+-0.0025 Temperature 
+
++0.015 Happiness 
+| +0.315 Sickness
++0.09 Blood Viscosity
+|20
+|NA
+|-
+|Chloroform
+|A volatile, colorless, sweet-smelling, dense liquid produced on a large scale as a precursor to refrigerants and polytetrafluoroethylene. In practical use, it's very useful at knocking people out.
+|Can not be applied
+|[[Consciousness]] moves toward 0 
+at a max of 8 per tick for 0.01 ticks per ml
+|Consciousness moves toward 0 
+at a max of 8 per tick for 0.01 ticks per ml
+|12
+|NA
+|-
+|[[Chocolate milk|Chocolate Milk]]
+|A type of flavoured milk made by mixing it with cocoa solids. Very sweet and tasty, but toxic for your species. Increases happiness, consume with caution.
+|Can not be applied
+| +0.09 Thirst 
++0.025 Hunger  
+
++0.003 Weight Gain 
+
+-0.0025 Temperature  
+
++0.01 Happiness 
+
++0.12 Sickness 
+| +0.35 Sickness
++0.1 Blood Viscosity
+|10
+|Water(0.5)
+|-
+|Clean Water
+|Clean, filtered water. Safe, but tastes like nothing.
+|Can not be applied
+| +0.09 [[Thirst]]
+-0.0025 [[Temperature|Body Temperature]]
+|Nothing
+|14
+|Water(1)
+|-
+|[[Coffee]]
+|Beverage brewed from roasted coffee beans. Tasty and stimulating, but rather toxic due to the caffeine content.
+|Can not be applied
+| +0.09 Thirst
++0.001 Weight Gain
+
++0.025 Happiness
+
++0.15 Sickness
+
++3.5 Caffeinated
+| +0.245 Sickness
++0.07 Blood Viscosity
+|14
+|Water(0.3)
+|-
+|[[Tile Fluids|Dirty Water]]
+|At least it's not on your body anymore. Not safe to drink.
+|Can not be applied
+| +0.06 Thirst
+-0.0025 Temperature per liter
+
+if not holding filter straw:+0.06 to +0.08 Sickness
+
+-1 Happiness (regardless of amount)
+| +0.7 Sickness
++0.2 Blood Viscosity
+|0
+|Water(0.2)
+|-
+|[[Energy drink|Energy Drink]]
+|Tasty, caffeinated drink. Tasty and stimulating, but slightly toxic for your species.
+|Can not be applied
+| +0.09 Thirst
++0.004 Weight Gain
+
++0.25 Stamina
+
++0.2 Energy 
+
++0.025 Happiness 
+
++0.2 Sickness 
+
++4 Caffeinated
+| +0.245 Sickness
++0.07 Blood Viscosity
+|20
+|Water(0.3)
+|-
+|[[Combat pen|Epinephrine]]
+|Pure adrenaline. Reduces pain for a while and has a low chance to restart the heart if it stops. Going over 40ml will cause fibrillation.
+|Can not be applied
+| for 1 ticks per ml:
+Sets adrenaline to 100 
+
+5% chance to restart heart while in [[Cardiac arrest]]
+
+Starts fibrillation if effect duration is over 240 ticks (240ml of drunken epinephrine)
+| for 6 ticks per ml:
+Sets adrenaline to 100 
+
+5% chance to restart heart while in [[Cardiac arrest]]
+
+Starts fibrillation if effect duration is over 240 ticks (40ml of injected epinephrine)
+|80
+|NA
+|-
+|Fat
+|Liquid animal fat, gotten from flesh. Can be eaten, though not particularly pleasant. Can be processed into soap.
+|Can not be applied
+| +0.04 Thirst
++0.05 Hunger
+
++0.008 Weight Gain
+
+-0.005 Happiness
+
++0.04 Sickness
+| +0.7 Sickness
++0.2 Blood Viscosity
+|14
+|Fat(1)
+|-
+|[[Fentanyl]]
+|Highly potent opioid, 100 times stronger than morphine. Consider diluting it.
+|Can not be applied
+| +40 Opiate
+| +42 Opiate
+|2000
+|Opiate(40)
+|-
+|[[Tile Fluids|Groundwater]]
+|Slightly dirty groundwater. Mostly safe to drink, though slightly sickening.
+|Can not be applied
+| +0.08 Thirst
+
++0.14 Sickness
+
+-0.0018 Happiness
+
+-0.0025 Temperature 
+| +0.0525 Sickness
++0.015 Blood Viscosity
+|4
+|Water(0.4)
+|-
+|Hard Stimulant
+|Decently refined stimulating hard drug. Only works intravenously. Will give you a pretty good kick for a short while, but has some side effects. Overdose entails weakness and internal bleeding. Dosage is 50ml.
+|Can not be applied
+| -0.002 Happiness
++0.1 Sickness
+| +3.6 Seconds of Stimulated (<code>midgradestimulant</code>) per ml
++0.1 Sickness per second of <code>midgradestimulant</code>
+
++0.06 [[Internal bleeding|Internal Bleeding]] per second of <code>midgradestimulant</code>
+
+Additional +0.15 Internal bleeding per second while duration is over 220 seconds
+
++7 Adrenaline per second of <code>midgradestimulant</code>
+
+-0.05 [[Brain health|Brain Health]] per second of <code>midgradestimulant</code> while duration is over 220 seconds 
+
++4 pain to Thorax per second of <code>midgradestimulant</code> while duration is over 220 seconds, up to 60 pain
+|24
+|NA
+|-
+|[[Heroin]]
+|Very strong opiate for pain relief. You know little about it.
+|Can not be applied
+| +0.6 Opiate
++0.25 Sickness
+| +1.3 Opiate
++0.5 Sickness
+|140
+|Opiate(1.5)
+|-
+|Hot Sauce
+|Condiment made from particularly spicy peppers. Burns your mouth, but warms you up... Somehow.
+|Can not be applied
+| +0.04 Thirst per liter
++0.05 Hunger per liter
+
++0.02 Weight Gain per liter
+
++0.03 Sickness per liter 
+
++0.12 Pain per liter
+
+if body temperature under 41.0°C:
+
+for 25 seconds:  +0.2 Temperature (regardless of amount)
+| +0.35 Sickness
++0.1 Blood Viscosity
+|14
+|Condiment(1)
+|-
+|Ice Cream
+|A frozen dessert made from milk and cream that has been flavoured with a sweetener. Somehow still cold. Delicious!
+|Can not be applied
+| +0.06 Thirst
++0.06 Hunger
+
++0.012 Weight Gain
+
++0.015 Sickness 
+
++0.015 Happiness
+
+if body temperature over 28.5°C:
+
+for 15 seconds:  -0.2 Temperature (regardless of amount)
+| +0.35 Sickness
++0.1 Blood Viscosity
+|26
+|Water(0.5)
+|-
+|[[Iced tea|Ice Tea]]
+|Cold, sweetened decaffeinated tea. Tasty!
+|Can not be applied
+| +0.09 Thirst
++0.004 Weight Gain 
+
+-0.003 Temperature 
+
++0.014 Happiness 
+
++0.035 Sickness 
+| +0.14 Sickness
++0.04 Blood Viscosity
+|12
+|Water(0.5)
+|-
+|[[Keratin booster]]
+|A modified growth hormone that specifically targets keratin in order to encourage its growth. Makes your claws regrow faster for a while.
+|Can not be applied
+|if claw regrow time is more than 3600:
++0.2 Sickness
+
++2.4 Claw Regrow time
+
+otherwise:
+
++24 Claw Regrow time
+|if claw regrow time is more than 3600:
++0.2 Sickness
+
++2.8 Claw Regrow time
+
+otherwise:
+
++28 Claw Regrow time
+|150
+|NA
+|-
+|[[Ketchup]]
+|Sweet and sour tomato paste. Slightly disgusting to drink by itself.
+|Can not be applied
+| +0.06 Thirst
++0.08 [[Hunger]]
+
++0.01 [[Weight|Weight Gain]]
+
++0.05 Sickness
+
+-0.025 Happiness
+| +0.35 Sickness
+|18
+|Condiment(1)
+|-
+|[[Lemonade]]
+|Sweetened lemon-flavored drink. Tasty!
+|Can not be applied
+| +0.09 Thirst
++0.002 Weight Gain
+
+-0.003 Temperature
+
++0.012 Happiness
+| +0.14 Sickness
++0.04 Blood Viscosity
+|14
+|Water(0.5)
+|-
+|[[LRD]] Serum
+|Special mixture used by a Localized Resuscitation Device. Does nothing if injected via other tools.
+|Can not be applied
+| +0.05 [[Sickness]]
+|Nothing
+|120
+|NA
+|-
+|[[Tile Fluids|Lumalgae]]
+|Water with dense, bioluminescent algae growing in it. Very buoyant. Inedible
+|Can not be applied
+| +0.06 Thirst
++0.08 Hunger
+
++0.07 Sickness
+
+-0.0016 Happiness
+
+-0.0025 Temperature 
+| +0.56 Sickness
++0.16 Blood Viscosity
+|2
+|NA
+|-
+|Medical-grade Stimulant
+|Medical stimulant drug. Gives you a very good kick for a pretty long while, and is generally safe to use. Overdose generally entails weakness, with a neglegible crash. Dosage is 100ml.
+|Can not be applied
+| +2 Seconds of [[moodles|Stimulated]] (<code>highgradestimulant</code>) per ml
++3 Stamina per second of <code>highgradestimulant</code>
+
++3.5 Consciousness per second of <code>highgradestimulant</code>
+
++25 [[Adrenaline]] per second of <code>highgradestimulant</code>
+| +2.4 Seconds of Stimulated (<code>highgradestimulant</code>) per ml
++3 Stamina per second of <code>highgradestimulant</code>
+
++3.5 Consciousness per second of <code>highgradestimulant</code>
+
++25 [[Adrenaline]] per second of <code>highgradestimulant</code>
+|32
+|NA
+|-
+|Mercury
+|Liquid metal. Great for skin care, not so great for your bodily functions.
+|Can not be applied
+| +0.25 Sickness
++0.08 Blood Viscosity
+
+-0.04 Happiness
+
+for 200 ticks:
+
+-0.0005 Brain Health
+| +3.5 Sickness
++1 Blood Viscosity
+|8
+|NA
+|-
+|[[Milk]]
+|White liquid food produced by the mammary glands of mammals. Tasty and filling!
+|Can not be applied
+| +0.09 Thirst
++0.03 [[Hunger]]
+
++0.01 [[Weight|Weight Gain]] 
+
++0.004 Weight Gain
+
+-0.0025 Temperature 
+
++0.005 Happiness 
+| +0.14 Sickness
++0.04 Blood Viscosity
+|13
+|Water(0.5)
+|-
+|[[Mindwipe]]
+|Specially synthetised drug which completely wipes the brain of most of its memories and past traumas, leaving only a blank emotionless vessel with basic knowledge and survival instincts. Commonly used as a last resort on subjects which are too far gone to function or are at risk of suicide. May also cure cases of moderate-to-severe brain damage. The effect is permanent without extensive rehabilitation. Use as a last resort.
+|Can not be applied
+|Get Mindwiped
+| +0.35 Sickness
++0.1 Blood Viscosity
+|1333
+|NA
+|-
+|[[Morphine]]
+|Strong opiate for pain relief. Lesser effect when taken orally.
+|Can not be applied
+| +0.4 [[Opiates|Opiate]]
+| +0.9 Opiate
+|110
+|Opiate(1)
+|-
+|Mold
+|Any indication of what this once was is long gone. Smells putrid...
+|Can not be applied
+| +0.03 Hunger
++0.004 Weight Gain 
+
++0.03 Sickness 
+
+-0.04 Happiness
+
+if drank more than 25 ml: Vomit
+| +0.35 Sickness
++0.1 Blood Viscosity
+|0
+|NA
+|-
+|[[Naloxone]]
+|Opioid antagonist, used in treatment of opiate overdose. Quick treatment might save your life during accidental overdose.
+|Can not be applied
+|Nothing
+| +0.5 Opioid Antagonist 
+|80
+|NA
+|-
+|[[Naltrexone]]
+|Pills used to treat general ailments like sickness or opiate abuse. Lowers happiness and may cause vomiting.
+|Can not be applied
+|0.75% [[Vomit]] Chance 
+-0.1 Happiness
+
++0.75 Opioid Antagonist
+
+-0.75 Opiate Tolerance
+
+
+
+for 1.25 ticks per ml:
+
+-1 Sickness
+| +0.35 Sickness
++0.1 Blood Viscosity
+|100
+|NA
+|-
+|Off-brand Stimulant
+|Unrefined stimulating hard drug. Dodgy. Gives you a pretty nice kick, but overdose and the subsequent crash is extremely debilitating. Dosage is unknown. Use with caution.
+|Can not be applied
+| -0.006 Happiness
++2.5 Seconds of Stimulated (<code>lowgradestimulant</code>) per ml
+
++0.18 Sickness per second of <code>lowgradestimulant</code>
+
++1.5 Stamina per second of <code>lowgradestimulant</code>
+
++1 Consciousness per second of <code>lowgradestimulant</code>
+
++20 [[Adrenaline]] per second of <code>lowgradestimulant</code>
+
++0.03 Temperature per second of <code>lowgradestimulant</code>
+
+Additional +0.04 Temperature per second while remaining duration is over 160 seconds
+
+-0.08 Brain Health per second of <code>lowgradestimulant</code> while remaining duration is over 160 seconds
+
++4 pain to Head and Thorax per second of <code>lowgradestimulant</code> while remaining duration is over 160 seconds, up to 60 pain
+| +3.25 Seconds of Stimulated (<code>lowgradestimulant</code>) per ml
++0.18 Sickness per second of <code>lowgradestimulant</code>
+
++1.5 Stamina per second of <code>lowgradestimulant</code>
+
++1 Consciousness per second of <code>lowgradestimulant</code>
+
++20 [[Adrenaline]] per second of <code>lowgradestimulant</code>
+
++0.03 Temperature per second of <code>lowgradestimulant</code>
+
+Additional +0.04 Temperature per second while remaining duration is over 160 seconds
+
+-0.08 Brain Health per second of <code>lowgradestimulant</code> while remaining duration is over 160 seconds
+
++4 pain to Head and Thorax per second of <code>lowgradestimulant</code> while remaining duration is over 160 seconds, up to 60 pain
+|20
+|NA
+|-
+|[[Tile Fluids|Oil]]
+|A thick, black tar. Difficult to move through. Inedible.
+|Can not be applied
+| +0.01 Thirst
++0.02 Hunger
+
++0.3 Sickness
+
+-0.06 Happiness
+
+-0.005 Temperature 
+| +1.75 Sickness
++0.5 Blood Viscosity
+|1
+|NA
+|-
+|Olive Oil
+|A vegetable oil obtained by pressing whole olives. Very fatty and somewhat unpleasant to drink.
+|Can not be applied
+| +0.03 Thirst
++0.08 Hunger
+
++0.02 Weight Gain
+
+-0.01 Happiness
+
++0.12 Sickness
+
++0.005 [[Dirtiness]]
+| +0.35 Sickness
++0.1 Blood Viscosity
+|14
+|Fat(0.25)
+|-
+|[[Opium]]
+|Mild opiate for pain relief. Lesser effect when taken orally.
+|Can not be applied
+| +0.2 Opiate
+| +0.4 Opiate
+|100
+|Opiate(0.4)
+|-
+|Orange Juice
+|Liquid extract of the orange tree fruit. While it is healthy, you're really not a fan of the taste.
+|Can not be applied
+| +0.09 Thirst
++0.0007 Weight Gain
+
+-0.001 Temperature
+
+-0.015 Happiness
+
+-0.025 Sickness
+| +0.14 Sickness
++0.04 Blood Viscosity
+|14
+|NA
+|-
+|[[Oxyline]]
+|Synthesized reagent that quickly reoxygenates the bloodstream when injected, also stabilizing fibrillation and promoting hemoglobin production. Has explosive tendencies when mixed with stomach acid.
+|Can not be applied
+| for 0,33 ticks per ml:
++8 Thorax pain
+
+-2.5 Thorax muscle health 
+
++28 Shock
+
+Causes spasm while ragdolling from the shock
+
+| for 2 ticks per ml:
+
++2,5 (0.625/m in health panel) respiratory rate
+
++1.666 SPO2
+
++2.5 Stamina
+
+-1.2 Fibrillation progress
+
++0.1 Blood Volume
+|80
+|NA
+|-
+|[[Painkillers]]
+|Opioid pills used to treat pain. Overdose at 60ml.
+|Can not be applied
+| +1.4 Opiate
+|Nothing
+|125
+|Opiate(1)
+|-
+|Powdered Milk
+|Dehydrated and compressed efficient milk powder. While not edible on its own, it'll turn into milk when mixed with hot water.
+|Can not be applied
+| -0.267 Thirst
++0.267 hunger
+
++0.0134 Weight Gain
+
++0.134 Sickness
+
+-0.0167 Happiness
+| +0.35 Sickness
++0.1 Blood Viscosity
+|26
+|NA
+|-
+|[[Procoagulant]]
+|Chemical which promotes blood clotting. Globally slows down blood loss, including internal bleeding. Will cause complications if overused.
+|Can not be applied
+| -0.06 Happiness
++0.5 Blood Viscosity
+
+Reduces internal bleeding and limb bleeding
+
+[Note: I haven't looked at the code so I'm not sure about the exact values for bleeding reduction. Its probably safe to assume its about half as effective as when injected]
+|*0.95 Internal Bleeding
++1 Blood Viscosity 
+
+for each limb for 0.606 seconds per ml:
+
+<nowiki>*</nowiki>0.96 Bleed Amount every second
+|250
+|NA
+|-
+|Produce Juice
+|A bunch of fruit, vegetables and whatever else you could find, mashed up and mixed with water. It tastes... interesting.
+|Can not be applied
+| +0.085 Thirst
++0.022 Hunger
+
++0.002 Weight Gain
+
+-0.003 Temperature
+
++0.00025 Happiness
+| +0.315 Sickness
++0.09 Blood Viscosity
+|14
+|NA
+|-
+|Rad Water
+|Clean, filtered water. Safe, but tastes like nothing... On further inspection, it seems mildly radioactive.
+|Can not be applied
+| +0.09 Thirst
+-0.02 Temperature
+
+for 45 seconds: +0.035 [[Radiation|Rad Sickness]]
+| +0.07 Sickness
++0.02 Blood Viscosity
+|10
+|Water(0.8)
+|-
+|[[Red blood bag|Red Blood]]
+|Red blood. It looks odd to you, and the smell reminds you of your captors. Can treat hypovolemia, but you body won't take it well.
+|Can not be applied
+| +0.027 Thirst
+
++0.094 Sickness
+
+-0.0093 Happiness
+| +0.04 Blood Volume per ml
++0.067 Sickness per ml
+
++0.054 Septic Shock
+
+-0.04 Muscle Health
+|18
+|Blood(1.2)
+|-
+|Refined Juice
+|Cooked through, better mixed and mashed produce juice. Very tasty and nutricious!
+|Can not be applied
+| +0.095 Thirst
++0.025 Hunger
+
++0.002 Weight Gain
+
+-0.002 Temperature per milliliter
+
++0.002 Happiness per milliliter
+| +0.245 Sickness
++0.07 Blood Viscosity
+|18
+|NA
+|-
+|[[Relief cream|Relief Cream]]
+|Mix of chemicals and drugs that instantly relieves pain and disinfects wounds.
+| +0.3 Skin Healing
++30 Disinfect
+
+for 1.5 seconds per ml taken:
+
+limb pain is reduced by 15% of the difference between limb pain and 10% of limb pain every second.
+| +0.1 Sickness
+Chance to vomit
+| +0.263 Sickness
++0.075 Blood Viscosity
+|120
+|Antiseptic(1)
+|-
+|[[Ringer's solution|Ringer's Solution]]
+|Solution of several salts dissolved in water for the purpose of creating an isotonic solution relative to the body fluids of an animal. Good for thirst and blood loss.
+|Can not be applied
+| +0.034 Sickness
+-0.006 Happiness
+
++0.1 Thirst
+| +0.05 blood Volume
++0.057 Blood Viscosity
+
++0.086 Thirst
+|24
+|Water(0.8)
+|-
+|[[Saline]]
+|Mixture of salt and water, often used in treating hypovolemia and thirst.
+|Can not be applied
+| +0.042 Sickness
+-0.0053 Happiness
+
++0.093 Thirst
+| +0.053 blood Volume
+-0.066 Blood Viscosity
+
++0.093 Thirst
+|20
+|Water(1)
+|-
+|[[Tile Fluids|Sap]]
+|A thick, tasty sap, produced by jungle trees. Very sugary.
+|Can not be applied
+| +0.04 Thirst
++0.04 Hunger
+
++0.01 Sickness
+
++0.002 Weight Gain
+
++0.004 Happiness
+| +0.7 Sickness
++0.2 Blood Viscosity
+|15
+|NA
+|-
+|[[Sleeping pills|Sleeping Pills]]
+|Potent sleeping pills. Lets you sleep in bad physical condition. Don't combine with opioids.
+|Can not be applied
+|Sleeping Pills: 60 seconds per ml
+| +0.35 Sickness
++0.1 Blood Viscosity
+|320
+|NA
+|-
+|Soap
+|Soap made from animal fat. Can be used in the health panel to clean dirt off of you, and slightly disinfect wounds.
+| -0.25 Dirtiness per ml
++0.3 Disinfect per ml
+| +0.04 Thirst
++0.2 Sickness
+
+-0.02 Happiness
+| +0.56 Sickness
++0.16 Blood Viscosity
+|14
+|Antiseptic(0.05)
+|-
+|[[Soda bottle|Soda]]
+|Tasty, sugary drink. Good in moderation.
+|Can not be applied
+| +0.09 Thirst
+-0.003 Temperature
+
++0.004 Stamina
+
++0.004 Energy
+
++0.004 Weight Gain
+
++0.015 Happiness 
+
++0.05 Sickness 
+
++0.8 Caffeinated 
+| +0.21 Sickness
++0.06 Blood Viscosity
+|16
+|Water(0.5)
+|-
+|[[Sodium nitroprusside]]
+|A medication used to lower blood pressure, useful for avoiding hypertensive crisis. Only works intravenously. 10ml per minute.
+|Can not be applied
+| +0.05 Sickness
+|Lowers Blood Pressure by 25% for 6 seconds per ml
+|150
+|NA
+|-
+|[[Soup]]
+|Unidentifiable soup, though still tasty and filling.
+|Can not be applied
+| +0.09 Thirst
++0.1 Hunger 
+
++0.005 Weight Gain
+
++0.01 Happiness
+| +0.21 Sickness
++0.06 Blood Viscosity
+|20
+|NA
+|-
+|Sports Drink
+|Non-caffeinated electrolyte drink. Quenches thirst efficiently, gives you a little boost and tastes nice.
+|Can not be applied
+| +0.13 Thirst
++0.01 Weight Gain 
+
++0.25 Stamina 
+
++0.1 Energy 
+
++0.005 Happiness  
+
++0.02 Sickness 
+| +0.14 Sickness
++0.04 Blood Viscosity
+|20
+|Water(0.8)
+|-
+|[[Streptokinase]]
+|Blood thinner. Strongly reduces blood viscosity and breaks down clots.
+|Can not be applied
+|Same as inject except:
++10 Sickness per 33.34 ml
+
+-25 Blood Viscosity per 33.34 ml
+|Per 33.34 ml:
+-50 Blood Viscosity
+
++5 Sickness
+
+Increases internal bleeding by 50%
+
+Increases limb bleeding by 75%
+|150
+|NA
+|-
+|Urine
+|Sweetened lemon-flavored drink. Tasty, although it does smell like piss for some reason.
+|Can not be applied
+| +0.07 Thirst
+-0.003 Temperature 
+
+-0.025 Happiness 
+
++0.075 Sickness 
+| +0.7 Sickness
++0.2 Blood Viscosity
+|2
+|Water(0.1)
+|-
+|[[Vasopressin]]
+|A hormone used to increase blood pressure, useful for avoiding lethal hypotension. Only works intravenously. 10ml per minute.
+|Can not be applied
+|Raises Blood Pressure by 25% for 0.5 seconds per ml
+|Raises Blood Pressure by 25% for 6 seconds per ml
+|150
+|NA
+|-
+|[[Wound glue|Wound Glue]]
+|A hemostatic, antibiotic glue-like substance. Fights infection, promotes healing and is very effective at sealing bleeding wounds. Might cause circulation problems - use with care.
+| +0.5 Skin Healing
++0.25 Muscle Health per
+
++1.5 [[Bleeding|Bandaging]]
+
+-0.25 Infection Progress
+
++15 Disinfect 
+
+<nowiki>*</nowiki>0.9 Pain per 20ml
+
++0.75 Blood Viscosity
+
++0.1125 Sickness
+| +0.1 Sickness
+Chance to vomit
+| +0.263 Sickness
++0.075 Blood Viscosity
+|150
+|Antiseptic(0.8)
+|-
+|Yogurt
+|Bacterially fermented milk. Tastes okay. Decently filling.
+|Can not be applied
+| +0.04 Thirst
++0.09 Hunger
+
++0.004 Weight Gain 
+
++0.002 Happiness
+
++0.01 Sickness 
+
+-0.015 Temperature 
+| +0.35 Sickness
++0.1 Blood Viscosity
+|26
+|NA
+|}
+{| class="wikitable sortable mw-collapsible mw-collapsed"
+|+Medical Fluids
+!Fluid
+!Description
+!Effects if Applied
+!Effects if Drank
+!Effects if Injected
+!Value Per Liter
+!Crafting Qualities
+|-
+|
+|
+|
+|
+|
+|
+|
+|-
+|
+|
+|
+|
+|
+|
+|
+|-
+|
+|
+|
+|
+|
+|
+|
+|}
+{| class="wikitable sortable mw-collapsible mw-collapsed"
+|+Edible Fluids
+!Fluid
+!Description
+!Effects if Applied
+!Effects if Drank
+!Effects if Injected
+!Value Per Liter
+!Crafting Qualities
+|-
+|
+|
+|
+|
+|
+|
+|
+|-
+|
+|
+|
+|
+|
+|
+|
+|-
+|
+|
+|
+|
+|
+|
+|
+|}

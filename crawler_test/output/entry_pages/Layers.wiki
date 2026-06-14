@@ -1,0 +1,195 @@
+{{Spoiler warning}}
+
+[[Scav Prototype]] is organized into '''layers''', each with their own collections of [[tiles]], [[buildings|structures]], [[buildings#Hazards|traps]], [[enemies]], and [[items|items]]. There are currently '''5''' accessible layers in the Itch.io demo build and the 6.x Steam demo.
+
+==Description==
+
+Each layer is '''307.2m''' tall. The player must go through these layers to progress in the game. There is currently no limit to the amount of layers the player can go through, and the game goes back to [[Deeper_gravel_lands|deeper gravel lands]] after [[overgrown depths]] is completed.
+
+Upon generation of each layer, there can rarely be a [[Layer modifiers|Layer modifier]] added.
+
+By default, the amount of [[buildings#Hazards|traps]] and [[Items|items]] changes per layer. This can be adjusted in the [[Controls|main menu]].
+
+One block in the world is exactly 0.30 by 0.30 meters<ref>Assembly-CSharp.dll:WorldGeneration.cs:WorldGeneration.PlayerLayerDepthMeters()</ref> and is 1 Unity unit by 1 Unity unit.<ref>SampleScene.unity</ref> Gravity in the game is set to 55 Unity units / s<sup>2</sup>,<ref>Physics2DSettings.asset</ref> or 16.5 m/s<sup>2</sup> (including in the [[Tutorial]]), which is a bit less than twice Earth's gravity.
+
+==Layers in order==
+{{Clear}}
+
+<div style="float: left; margin-right: 5px; margin-top: 0px;">
+[[File:Gravel lands_icon.png|18px]]
+</div>
+
+=== Gravel Lands ===
+
+[[File:Gravel lands layer list.png|right|300px]]
+
+The [[gravel lands]] is a cavernous, cold layer made up of small interconnected caves. 
+
+Most of the layer is made of light stone, gravel, soil, and clay, with [[groundwater]] pools filling in any gaps. Wooden scaffolding generates around the layer, and are easy to dig through. Climbing Ropes generate occasionally, which can be climbed to reach different sections of the layer. Holes in the background illuminate parts of the layer, providing some lighting. 
+
+Only [[shade crawler]]s spawn here, and [[buildings#Hazards|traps]] are limited to [[geyser|geysers]], [[jump pad|jump pads]], and [[spike trap|spike traps]]. Falls are usually short.
+
+This layer serves as the start for all runs, and will never reappear later in the run.
+
+{{Clear}}
+
+<div style="float: left; margin-right: 5px; margin-top: 4px;">
+[[File:Deeper_gravel lands_icon.png|20px]]
+</div>
+===Deeper Gravel Lands===
+
+[[File:Deeper gravel lands layer list.png|right|300px]]
+
+The [[deeper gravel lands]] is a direct continuation of the gravel lands, bearing many of the same characteristics, along with more dangerous hazards. 
+
+Unlike the gravel lands, there are no illuminating holes in the background, and wooden scaffolding is replaced by concrete beams. [[Lumalgae]] can be found alongside [[groundwater]]. [[Barbed fence|Barbed fences]], [[bear trap|bear traps]], and [[cave tick|cave tick swarms]] appear in this layer, along with the hazards from the gravel lands. 
+
+Sand and sandstone will appear as the player makes it towards the end of the layer.
+
+* The game currently loops from this layer once the [[overgrown depths]] layer is completed, doing so until the player ends the run (whether forcefully or willingly). 
+
+{{Clear}}
+
+<div style="float: left; margin-right: 5px; margin-top: 3px;">
+[[File:Dried_desert_icon.png|17px]]
+</div>
+===Dried Desert===
+
+[[File:Dried desert layer list.png|right|300px]]
+
+The [[dried desert]] is a desert-themed layer with spacious caves made of sand and hard stones. Tall drops, [[turret|turrets]], [[coil|coils]], [[stalactites]], and [[landmine|landmines]] make mistakes much more punishing compared to the previous layers, and force the player to look in every direction.
+
+[[Waste pipe|Waste pipes]] and [[oil]] can be found alongside [[groundwater]], the latter of which is rarer to find in the desert. As oil is more viscous and harder to escape in this layer, deaths caused by drowning via fractures or exhaustion poses a new challenge. 
+
+However, this layer provides new tools, including very powerful [[Rose light]]s, as well as sand vines that can be climbed, similarly to the climbing ropes that appear in the [[gravel lands]]. Recharge station structures also generate here, though they are frequently flooded with oil.
+
+[[Wall biter|Wall biters]] and [[Shade crawler|Shade crawlers]] are [[enemies]] that spawn.
+
+The layer tests the player's ability to spot hazards, encouraging a slow and careful approach through tall drops, large caves, and obscured areas.
+
+{{Clear}}
+
+<div style="float: left; margin-right: 5px; margin-top: 3px;">
+[[File:Wasteland_icon.png|18px]]
+</div>
+
+=== Wasteland ===
+[[File:Wasteland layer list.png|right|300px]]
+
+The [[wasteland]] is a radioactive fallout-themed layer sharing many characteristics with the dried desert. 
+
+While the layer lacks [[enemies]] of any kind, [[sound cannon|sound cannons]], [[tiles|toxirock]], and [[spent fuel]] force the player to decisively route through the layer, whilst spotting and avoiding the dangerous threats from the previous layer. 
+
+Durable brick blocks can sometimes be found around the layer, and verdure will start appearing as the player makes it towards the end of the layer.
+
+{{Clear}}
+
+<div style="float: left; margin-right: 5px; margin-top: 3px;">
+[[File:Overgrown depths_icon.png|18px]]
+</div>
+
+===Overgrown Depths===
+[[File:Overgrown depths layer list.png|right|300px]]
+
+The [[overgrown depths]] also known as The Jungle is a jungle-themed layer filled with thick vegetation.
+
+[[Skullcrusher]]s, and [[grabber Plant|grabber plant]]s  are new traps found in this area. Luckily, sound cannons and other wasteland traps are not present. Every plant thus far besides cacti will spawn here, and quite frequently, making starvation a non-issue.  
+
+Because of the abundance of food, drinkable sap and groundwater, and the lack of turrets and landmines, one might mistake this layer for some sort of paradise if it weren't for a very large and very noticeable threat.  
+
+[[Thornback|Thornbacks]], [[overgrown tick]]s, [[cave tick]]s, and [[elder thornback|elder thornbacks]] are enemies that spawn in this layer as well as wall biters, forming the primary challenge.
+
+It is currently the final layer of the game. 
+
+{{Clear}}
+
+==IN-DEV Layers==
+These layers are still in development and aren't accessible to the current Itch.io build or the Steam demo.
+
+{{Clear}}
+
+<div style="float: left; margin-right: 5px; margin-top: 3px;">
+[[File:Frozen chasm_icon.png|18px]]
+</div>
+===Frozen Chasm===
+
+The [[frozen chasm]] is an in-development ice-themed layer, not currently accessible in the public Itch.io build.
+
+This layer can be accessed if you save upon exiting Layer 5.
+The main danger planned with the layer is the freezing cold, and to a lesser extent, [[Snow strider]]s and Gunmines, the player must go between [[Ion space heater]]s, [[Xaloris]]es and [[life pod]]s to stay warm and not freeze to death
+* The layer at the moment will be blank if entered in the current build (v5.1)
+* The [[frozen chasm]] along with [[Fungal Pools]] have been fully teased within a stream and video (but are still W.I.P)
+* Normally continuing will loop the player back to the [[Deeper gravel lands]]
+
+{{Clear}}
+
+<div style="float: left; margin-right: 5px; margin-top: 3px;">
+[[File:Fungal pools icon.png|18px]]
+</div>
+
+===Fungal Pools===
+
+The [[Fungal Pools]] are an in-development layer, continuing after the [[frozen chasm]].
+This layer is a fungus themed layer, with many fungus themed blocks, traps and enemies. The main danger within the layer is the constant rain that is very likely to make you freeze to death if sleeping while wet, the player must sleep within [[life pod]]s to avoid this, other dangers include [[sawblade]]s, Side Stabbers and Grabber Shrooms that can easily cause injuries.
+*The layer isn't able to be loaded in the current build of the game (v7.0).
+*The [[Fungal Pools]] and [[frozen chasm]] were the 2 layers fully teased within a stream and the Steam trailer (but are still W.I.P).
+*The layer is the only layer that [[fungali bungali]] can be found and broken to obtain [[bunchunk]] and craft [[procoagulant]].
+{{clear}}
+
+The layers after 7 will crash when trying to load so do NOT mod your save file to these layers if you don't have a backup to its previous version.
+
+=== Crystalline Hollow ===
+The Crystalline Hollow is an in-development layer.
+
+* This is the same setting as the Crystalline Hollow from Orsoniks' game [https://orsonik.itch.io/gooey Gooey]
+From what footage and text from the locale has surfaced so far, this layer will revolve around making use of various crystals while avoiding others. The main dangers of the layer are the hectic terrain with very very large drops, the different types of crystals and a flying crystal enemy called [[Manifestation]], its also said that the corpses of said enemy, if not consumed quickly, will turn into 2 Manifestations, though the larger the group of them is, the slower they are.
+
+* Crystal types and their effects 
+* Yellow Crystal: acts like [[coil]], but also recharges all batteries on you 
+* Red Crystal blows up 
+* Green Crystal: (radioactive): irradiates you 
+* Green Crystal: (magic): heals you 
+* Purple Crystal: causes [[sepsis]] 
+* Foggy Crystal: heats you up rapidly 
+* Shaky Crystal: throws you (but allows movement, similar to [[bouncecap]]) 
+* Repulsion Crystal: repels you away (has a field that pushes outwards) 
+* Attraction Crystal: pulls you in (has a field that pulls inwards) 
+* Fragile Crystal: shatters when stood on 
+* Teleportation Crystal: links 2 locations, touching it teleports you to the second location and brain flashes you, crystal is see through 
+* Gray Crystal: flashes but doesn't harm you directly, but will drain all your batteries 
+* Bright Crystal: extremely bright, good light source (might blind?) 
+* Hazy Crystal: touching it causes it to blind for a bit, but acts like [[drop capsule]] 
+* Burning Crystal: burns you 
+* Shifting Crystal: switches places (?) 
+
+(Note: this is info found from the english translation github page by the dev and direct sneak peaks show) 
+(Note: at the moment its not known the exact names of the crystals, im just going off what they do)
+
+=== Geothermal Vents ===
+The Geothermal Vents are an in-development layer. The main threat here is planned to be extremely high temperatures. Magma has also been shown off in some sneak peeks.
+
+=== Where We Must Reach ===
+The planned location of the target technology.
+
+=== The Ascent ===
+Ascent back to the surface.
+
+=== Surface ===
+The surface of the Target Planet.
+
+=== Pathway to Freedom ===
+Optional, related to the [[Ending|game endings]].
+
+==Trivia==
+
+* Tracks for the [[frozen chasm]], [[fungal Pools]], [[crystalline Hollow]] and Geothermal Vents can be found in the [[soundtrack]] page.
+* Reaching the bottom of a layer prompts the player to either save and quit, or continue to the next layer. This disables the player's ability to jump until an option is chosen, so be ready to leave once you reach the bottom.
+** The player can use the [[Jetpack]] to get back off of the bottom of the layer, but this does not remove the save/continue prompt from the middle of the screen or return their ability to jump.
+** No longer true as of version 5 on itch.io and version 6.x on Steam.
+* Any [[liquids|liquid]] that touches the bottom of a layer disappears.
+** [[Items]] do not, however. This is likely to prevent players from losing the items in their hands permanently due to falling.
+*It is possible to enter a different layer in the tutorial. <!-- Is this still true in the steam demo? Test this using debug, it's likely that the tranquilizer sequence will trigger before DGL loads though -->
+** The Tutorial structure does not despawn, but the traps and enemies in a layer may spawn inside it.
+** The Tutorial structure will not spawn if the game is saved and reloaded instead of just continued.
+
+[[zh:层级]]

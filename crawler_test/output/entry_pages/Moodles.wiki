@@ -1,0 +1,945 @@
+ ''Not to be confused with <u>[[Mood]]</u>, which is a value that describes the player's mental state.''
+'''Moodles''' are statuses that describe the player's condition as they descend through the caves. Various actions and events will make different moodles appear.
+
+Several simply tell you of a need that the player character has, but others have more impact, ranging from being soaked in water, bleeding from a wound, and many other such events.
+
+Moodles that are positive or whose effects don't stem from a negative event (other than Adrenaline from severe injuries, and Last Stand) will be outlined in a ''rectangular'' frame instead of ''circular''.
+
+All moodles here are sorted in the way they appear to the player. Moodles near the bottom are considered side moodles, which only appear in the [[health panel]] or when the moodle bar is hovered over.
+
+== Positive ==
+{| class="wikitable mw-collapsible"
+|+
+! scope="col" style="width: 10%" | Moodle
+! scope="col" style="width: 50%" | Description
+! scope="col" style="width: 5%" | [[Unchipped mode|Unchipped]]<abbr title="If the moodle is visible without a brainchip">[[file:mouse over me!.png|12px]]</abbr>
+! scope="col" | Cause
+|-
+![[File:Moodlast.png|48x48px]]<br /> Last stand
+|You're not going down that easily. Something deep inside you compels you to push through.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Last stand]] activated
+|-
+![[File:Stimulated.png|48x48px]]<br /> Stimulated
+|Hard stimulant drugs in the bloodstream. You feel ready to tackle anything thrown at you...For now, at least.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Duration of any Stimulant > 0s
+|-
+! [[File:Asleep Moodle.png|48x48px]]<br /> Sleeping
+|Just taking a nap.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|<abbr title="Consciousness &lt; 20%">Unconscious</abbr> while [[Energy#Sleep|sleeping]]
+|-
+![[File:Moodle_hunger_4.webp|48x48px]]<br /> Satiated
+|Eating good today! Lowered weight loss rate and mobility. Slight happiness increase.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Hunger]] > 100%
+|-
+![[File:Moodle_hunger_5.webp|48x48px]]<br /> Full
+|Stomach totally stuffed with food! Any more and you'll be sick. Greatly lowered weight loss rate and mobility. Happiness increase.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Hunger > 120%
+|-
+![[File:Happy 1.png|48x48px]]<br /> Satisfied
+|Content with your current predicament.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Mood]] > 10%
+|-
+![[File:Happy 2.png|48x48px]]<br /> Excited
+|Looking forward to what's around the corner.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Mood > 30%
+|-
+![[File:Happy 3.png|48x48px]]<br /> Happy
+|You've found peace in this strange land.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Mood > 50%
+|-
+![[File:Happy 4.png|48x48px]]<br /> Gleeful
+|You're at the top of the world, shaping the way forward at your will. Nothing can stop you!
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Mood > 75%
+|-
+! colspan="4" style="text-align: center" | The following are <abbr title="Only appear in the health panel or while the moodle bar is hovered over">side moodles</abbr>
+|-
+![[File:HighImmunity Moodle.png|48x48px]]<br /> Immunocompetent
+|Your immune system is working at high capacity, likely due to antibiotics. Infections are much less dangerous, and might even regress on their own if near 200%.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Immunity]] > 150%
+|-
+![[File:BoostedRegrowth Moodle.png|48x48px]]<br /> Boosted regrowth
+|Your claws regrow three times as fast. (&lt;Time remaining&gt;)
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Using [[Keratin booster]]
+|-
+! [[File:Energized.png|48x48px]]<br /> Energized
+|Stamina loss and sleepiness decreased. (&lt;Time remaining&gt;)
+| style="text-align: center"| [[File:Nomark.png|32x32px]]
+|[[Energized|Caffeinated]]
+|-
+![[File:FightOrFlight Moodle.gif|48x48px]]<br /> Adrenaline
+|Pain numbed. You're on high alert.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Adrenaline]] > 20%
+Adrenaline > 65%
+|}
+
+== Negative ==
+
+{| class="wikitable mw-collapsible"
+|+
+! scope="col" style="width: 10%" | Moodle
+! scope="col" style="width: 50%" | Description
+! scope="col" style="width: 5%" | [[Unchipped mode|Unchipped]]<abbr title="If the moodle is visible without a brainchip">[[file:mouse over me!.png|12px]]</abbr>
+! scope="col" | Cause
+|-
+![[File:ImpendingDoom Moodle.png|48x48px]]<br /> Sense of impending doom
+| You can't help but feel sudden, overwhelming fear. Your skin has goosebumps all over. It's as if the nature around you abruptly fell silent...
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+| An [[Elder thornback]] is within 101.25 tiles of distance (but further than 45)
+|-
+![[File:HorrifiedMoodle.png|48x48px]]<br /> <span style="color:#FF0000;">HORRIFIED</span>
+|CAN'T FOCUS. CAN'T THINK. NOTHING ELSE MATTERS. RUN FOR YOUR LIFE OR FIGHT FOR IT!
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|An [[Elder thornback]] is within 45 tiles of distance and is in stage 1 (>=3750 health)
+|-
+![[File:Moodle_focused_8_critical.webp|48x48px]]<br /> <span style="color:#FF0000;">FOCUSED</span>
+| ''Both of us die today. One, just a little later than the other.''
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+| An [[Elder thornback]] is within 45 tiles of distance and is not in stage 1 (<3750 health)
+|-
+
+![[File:Moodle_tachycardia_anim.webp|48x48px]]<br /> Tachycardia
+|Your heart rate feels abnormally high.
+| style="text-align: center" | <abbr title="Only appears when unchipped">[[File:Checkmark.png|32x32px]]
+(Exclusive)</abbr>
+|Heart rate > 110
+
+Heart rate > 160
+
+Heart rate > 200
+|-
+![[File:Bradycardia Moodle Animated.gif|48x48px]]<br /> Bradycardia
+|Your heart rate feels abnormally low.
+| style="text-align: center" | <abbr title="Only appears when unchipped">[[File:Checkmark.png|32x32px]]
+
+(Exclusive)</abbr>
+|Heart rate < 60
+Heart rate < 40
+|-
+![[File:Palpitations.png|48x48px]]<br /> Palpitations
+|You feel your heart pounding out of your chest. Are you just anxious, or is something horribly wrong?
+| style="text-align: center" | <abbr title="Only appears when unchipped">[[File:Checkmark.png|32x32px]]
+(Exclusive)</abbr>
+|Fibrillation > 50% or Heart rate > 240
+|-
+![[File:Braindamage Moodle 1.png|48x48px]]<br /> Cognitive impairment
+|Mentally impaired from damage to the brain. You feel weirdly confused...
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Brain health]] < 95%
+|-
+![[File:Braindamage Moodle 2.png|48x48px]]<br /> Neurological damage
+|Strong mental deficit. Ability to think intelligently and self-sustain is limited. Serious brain damage present.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Brain health < 80%
+|-
+![[File:Braindamage Moodle 3.png|48x48px]]<br /> Severe neurophysiological deterioration
+|reality  ..  stops   making   sense
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Brain health < 60%
+|-
+![[File:Braindamage Moodle 4 Crit.png|48x48px]]<br /> <span style="color:#FF0000;">Comatose</span>
+|...
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Brain health < 30%
+|-
+![[File:Stroke.png|48x48px]]<br /> <span style="color:#FF0000;">Stroke</span>
+|Bleeding in the brain, likely caused by severe hypertension. Already in its advanced stages, chances of survival are nil unless you have Braingrow or a procoagulant.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Stroke Amount > 70%
+|-
+![[File:Cardiacarrest Moodle New.png|48x48px]]<br /> <span style="color:#FF0000;">Cardiac arrest</span>
+|Asystole. If you're somehow conscious, this has a low chance of being treated via defibrillation. Otherwise, cerebral hypoxia and death is soon to follow.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Heart stopped
+|-
+![[File:Arrhythmia 1.png|48x48px]]<br /> Arrhythmia
+|Abnormal heart rhythm, likely caused by severe strain to the body. May progress further if the cause isn't addressed. Can be defibrillated.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Fibrillation > 15%
+|-
+![[File:Moodle_arrythmia_2_critical.webp|48x48px]]<br /> <span style="color:#FF0000;">Ventricular tachycardia</span>
+|Severe irregular heartbeat, preventing effective blood pumping. Will progress into lethal V-fib if not treated. Can be defibrillated.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Fibrillation > 50%
+|-
+![[File:Arrhythmia 3.png|48x48px]]<br /> <span style="color:#FF0000;">Ventricular fibrillation</span>
+|Life threatening, chaotic heart rhythm. Asystole is soon to follow. Things have gone horribly wrong.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Fibrillation > 75%
+|-
+![[File:Moodle_hypotension_0.webp|48x48px]]<br /> Mild hypotension
+|Slightly decreased blood pressure. You feel slightly dizzy.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure < 110/73 and not in cardiac arrest
+|-
+![[File:Moodle_hypotension_1.webp|48x48px]]<br /> Hypotension
+|Moderately decreased blood pressure. You look pale and have clammy skin. Something is wrong - check your vitals.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure < 96/63 and not in cardiac arrest
+|-
+![[File:Moodle_hypotension_2_anim.webp|48x48px]]<br /> <span style="color:#FF0000;">Severe hypotension</span>
+|Severely decreased blood pressure, you're on the edge of fainting. Treatment needed. This might start fibrillation, check your vitals.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure < 83/55 and not in cardiac arrest
+Critical when Blood pressure < 70/46
+|-
+![[File:Moodle_hypotension_3_critical.webp|48x48px]]<br /> <span style="color:#FF0000;">Circulatory collapse</span>
+|Lethally low blood pressure. Blood is not getting to your organs. Cerebral hypoxia and death is imminent.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure < 60/40 and not in cardiac arrest
+|-
+![[File:Moodle_hypertension_0.webp|48x48px]]<br /> Mild hypertension
+|Slightly elevated blood pressure.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure > 130/86 and not in cardiac arrest
+|-
+![[File:Moodle_hypertension_1.webp|48x48px]]<br /> Hypertension
+|Moderately elevated blood pressure. You have a headache, you're dizzy and your nose is bleeding. Check your vitals.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure > 145/96 and not in cardiac arrest
+|-
+![[File:Moodle_hypertension_2.webp|48x48px]]<br /> Severe hypertension
+|Severely elevated blood pressure, dangerously close to having severe health complications. You feel terrible. Check your vitals.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure > 162/107 and not in cardiac arrest
+|-
+![[File:Moodle_hypertension_3_critical.webp|48x48px]]<br /> <span style="color:#FF0000;">Hypertensive crisis</span>
+|Life-threatening blood pressure. Risk of hemorrhagic stroke. Check your vitals urgently, and watch for stroke symptoms.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Blood pressure > 180/119 and not in cardiac arrest
+|-
+![[File:hypoventilation 1.png|48x48px]]<br /> Mild hypoventilation
+|Lowered respiratory rate.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Respiratory rate < 22.5/min
+|-
+![[File:hypoventilation 2.png|48x48px]]<br /> Hypoventilation
+|Highly lowered respiratory rate, enough to slowly lower blood oxygen concentration.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Respiratory rate < 12.5/min
+|-
+![[File:Respfailure.png|48x48px]]<br /> <span style="color:#FF0000;">Respiratory arrest</span>
+|Suffocating! Loss of consciousness and death imminent if untreated.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Respiratory rate < 2.5/min
+|-
+![[File:Thoraxdestroyed Moodle.png|48x48px]]<br /> <span style="color:#FF0000;">Lung failure</span>
+|Your lungs are too damaged to function, caused by critically low thorax muscle health.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Limb health|Thorax health]] < 4%
+|-
+![[File:Moodle_hemothorax_1_anim.webp|48x48px]]<br /> <span style="color:#FF0000;">Hemothorax</span>
+|Blood is accumulating in the pleural cavity due to internal bleeding. Your chest hurts... Treatment needed.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Hemothorax]] > 40%
+Hemothorax > 70%
+|-
+![[File:Moodle_pulmonaryembolism_3_critical.webp|48x48px]]<br /> <span style="color:#FF0000;">Pulmonary embolism</span>
+|A large blood clot has broken off and lodged itself in the lungs, blocking an artery. Rapid lung damage and suffocation incoming. Lower your blood viscosity urgently.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Has a pulmonary embolism
+(1.66% chance every second when >90% blood viscosity)
+|-
+![[File:Oxygen Moodle 1.png|48x48px]]<br /> Mild hypoxemia
+|SpO2 below 90%. While not dangerous, it could be a sign of an underlying condition.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Oxygen|Sp02]] < 90%
+|-
+![[File:Oxygen Moodle 2.png|48x48px]]<br /> Hypoxemia
+|SpO2 below 75%, causing tachycardia and slowly depriving the brain of oxygen. While not lethal, it does point at an underlying condition.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Sp02 < 75%
+|-
+![[File:Oxygen Moodle 3.png|48x48px]]<br /> Severe hypoxemia
+|SpO2 below 60%, depriving tissues of oxygen and likely causing heart arrhythmia. Lethal if left to progress.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Sp02 < 60%
+|-
+![[File:Oxygen Moodle 4.png|48x48px]]<br /> Critical hypoxemia
+|SpO2 below 45%. Something in your body has gone horribly, horribly wrong. Lethal if left to progress.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Sp02 < 45%
+|-
+![[File:Irradiated 1.png|48x48px]]<br /> Uncomfortable
+|Feeling weirdly irritated and uncomfortable.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Absorbed [[radiation]] > 3.0 Gy
+|-
+![[File:Irradiated Moodle 2.png|48x48px]]<br /> Radiation sickness
+|Feverish and nauseous. Your skin feels hot and painful. Something is very wrong. It's terrifying.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Absorbed radiation > 9.0 Gy
+|-
+![[File:Irradiated Moodle 3 Crit.png|48x48px]]<br /> <span style="color:#FF0000;">Severe radiation sickness</span>
+|Horribly sick and aching all over. Breathing and thinking is extremely difficult. You feel abhorrent.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Absorbed radiation > 15.0 Gy
+|-
+![[File:Irradiated Moodle 4 Crit.png|48x48px]]<br /> <span style="color:#FF0000;">Chernobyl wannabe</span>
+|''Not going gently into that good night...''
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Absorbed radiation > 24.0 Gy
+|-
+![[File:Pain 1.png|48x48px]]<br /> Discomfort
+|Feeling mild pain.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Pain|Total pain]] > 10%
+|-
+![[File:Pain 2.png|48x48px]]<br /> Pain
+|Hurting a decent bit. Unhappiness rising slowly.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Total pain > 30%
+|-
+![[File:Pain 3.png|48x48px]]<br /> Severe pain
+|Half-conscious, mind fogged by intense pain. Unhappiness rising.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Total pain > 55%
+|-
+![[File:Moodle_pain_3_critical.webp|48x48px]]<br /> <span style="color:#FF0000;">Agony</span>
+|Mind-shattering pain. Movement compromised. Death sounds preferable right about now. Unhappiness rising quickly.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Total pain > 80%
+|-
+![[File:Shock.png|48x48px]]<br /> Shock
+|Going into shock from agony.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Shock]] > 30%
+|-
+![[File:Overdose Moodle 1.png|48x48px]]<br /> Opiated
+|Relaxed and calm. Your body feels numb.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Opiates|Opiate]] reception > 5%
+|-
+![[File:Overdose Moodle 2.png|48x48px]]<br /> Drugged
+|Very relaxed and calm, but your lungs feel heavy. A little more tired than usual. This feels pretty good, for now...
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Opiate reception > 20%
+|-
+![[File:Overdose Moodle 3.png|48x48px]]<br /> Highly drugged
+|Breathing is difficult, but your mind is in euphoria. This definitely isn't healthy. If only it could last forever...
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Opiate reception > 50%
+|-
+![[File:Overdose Moodle 4.png|48x48px]]<br /> <span style="color:#FF0000;">Opioid overdose</span>
+|Respiratory failure. You are experiencing a drug-filled euphoria. Asphyxiation imminent.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Opiate reception > 80%
+|-
+![[File:Withdrawal 1.png|48x48px]]<br /> Opioid craving
+|You really want another shot.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Opiate reception < -5%
+|-
+![[File:Withdrawal 2.png|48x48px]]<br /> Withdrawal
+|Your body is desperate for another hit. You want to vomit... This feels really bad. Treatment recommended.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Opiate reception < -15%
+|-
+![[File:Withdrawal 3.png|48x48px]]<br /> Severe withdrawal
+|You are struggling to hold yourself together, shaking, desperate for any sort of relief. It feels horrible. Treatment needed.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Opiate reception < -25%
+|-
+![[File:Withdrawal 4.png|48x48px]]<br /> <span style="color:#FF0000;">Dying of withdrawal</span>
+|Your body is failing to sustain itself without the opiates it became so reliant on. Your heart is struggling to pump blood around the body; Watch for fibrillation.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Opiate reception < -34%
+|-
+![[File:Concussion moodle.png|48x48px]]<br /> <span style="color:#FF0000;">Concussed</span>
+|Rendered unconscious by low head vitality - you will wake up when your head heals.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Head [[muscle health]] <14.4
+|-
+![[File:Faint 1.png|48x48px]]<br /> Confused
+|Feeling disoriented and slightly dizzy.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Consciousness]] < 90%
+|-
+![[File:Faint 2.png|48x48px]]<br /> Very confused
+|Confused and dizzy, struggling to keep up with the world around you.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Consciousness < 72%
+|-
+![[File:Faint 3.png|48x48px]]<br /> Fainting
+|Barely conscious, feeling like you could collapse at any moment.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Consciousness < 55%
+|-
+![[File:Faint 4.png|48x48px]]<br /> Incapacitated
+|Can't stand or think. You barely feel anything.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Consciousness < 30%
+|-
+![[File:Unconscious Moodle.png|48x48px]]<br /> Unconscious
+|Not responding to any external stimuli. Lights out.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Consciousness < 20%, not sleeping or concussed
+|-
+![[File:Drugoverdose Moodle.png|48x48px]]<br /> <span style="color:#FF0000;">Drug overdose</span>
+|You have overdosed on a non-opioid drug. Health complications likely.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Injuries#Drug overdose|Drug overdose]]
+(taking too much antidepressant, anti-rad, stimulant, or sleeping pills at once)
+|-
+![[File:Moodle_internalbleed_anim.webp|48x48px]]<br /> <span style="color:#FF0000;">Internal bleeding</span>
+|Turns out your guts and lungs are NOT where the blood is supposed to be. Treatment recommended.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Internal bleeding]] > 0.04275 L/min
+
+Internal bleeding > 0.2223 L/min
+
+Internal bleeding > 0.43605 L/min
+
+Internal bleeding > 0.6498 L/min
+
+Critical when Internal bleeding > 0.4275 L/min
+|-
+![[File:Moodle_smallbleeding_0.webp|48x48px]]<br /> Minor bleeding
+|Blood is oozing out of a relatively small wound. There is no immediate danger.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Total [[bleeding]] > 0 L/m
+|-
+![[File:Moodle_bleeding_1.webp|48x48px]]<br /> Bleeding
+|Blood is flowing out of a decently sized wound. Unlikely to be fatal if you're healthy. Treatment recommended.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Total bleeding > 0.09 L/m
+|-
+![[File:Moodle_heavybleeding_2_critical.webp|48x48px]]<br /> <span style="color:#FF0000;">Heavy bleeding</span>
+|A large volume of blood is haemorrhaging out of your body. Likely lethal if untreated. Treatment needed.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Total bleeding > 0.225 L/m
+|-
+![[File:Moodle_maxbleeding_3_critical.webp|64x64px]]<br /> <span style="color:#FF0000;">Catastrophic bleeding</span>
+|''As your life gushes out behind you, you remember that you are mortal.''
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Total bleeding > 0.45 L/m
+|-
+![[File:Endurance 1.png|48x48px]]<br /> Slightly exerted
+|Mildly physically strained. (&lt;Stamina&gt;%)
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Stamina]] < 70%
+|-
+![[File:Endurance 2.png|48x48px]]<br /> Exerted
+|Uncomfortably exerted, struggling to move and work. (<Stamina>%)
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Stamina < 50%
+|-
+![[File:Endurance 3.png|48x48px]]<br /> Highly exerted
+|Barely able to move, highly physically exerted. (<Stamina>%)
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Stamina < 35%
+|-
+![[File:Endurance 4.png|48x48px]]<br /> <span style="color:#FF0000;">Totally exhausted</span>
+|Barely able to breathe. (<Stamina>%)
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Stamina < 15%
+|-
+![[File:Moodle_brokenbone_anim.webp|48x48px]]<br /> Fractured bone
+|You broke something. Try not to use the affected limb, and rest as much as possible. Treatment highly recommended.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Any bone [[Fracture|fractured]]
+
+Highest fracture heal time > 6m 28s
+
+Highest fracture heal time > 19m 23s
+
+Highest fracture heal time > 32m 18s
+|-
+![[File:Moodle_dislocation_anim.webp|48x48px]]<br /> Dislocated joint
+|You dislocated something. Try not to use the affected limb, and find a way to fix it. Treatment recommended.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Any joint [[Dislocation|dislocated]]
+
+Highest dislocation heal time > 3m 58s
+
+Highest dislocation heal time > 11m 54s
+
+Highest dislocation heal time > 19m 50s
+|-
+![[File:Moodle_brokenneck_anim.webp|48x48px]]<br /> Fractured neck
+|Your neck is broken. Your spinal cord isn't severed, but any amount of moving around will be agonizing. Physically weaker from the neck down. Eating is painful.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Neck (head) fractured
+
+Fractured neck heal time > 6m 28s
+
+Fractured neck heal time > 19m 23s
+
+Fractured neck heal time > 32m 18s
+|-
+![[File:Moodle_brokenribs_anim.webp|48x48px]]<br /> Fractured ribs
+|Your ribs are broken, making breathing painful and much harder. Hope none of them punctured your lungs. Weakened arm strength.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Ribs (thorax) fractured
+
+Fractured ribs heal time > 6m 28s
+
+Fractured ribs heal time > 19m 23s
+
+Fractured ribs heal time > 32m 18s
+|-
+![[File:Moodle_dislocatedjaw_anim.webp|48x48px]]<br /> Dislocated jaw
+|Your jaw is dislocated, impairing your speech and making eating anything extremely painful.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Jaw (head) dislocated
+
+Dislocated jaw heal time > 3m 58s
+
+Dislocated jaw heal time > 11m 54s
+
+Dislocated jaw heal time > 19m 50s
+|-
+![[File:Moodle_dislocatedspine_anim.webp|48x48px]]<br /> Dislocated spine
+|Your spine is dislocated. Your spinal cord isn't severed, but moving your body at all is really painful. Physically weaker from the waist down.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Spine (thorax) dislocated
+
+Dislocated spine heal time > 3m 58s
+
+Dislocated spine heal time > 11m 54s
+
+Dislocated spine heal time > 19m 50s
+|-
+![[File:Infection 1.png|48x48px]]<br /> Infection
+|The infection site is swollen and warm. Treatment needed. Find something that can kill off foreign bodies.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Any limb is visibly [[Infection|infected]]
+|-
+![[File:Infection 2.png|48x48px]]<br /> Painful infection
+|The infection site is leaking dark pus, and is swelling more. Treatment needed.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Highest infection > 40%
+|-
+![[File:Infection 3.png|48x48px]]<br /> Severe infection
+|The infection is spreading across the limb quickly and painfully. Chances of going into sepsis. Urgent treatment needed.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Highest infection > 60%
+|-
+![[File:Infection 4.png|48x48px]]<br /> Life-threatening infection
+|The infection is spreading to other limbs, and the infected limb is starting to undergo necrosis. Sepsis is setting in. Emergency care needed.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Highest infection > 80%
+|-
+![[File:Sepsis 1.png|48x48px]]<br /> Sepsis
+|A widespread infection is causing your body to react badly. You feel confused, with lowered blood pressure and a fever. Lethal if progresses.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Sepsis|Septic shock]] > 10%
+|-
+![[File:Sepsis 2.png|48x48px]]<br /> Severe sepsis
+|Increased heart rate, lowered blood pressure, lightheadedness and a strong fever. Signs of organ dysfunction. Likely to soon enter septic shock.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Septic shock > 50%
+|-
+![[File:Sepsis 3.png|48x48px]]<br /> <span style="color:#FF0000;">Septic shock</span>
+|''You couldn't stop for death, so death has kindly stopped by for you.'' Circulatory collapse imminent.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Septic shock > 80%
+|-
+![[File:Toxicosis 1.png|48x48px]]<br /> Mild toxicosis
+|Slight hemotoxin presence in the bloodstream. Did something bite you?
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Current [[venom]] > 2%
+|-
+![[File:Toxicosis 2.png|48x48px]]<br /> Toxicosis
+|Hemotoxin present in the bloodstream, impairing blood clotting and destroying blood cells. Watch for vital signs
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Current venom > 25%
+|-
+![[File:Toxicosis 3.png|48x48px]]<br /> Severe toxicosis
+|Large amount of hemotoxin present in the bloodstream, clogging your blood and destroying blood cells. Watch for vital signs.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Current venom > 55%
+|-
+![[File:Toxicosis 4.png|48x48px]]<br /> <span style="color:#FF0000;">Toxic crisis</span>
+|Your blood more closely resembles marmalade than something that can upkeep life.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Current venom > 80%
+|-
+![[File:Sleep 1.png|48x48px]]<br /> Drowsy
+|Getting sleepy.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Energy]] < 35%
+|-
+![[File:Sleep 2.png|48x48px]]<br /> Tired
+|It's nap time.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Energy < 25%
+|-
+![[File:Sleep 3.png|48x48px]]<br /> Very tired
+|It's REALLY nap time.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Energy < 15%
+|-
+![[File:Sleep 4.png|48x48px]]<br /> <span style="color:#FF0000;">Half-asleep</span>
+|Barely awake, about to collapse from exhaustion.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Energy < 7%
+|-
+![[File:Moodle_hunger_0.webp|48x48px]]<br /> Peckish
+|Could do with a bite to eat.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Hunger]] < 75
+Requirement lowered when unhappy, down to 7.5 at -100 mood.
+|-
+![[File:Moodle_hunger_1.webp|48x48px]]<br /> Hungry
+|Uncomfortably hungry. Slightly weaker than usual.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Hunger < 50
+Requirement lowered when unhappy, down to 5 at -100 mood.
+|-
+![[File:Moodle_hunger_2.webp|48x48px]]<br /> Very hungry
+|Extremely hungry, desperate for satiation. Weaker than usual.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Hunger < 35
+Requirement lowered when unhappy, down to 3.5 at -100 mood.
+|-
+![[File:Moodle_hunger_3_anim.webp|48x48px]]<br /> <span style="color:#FF0000;">Starving</span>
+|Your entire body, just wasting away... Total organ failure imminent.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Hunger <= 15
+
+Requirement lowered when unhappy, down to 1.5 at -100 mood.
+
+Critical when Hunger <= 0
+|-
+![[File:Moodle_thirst_0.webp|48x48px]]<br /> Thirsty
+|Feeling a little thirsty.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Thirst]] < 75
+|-
+![[File:Moodle_thirst_1.webp|48x48px]]<br /> Dehydrated
+|Low body water volume. Very thirsty.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Thirst < 55
+|-
+![[File:Moodle_thirst_2.webp|48x48px]]<br /> Parched
+|Body drying out, in desperate need of water. Mind consumed by thirst.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Thirst < 35
+|-
+![[File:Moodle_thirst_3_anim.webp|48x48px]]<br /> <span style="color:#FF0000;">Desiccated</span>
+|Blood volume dangerously low and thick due to lack of fluids.<br />''Your dust is becoming one with the earth...''
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Thirst <= 20
+Critical when Thirst <= 0
+|-
+! [[file:slaked.png|48x48px]]<br /> Slaked
+|Your thirst is fully satiated - you won't need water for a while. Thirst rate doubled. Blood pressure increased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Thirst > 100
+|-
+! [[file:overhydrated.png|48x48px]]<br /> Overhydrated
+|You've drank considerably more than needed. Movement slightly impaired. Thirst rate doubled. Blood pressure increased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Thirst > 125
+|-
+! [[file:waterintoxicated.png|48x48px]]<br /><span style="color:#FF0000;">Water-intoxicated</span>
+|Excessive water intake. Your cells are swelling, causing high intracranial pressure, interrupting blood flow to the brain. Your head hurts... Thirst rate doubled. Blood pressure highly increased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Thirst > 175
+|-
+![[File:Nausea 1.png|48x48px]]<br /> Queasy
+|Feeling discomfort. Minorly sick.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Sickness]] > 10%
+|-
+![[File:Nausea 2.png|48x48px]]<br /> Nauseous
+|Confused, uncomfortable around the stomach. Prone to vomiting.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Sickness > 30%
+|-
+![[File:Nausea 3.png|48x48px]]<br /> Sick
+|Lethargic, tired and in major discomfort. Very prone to vomiting.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Sickness > 50%
+|-
+![[File:Moodle_sick_3_anim.webp|48x48px]]<br /> <span style="color:#FF0000;">Grossly sick</span>
+|Dangerously sick. Something is VERY wrong on the inside. Weak, confused and in a world of pain.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Sickness > 75%
+Critical when Sickness > 95%
+|-
+![[File:Heat 1.png|48x48px]]<br /> Warm
+|A little warm for comfort.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Temperature|Body temperature]] > 38°C
+|-
+![[File:Heat 2.png|48x48px]]<br /> Hot
+|Unpleasantly hot. Thirst increased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Body temperature > 39°C
+|-
+![[File:Heat 3.png|48x48px]]<br /> Hyperthermia
+|Dangerously hot. You're struggling to go on in the heat... Thirst highly increased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Body temperature > 40.25°C
+|-
+![[File:Heat 4.png|48x48px]]<br /> <span style="color:#FF0000;">Heatstroke</span>
+|Cells are starting to die from the intense heat. Irreversible organ damage imminent.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Body temperature > 41.5°C
+|-
+![[File:Cold 1.png|48x48px]]<br /> Chilly
+|A little cold for comfort.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Body temperature < 35.5°C
+|-
+![[File:Cold 2.png|48x48px]]<br /> Cold
+|Unpleasantly cold. Your body is slowing down.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Body temperature < 34°C
+|-
+![[File:Cold 3.png|48x48px]]<br /> Hypothermia
+|Dangerously low temperature, body and mind taken by the cold. Your entire body is slowly shutting down.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Body temperature < 32.5°C
+|-
+![[File:Cold 4.png|48x48px]]<br /> <span style="color:#FF0000;">Freezing to death</span>
+|You feel like you're burning up, but you're so tired and confused. You could go for a long nap...
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Body temperature < 28°C
+|-
+![[File:Moodle_sad_0.webp|48x48px]]<br /> Feeling down
+|Starting to realize the gravity of your situation. Try to distract yourself.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Mood]] < -10
+|-
+![[File:Moodle_gloomy_1.webp|48x48px]]<br /> Gloomy
+|Lacking the motivation to go on, struggling with emotions. Things really aren't looking up. Find a way to distract yourself.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Mood < -30
+|-
+![[File:Moodle_depression_2_anim.webp|48x48px]]<br /> <span style="color:#FF0000;">Depressed</span>
+|Barely willing to do anything. Your mind, ravaged by desperation. Maybe it will all be over soon?
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Mood < -50
+Critical when about to self-harm
+|-
+![[File:Moodle_miserable_3_anim.webp|68x68px]]<br /> <span style="color:#FF0000;">Miserable</span>
+|''How does it feel, knowing you're not coming back up..?''
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Mood < -75
+Critical when about to self-harm
+|-
+![[File:Dulled Claws Moodle.png|48x48px]]<br /> Dulled claws
+|Your claws are worn down from continuous use, reducing your damage output. Give your hands a break, or use a tool.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Claw health < 60%
+|-
+![[File:Broken Claws Moodle.png|48x48px]]<br /> Broken claws
+|Your claws are severely damaged from excessive use, severely reducing your damage output. You might damage your hands if you keep using them without a tool.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Claw health < 25%
+|-
+![[File:Deaf 1.png|48x48px]]<br /> Impaired hearing
+|You can't hear those high frequencies as well as before. Let your ears rest for a while.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Hearing loss]] > 15%
+|-
+![[File:Deaf 2.png|48x48px]]<br /> Hearing loss
+|Everything sounds very muffled and echo-y. You feel irritated. This may take a bit.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Hearing loss > 40%
+|-
+![[File:Deaf 3.png|48x48px]]<br /> Severe hearing loss
+|You can barely hear anything. You feel very irritated. Your ears will take a good while to improve.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Hearing loss > 70%
+|-
+![[File:Dirty Moodle 1.png|48x48px]]<br /> Dirty
+|Consider taking a quick bath. (&lt;Dirtiness&gt;%)
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Dirtiness]] > 50%
+|-
+![[File:Dirty Moodle 2.png|48x48px]]<br /> Very dirty
+|While you don't particularly mind the lack of hygiene, your immune system certainly will. Take a bath. (&lt;Dirtiness&gt;%)
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Dirtiness > 80%
+|-
+![[File:Encumbered Moodle 1.png|48x48px]]<br /> Heavy load
+|Carrying a bit much for comfort. &lt;Over-encumbrance&gt;% encumbrance.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Encumbrance#Overencumbrance|Over-encumbrance]] > 0%
+|-
+![[File:Encumbered Moodle 2.png|48x48px]]<br /> Encumbered
+|Carrying too much. Stamina and mobility decreased. Passively gain STR/RES. &lt;Over-encumbrance&gt;% encumbrance.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Over-encumbrance > 30%
+|-
+![[File:Encumbered Moodle 3.png|48x48px]]<br /> Very encumbered
+|Carrying way too much. Stamina and mobility highly decreased. Passively gain STR/RES. &lt;Over-encumbrance&gt;% encumbrance.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Over-encumbrance > 55%
+|-
+![[File:Encumbered Moodle 4 Crit.png|48x48px]]<br /> <span style="color:#FF0000;">Hampered</span>
+|Practically unable to move. Carrying WAY, way too much. Passively gain STR/RES. &lt;Over-encumbrance&gt;% encumbrance.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Over-encumbrance > 85%
+|-
+![[File:Wet Moodle 1.png|48x48px]]<br /> Damp
+|Your fur feels slightly wet.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Wetness]] > 5%
+|-
+![[File:Wet Moodle 2.png|48x48px]]<br /> Wet
+|Considerably wet. Temperature and comfort decreased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Wetness > 20%
+|-
+![[File:Wet Moodle 3.png|48x48px]]<br /> Soaked
+|Dripping wet. Temperature and comfort considerably decreased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Wetness > 45%
+|-
+![[File:Wet Moodle 4.png|48x48px]]<br /> Water-logged
+|Completely drenched! The water is weighing you down. Temperature and comfort highly decreased.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Wetness > 70%
+|-
+! colspan="4" style="text-align: center" | The following are <abbr title="Only appear in the health panel or while the moodle bar is hovered over">side moodles</abbr>
+|-
+![[File:Lowimmunity Moodle.png|48x48px]]<br /> Immunocompromised
+|Your immune system is severely weakened, be it due to dirtyness, hunger, thirst or more. Infections are much more dangerous. Take better care of yourself.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Immunity]] < 55%
+|-
+![[File:Underweight Moodle 1.png|48x48px]]<br /> Underweight
+|Try to pack on a few kilos.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|[[Weight]] < 44.9kg
+|-
+![[File:Underweight Moodle 2.png|48x48px]]<br /> Skinny
+|Unhealthily underweight considering your species. Weaker than normal. Lowered carrying capacity.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Weight < 39.8kg
+|-
+![[File:Underweight Moodle 3.png|48x48px]]<br /> Malnourished
+|You're dangerously thin and frail. Way weaker than normal, prone to being tired and lethargic. Lowered carrying capacity.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Weight < 36.4kg
+|-
+![[File:Underweight Moodle 4.png|48x48px]]<br /> Emaciated
+|You're excessively skinny. You can easily see and feel your bones through your fur. At high risk of heart failure. Very lowered carrying capacity.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Weight < 33kg
+|-
+![[File:Overweight Moodle 1.png|48x48px]]<br /> Chubby
+|Try to lose a few kilos.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Weight > 55kg
+|-
+![[File:Overweight Moodle 2.png|48x48px]]<br /> Overweight
+|Unhealthily overweight, though you look about average compared to other species. Clumsier, you get tired quicker.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Weight > 60.2kg
+|-
+![[File:Overweight Moodle 3.png|48x48px]]<br /> Fat
+|Dangerously wide and soft. Way clumsier and more prone to exhaustion.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Weight > 63.6kg
+|-
+![[File:Overweight Moodle 4.png|48x48px]]<br /> Obese
+|Life-threatenigly obese. It's like you stuffed a bag of fur with pure fat and hunger. At high risk of heart failure.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Weight > 67kg
+|-
+![[File:Trauma Moodle 2.png|48x48px]]<br /> Scared
+|Recent events have left you uneasy and scarred. You feel shaky. You REALLY don't want to go through that again. Happiness reduced.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Trauma]] > 25%
+|-
+![[File:Trauma Moodle 3.png|48x48px]]<br /> Traumatized
+|You feel panicked and horrified. Visions of past horrors flash before your eyes. You want OUT of here by any means necessary... This wound will take a good while to heal. Happiness highly reduced.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Trauma > 45%
+|-
+![[File:Trauma Moodle 4.png|48x48px]]<br /> Shell shocked
+|Horrified. Helpless. Hopeless. You can't muster a single word. Happiness severely reduced.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Trauma > 80%
+|-
+![[File:Badsleep Moodle.png|48x48px]]<br /> Bad sleep
+|Your back really isn't appreciating your choice of where you slept. Try picking a less harsh surface next time. Consciousness decreased.
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Waking up from '''Mediocre''' (1m) or '''Bad''' (2m 30s) [[sleep]] quality
+|-
+![[File:Speechless.png|48x48px]]<br /> Impaired speech
+|Something is making speaking difficult... You might have trouble communicating with others.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Conscious while item in mouth, dislocated jaw, or disfigured <!-- The file name is wrong... lol -->
+|-
+![[File:Rnrs Moodle.png|48x48px]]<br /> Rapid neuron regeneration sickness
+|Neural shock caused by a sudden and rapid regeneration of brain tissue. While you'll adjust after some time, you might not want to take another dose for now. (&lt;Time remaining&gt;)
+| style="text-align: center" | [[File:Nomark.png|32x32px]]
+|Consumed [[braingrow]] (1 min/ml) or [[Neural Booster]] (20 min)
+|-
+![[File:Rippedjaw Moodle.png|48x48px]]<br /> Disfigured
+|Your lower jaw has been ripped off due severe trauma to the head. Eating and talking is much harder. You are horribly scarred by the experience.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Jaw missing
+|-
+![[File:Amputation Moodle.png|48x48px]]<br /> Amputated
+|One of your extremities has been dismembered. Traumatizing. Obviously, any use of the lobbed off limb is permanently gone.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Any limb missing
+|-
+![[File:Rippedeye Moodle 3.png|48x48px]]<br /> Half-blind
+|One of your eyes has been ripped out, halving your field of view. You are somewhat scarred by the experience. Don't lose the remaining one.
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|One eye missing
+|-
+![[File:Rippedeye Moodle 4.png|48x48px]]<br /> Blind
+|Both of your eyes have been ripped out. You can only get by using feel and sound. At least you no longer need a light source...
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|Both eyes missing
+|-
+!{{Anchor|Hollow}}[[File:Hollow.png|48x48px]]<br /> [[Mindwipe#Hollow|Hollow]]
+|
+| style="text-align: center" | [[File:Checkmark.png|32x32px]]
+|[[Mindwipe]] used, or [[Braingrow]]/[[Neural Booster]] with RNRS
+|}
+
+== Unused ==
+These moodles are present in the lang file, but are not referenced in code and do not appear in-game.
+{| class="wikitable mw-collapsible"
+|+
+! scope="col" style="width: 10%" | Moodle 
+! scope="col" style="width: 50%" | Description
+! scope="col" | Cause
+|-
+![[File:Deceased.png|48x48px]]<br /> Deceased
+|Permanent, irreversible, and complete loss of brain function. You have left this world behind, alike the rest.
+|Dead, brain health is at 0
+|-
+![[File:Trauma Moodle 1.png|48x48px]]<br /> Anxious
+|Something bad has happened to you, and your brain does NOT want to experience it again. Happiness slightly reduced.
+|Unknown, likely would appear around ~10-15% [[Trauma]]
+|-
+![[File:Hypervolemic 1.png|48x48px]]<br /> Bloated
+|Feeling uncomfortable. Increased blood pressure.
+|Blood volume > 5 L
+|-
+![[File:Hypervolemic 2.png|48x48px]]<br /> Hypervolemic
+|Body bloated, blood pressure high, feeling dizzy with a headache.
+|Blood volume > 5.25 L
+|-
+![[File:Hypervolemic 3.png|48x48px]]<br /> Critically hypervolemic
+|Grossly bloated. Extremely high blood pressure. Can barely stand, or think.
+|Blood volume > 5.5 L
+|-
+![[File:Hypervolemic 4.png|48x48px]]<br /> <span style="color:#FF0000;">Lethally hypervolemic</span>
+|There's a terrible pain in your chest... Vital signs fading. Blood volume and pressure way too high.
+|Blood volume ≥ 5.625 L
+|}
+[[Category:Mechanics]]

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layers - Scav Prototype Wiki</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2em;
+            background: linear-gradient(90deg, #00d4ff, #7b2fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            line-height: 1.8;
+            color: #d0d0d0;
+        }
+        
+        h2 {
+            color: #00d4ff;
+            margin: 20px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        h3 {
+            color: #7b2fff;
+            margin: 18px 0 8px;
+        }
+        
+        h4 {
+            color: #a0a0a0;
+            margin: 15px 0 5px;
+        }
+        
+        strong {
+            color: #fff;
+        }
+        
+        em {
+            color: #aaa;
+            font-style: italic;
+        }
+        
+        .wiki-link {
+            color: #00d4ff;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(0, 212, 255, 0.5);
+        }
+        
+        .wiki-link:hover {
+            color: #7b2fff;
+            border-bottom-color: #7b2fff;
+        }
+        
+        .wiki-image {
+            max-width: 50px;
+            height: auto;
+            border-radius: 4px;
+            margin: 5px;
+            vertical-align: middle;
+        }
+        
+        .wiki-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .wiki-table th, .wiki-table td {
+            padding: 10px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .wiki-table th {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        
+        .wiki-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        ul {
+            margin: 10px 0 10px 30px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .wiki-table th, .wiki-table td {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Layers</h1>
+        </header>
+        <div class="content">
+            <br><br><a href="#/Scav Prototype" class="wiki-link">Scav Prototype</a> is organized into <strong>layers</strong>, each with their own collections of <a href="#/tiles" class="wiki-link">tiles</a>, <a href="#/buildings" class="wiki-link">structures</a>, <a href="#/buildings#Hazards" class="wiki-link">traps</a>, <a href="#/enemies" class="wiki-link">enemies</a>, and <a href="#/items" class="wiki-link">items</a>. There are currently <strong>5</strong> accessible layers in the Itch.io demo build and the 6.x Steam demo.<br><br><h2>Description</h2><br><br>Each layer is <strong>307.2m</strong> tall. The player must go through these layers to progress in the game. There is currently no limit to the amount of layers the player can go through, and the game goes back to <a href="#/Deeper_gravel_lands" class="wiki-link">deeper gravel lands</a> after <a href="#/overgrown depths" class="wiki-link">overgrown depths</a> is completed.<br><br>Upon generation of each layer, there can rarely be a <a href="#/Layer modifiers" class="wiki-link">Layer modifier</a> added.<br><br>By default, the amount of <a href="#/buildings#Hazards" class="wiki-link">traps</a> and <a href="#/Items" class="wiki-link">items</a> changes per layer. This can be adjusted in the <a href="#/Controls" class="wiki-link">main menu</a>.<br><br>One block in the world is exactly 0.30 by 0.30 meters<ref>Assembly-CSharp.dll:WorldGeneration.cs:WorldGeneration.PlayerLayerDepthMeters()</ref> and is 1 Unity unit by 1 Unity unit.<ref>SampleScene.unity</ref> Gravity in the game is set to 55 Unity units / s<sup>2</sup>,<ref>Physics2DSettings.asset</ref> or 16.5 m/s<sup>2</sup> (including in the <a href="#/Tutorial" class="wiki-link">Tutorial</a>), which is a bit less than twice Earth's gravity.<br><br><h2>Layers in order</h2><br><br><br><div style="float: left; margin-right: 5px; margin-top: 0px;"><br><img src="https://scavprototype.wiki.gg/images/thumb/Gravel lands_icon.png/80px-Gravel lands_icon.png" alt="Gravel lands_icon.png" class="wiki-image"><br></div><br><br><h3>Gravel Lands</h3><br><br><a href="#/File:Gravel lands layer list.png" class="wiki-link">right|300px</a><br><br>The <a href="#/gravel lands" class="wiki-link">gravel lands</a> is a cavernous, cold layer made up of small interconnected caves. <br><br>Most of the layer is made of light stone, gravel, soil, and clay, with <a href="#/groundwater" class="wiki-link">groundwater</a> pools filling in any gaps. Wooden scaffolding generates around the layer, and are easy to dig through. Climbing Ropes generate occasionally, which can be climbed to reach different sections of the layer. Holes in the background illuminate parts of the layer, providing some lighting. <br><br>Only <a href="#/shade crawler" class="wiki-link">shade crawler</a>s spawn here, and <a href="#/buildings#Hazards" class="wiki-link">traps</a> are limited to <a href="#/geyser" class="wiki-link">geysers</a>, <a href="#/jump pad" class="wiki-link">jump pads</a>, and <a href="#/spike trap" class="wiki-link">spike traps</a>. Falls are usually short.<br><br>This layer serves as the start for all runs, and will never reappear later in the run.<br><br><br><br><div style="float: left; margin-right: 5px; margin-top: 4px;"><br><img src="https://scavprototype.wiki.gg/images/thumb/Deeper_gravel lands_icon.png/80px-Deeper_gravel lands_icon.png" alt="Deeper_gravel lands_icon.png" class="wiki-image"><br></div><br><h3>Deeper Gravel Lands</h3><br><br><a href="#/File:Deeper gravel lands layer list.png" class="wiki-link">right|300px</a><br><br>The <a href="#/deeper gravel lands" class="wiki-link">deeper gravel lands</a> is a direct continuation of the gravel lands, bearing many of the same characteristics, along with more dangerous hazards. <br><br>Unlike the gravel lands, there are no illuminating holes in the background, and wooden scaffolding is replaced by concrete beams. <a href="#/Lumalgae" class="wiki-link">Lumalgae</a> can be found alongside <a href="#/groundwater" class="wiki-link">groundwater</a>. <a href="#/Barbed fence" class="wiki-link">Barbed fences</a>, <a href="#/bear trap" class="wiki-link">bear traps</a>, and <a href="#/cave tick" class="wiki-link">cave tick swarms</a> appear in this layer, along with the hazards from the gravel lands. <br><br>Sand and sandstone will appear as the player makes it towards the end of the layer.<br><br><ul><li>The game currently loops from this layer once the <a href="#/overgrown depths" class="wiki-link">overgrown depths</a> layer is completed, doing so until the player ends the run (whether forcefully or willingly). </li></ul><br><br><br><br><div style="float: left; margin-right: 5px; margin-top: 3px;"><br><img src="https://scavprototype.wiki.gg/images/thumb/Dried_desert_icon.png/80px-Dried_desert_icon.png" alt="Dried_desert_icon.png" class="wiki-image"><br></div><br><h3>Dried Desert</h3><br><br><a href="#/File:Dried desert layer list.png" class="wiki-link">right|300px</a><br><br>The <a href="#/dried desert" class="wiki-link">dried desert</a> is a desert-themed layer with spacious caves made of sand and hard stones. Tall drops, <a href="#/turret" class="wiki-link">turrets</a>, <a href="#/coil" class="wiki-link">coils</a>, <a href="#/stalactites" class="wiki-link">stalactites</a>, and <a href="#/landmine" class="wiki-link">landmines</a> make mistakes much more punishing compared to the previous layers, and force the player to look in every direction.<br><br><a href="#/Waste pipe" class="wiki-link">Waste pipes</a> and <a href="#/oil" class="wiki-link">oil</a> can be found alongside <a href="#/groundwater" class="wiki-link">groundwater</a>, the latter of which is rarer to find in the desert. As oil is more viscous and harder to escape in this layer, deaths caused by drowning via fractures or exhaustion poses a new challenge. <br><br>However, this layer provides new tools, including very powerful <a href="#/Rose light" class="wiki-link">Rose light</a>s, as well as sand vines that can be climbed, similarly to the climbing ropes that appear in the <a href="#/gravel lands" class="wiki-link">gravel lands</a>. Recharge station structures also generate here, though they are frequently flooded with oil.<br><br><a href="#/Wall biter" class="wiki-link">Wall biters</a> and <a href="#/Shade crawler" class="wiki-link">Shade crawlers</a> are <a href="#/enemies" class="wiki-link">enemies</a> that spawn.<br><br>The layer tests the player's ability to spot hazards, encouraging a slow and careful approach through tall drops, large caves, and obscured areas.<br><br><br><br><div style="float: left; margin-right: 5px; margin-top: 3px;"><br><img src="https://scavprototype.wiki.gg/images/thumb/Wasteland_icon.png/80px-Wasteland_icon.png" alt="Wasteland_icon.png" class="wiki-image"><br></div><br><br><h3>Wasteland</h3><br><a href="#/File:Wasteland layer list.png" class="wiki-link">right|300px</a><br><br>The <a href="#/wasteland" class="wiki-link">wasteland</a> is a radioactive fallout-themed layer sharing many characteristics with the dried desert. <br><br>While the layer lacks <a href="#/enemies" class="wiki-link">enemies</a> of any kind, <a href="#/sound cannon" class="wiki-link">sound cannons</a>, <a href="#/tiles" class="wiki-link">toxirock</a>, and <a href="#/spent fuel" class="wiki-link">spent fuel</a> force the player to decisively route through the layer, whilst spotting and avoiding the dangerous threats from the previous layer. <br><br>Durable brick blocks can sometimes be found around the layer, and verdure will start appearing as the player makes it towards the end of the layer.<br><br><br><br><div style="float: left; margin-right: 5px; margin-top: 3px;"><br><img src="https://scavprototype.wiki.gg/images/thumb/Overgrown depths_icon.png/80px-Overgrown depths_icon.png" alt="Overgrown depths_icon.png" class="wiki-image"><br></div><br><br><h3>Overgrown Depths</h3><br><a href="#/File:Overgrown depths layer list.png" class="wiki-link">right|300px</a><br><br>The <a href="#/overgrown depths" class="wiki-link">overgrown depths</a> also known as The Jungle is a jungle-themed layer filled with thick vegetation.<br><br><a href="#/Skullcrusher" class="wiki-link">Skullcrusher</a>s, and <a href="#/grabber Plant" class="wiki-link">grabber plant</a>s  are new traps found in this area. Luckily, sound cannons and other wasteland traps are not present. Every plant thus far besides cacti will spawn here, and quite frequently, making starvation a non-issue.  <br><br>Because of the abundance of food, drinkable sap and groundwater, and the lack of turrets and landmines, one might mistake this layer for some sort of paradise if it weren't for a very large and very noticeable threat.  <br><br><a href="#/Thornback" class="wiki-link">Thornbacks</a>, <a href="#/overgrown tick" class="wiki-link">overgrown tick</a>s, <a href="#/cave tick" class="wiki-link">cave tick</a>s, and <a href="#/elder thornback" class="wiki-link">elder thornbacks</a> are enemies that spawn in this layer as well as wall biters, forming the primary challenge.<br><br>It is currently the final layer of the game. <br><br><br><br><h2>IN-DEV Layers</h2><br>These layers are still in development and aren't accessible to the current Itch.io build or the Steam demo.<br><br><br><br><div style="float: left; margin-right: 5px; margin-top: 3px;"><br><img src="https://scavprototype.wiki.gg/images/thumb/Frozen chasm_icon.png/80px-Frozen chasm_icon.png" alt="Frozen chasm_icon.png" class="wiki-image"><br></div><br><h3>Frozen Chasm</h3><br><br>The <a href="#/frozen chasm" class="wiki-link">frozen chasm</a> is an in-development ice-themed layer, not currently accessible in the public Itch.io build.<br><br>This layer can be accessed if you save upon exiting Layer 5.<br>The main danger planned with the layer is the freezing cold, and to a lesser extent, <a href="#/Snow strider" class="wiki-link">Snow strider</a>s and Gunmines, the player must go between <a href="#/Ion space heater" class="wiki-link">Ion space heater</a>s, <a href="#/Xaloris" class="wiki-link">Xaloris</a>es and <a href="#/life pod" class="wiki-link">life pod</a>s to stay warm and not freeze to death<br><ul><li>The layer at the moment will be blank if entered in the current build (v5.1)</li></ul><br><ul><li>The <a href="#/frozen chasm" class="wiki-link">frozen chasm</a> along with <a href="#/Fungal Pools" class="wiki-link">Fungal Pools</a> have been fully teased within a stream and video (but are still W.I.P)</li></ul><br><ul><li>Normally continuing will loop the player back to the <a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></li></ul><br><br><br><br><div style="float: left; margin-right: 5px; margin-top: 3px;"><br><img src="https://scavprototype.wiki.gg/images/thumb/Fungal pools icon.png/80px-Fungal pools icon.png" alt="Fungal pools icon.png" class="wiki-image"><br></div><br><br><h3>Fungal Pools</h3><br><br>The <a href="#/Fungal Pools" class="wiki-link">Fungal Pools</a> are an in-development layer, continuing after the <a href="#/frozen chasm" class="wiki-link">frozen chasm</a>.<br>This layer is a fungus themed layer, with many fungus themed blocks, traps and enemies. The main danger within the layer is the constant rain that is very likely to make you freeze to death if sleeping while wet, the player must sleep within <a href="#/life pod" class="wiki-link">life pod</a>s to avoid this, other dangers include <a href="#/sawblade" class="wiki-link">sawblade</a>s, Side Stabbers and Grabber Shrooms that can easily cause injuries.<br>*The layer isn't able to be loaded in the current build of the game (v7.0).<br>*The <a href="#/Fungal Pools" class="wiki-link">Fungal Pools</a> and <a href="#/frozen chasm" class="wiki-link">frozen chasm</a> were the 2 layers fully teased within a stream and the Steam trailer (but are still W.I.P).<br>*The layer is the only layer that <a href="#/fungali bungali" class="wiki-link">fungali bungali</a> can be found and broken to obtain <a href="#/bunchunk" class="wiki-link">bunchunk</a> and craft <a href="#/procoagulant" class="wiki-link">procoagulant</a>.<br><br><br>The layers after 7 will crash when trying to load so do NOT mod your save file to these layers if you don't have a backup to its previous version.<br><br><h3>Crystalline Hollow</h3><br>The Crystalline Hollow is an in-development layer.<br><br><ul><li>This is the same setting as the Crystalline Hollow from Orsoniks' game [https://orsonik.itch.io/gooey Gooey]</li></ul><br>From what footage and text from the locale has surfaced so far, this layer will revolve around making use of various crystals while avoiding others. The main dangers of the layer are the hectic terrain with very very large drops, the different types of crystals and a flying crystal enemy called <a href="#/Manifestation" class="wiki-link">Manifestation</a>, its also said that the corpses of said enemy, if not consumed quickly, will turn into 2 Manifestations, though the larger the group of them is, the slower they are.<br><br><ul><li>Crystal types and their effects </li></ul><br><ul><li>Yellow Crystal: acts like <a href="#/coil" class="wiki-link">coil</a>, but also recharges all batteries on you </li></ul><br><ul><li>Red Crystal blows up </li></ul><br><ul><li>Green Crystal: (radioactive): irradiates you </li></ul><br><ul><li>Green Crystal: (magic): heals you </li></ul><br><ul><li>Purple Crystal: causes <a href="#/sepsis" class="wiki-link">sepsis</a> </li></ul><br><ul><li>Foggy Crystal: heats you up rapidly </li></ul><br><ul><li>Shaky Crystal: throws you (but allows movement, similar to <a href="#/bouncecap" class="wiki-link">bouncecap</a>) </li></ul><br><ul><li>Repulsion Crystal: repels you away (has a field that pushes outwards) </li></ul><br><ul><li>Attraction Crystal: pulls you in (has a field that pulls inwards) </li></ul><br><ul><li>Fragile Crystal: shatters when stood on </li></ul><br><ul><li>Teleportation Crystal: links 2 locations, touching it teleports you to the second location and brain flashes you, crystal is see through </li></ul><br><ul><li>Gray Crystal: flashes but doesn't harm you directly, but will drain all your batteries </li></ul><br><ul><li>Bright Crystal: extremely bright, good light source (might blind?) </li></ul><br><ul><li>Hazy Crystal: touching it causes it to blind for a bit, but acts like <a href="#/drop capsule" class="wiki-link">drop capsule</a> </li></ul><br><ul><li>Burning Crystal: burns you </li></ul><br><ul><li>Shifting Crystal: switches places (?) </li></ul><br><br>(Note: this is info found from the english translation github page by the dev and direct sneak peaks show) <br>(Note: at the moment its not known the exact names of the crystals, im just going off what they do)<br><br><h3>Geothermal Vents</h3><br>The Geothermal Vents are an in-development layer. The main threat here is planned to be extremely high temperatures. Magma has also been shown off in some sneak peeks.<br><br><h3>Where We Must Reach</h3><br>The planned location of the target technology.<br><br><h3>The Ascent</h3><br>Ascent back to the surface.<br><br><h3>Surface</h3><br>The surface of the Target Planet.<br><br><h3>Pathway to Freedom</h3><br>Optional, related to the <a href="#/Ending" class="wiki-link">game endings</a>.<br><br><h2>Trivia</h2><br><br><ul><li>Tracks for the <a href="#/frozen chasm" class="wiki-link">frozen chasm</a>, <a href="#/fungal Pools" class="wiki-link">fungal Pools</a>, <a href="#/crystalline Hollow" class="wiki-link">crystalline Hollow</a> and Geothermal Vents can be found in the <a href="#/soundtrack" class="wiki-link">soundtrack</a> page.</li></ul><br><ul><li>Reaching the bottom of a layer prompts the player to either save and quit, or continue to the next layer. This disables the player's ability to jump until an option is chosen, so be ready to leave once you reach the bottom.</li></ul><br>** The player can use the <a href="#/Jetpack" class="wiki-link">Jetpack</a> to get back off of the bottom of the layer, but this does not remove the save/continue prompt from the middle of the screen or return their ability to jump.<br>** No longer true as of version 5 on itch.io and version 6.x on Steam.<br><ul><li>Any <a href="#/liquids" class="wiki-link">liquid</a> that touches the bottom of a layer disappears.</li></ul><br>** <a href="#/Items" class="wiki-link">Items</a> do not, however. This is likely to prevent players from losing the items in their hands permanently due to falling.<br>*It is possible to enter a different layer in the tutorial. <!-- Is this still true in the steam demo? Test this using debug, it's likely that the tranquilizer sequence will trigger before DGL loads though --><br>** The Tutorial structure does not despawn, but the traps and enemies in a layer may spawn inside it.<br>** The Tutorial structure will not spawn if the game is saved and reloaded instead of just continued.<br><br><a href="#/zh:层级" class="wiki-link">zh:层级</a>
+        </div>
+    </div>
+</body>
+</html>

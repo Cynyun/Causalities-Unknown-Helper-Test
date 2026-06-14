@@ -1,0 +1,215 @@
+The game has a sizeable amount of ambient tracks and drones. This page lists all music tracks present in the game.
+
+== Tracks ==
+
+These tracks play in the background every couple of minutes. Each layer has its own set of tracks it will randomly play. Some tracks here are unique and either aren't used in the game yet, or don't play in a specific biome.
+
+<div style="text-align: center; width: 100%;">
+{| class="wikitable" style="margin: 0 auto; text-align: left;"
+|+ List of ambient tracks
+|-
+! Name !! style="min-width: 300px;" | File !! Plays in !! Notes
+|-
+| Proxy || [[File:ProxyNew.mp3]] || [[Gravel lands]]/Pre-run || 
+|-
+| Droning Grays || [[File:DroningGrays.ogg]] || [[Gravel lands]] || 
+|-
+| Unfriendly Welcome || [[File:Unfriendlywelcome.ogg]] || [[Gravel lands]] || 
+|-
+| Begin Anew || [[File:Strng_3.ogg]] || [[Gravel lands]] || 
+|-
+| Smooth Sailing || [[File:Smoothsailing.ogg]] || [[Deeper gravel lands]] || 
+|-
+| Odd Place || [[File:Gravel4.ogg]] || [[Deeper gravel lands]] || 
+|-
+| The Unknown || [[File:TheUnknown.ogg]] || [[Deeper gravel lands]] || 
+|-
+| Disturbing Discovery || [[File:Disturbingdiscovery.ogg]] || [[Deeper gravel lands]]/Pre-run || 
+|-
+| Absolute || [[File:Absolute.ogg]] || [[Dried desert]] ||   
+|-
+| What's With the Sand || [[File:Whatswiththesand.ogg]] || [[Dried desert]] ||   
+|-
+| There's Landmines in the Desert || [[File:Thereslandminesinthedesert.ogg]] || [[Dried desert]] || 
+|-
+| It's Ionizing || [[File:Itsionizing.ogg]] || [[Wasteland]] || 
+|-
+| Fuel Assembly || [[File:Desertmore.ogg]] || [[Wasteland]] || 
+|-
+| Biological Exclusion Zone || [[File:Biologicalexclusionzone.ogg]] || [[Wasteland]] || 
+|-
+| The Flora is Moving || [[File:Thefloraismoving.ogg]] || [[Overgrown depths]] || 
+|-
+| Lush Descent || [[File:Junglesong.ogg]] || [[Overgrown depths]] || 
+|-
+| Digging From Afar || [[File:Jungle3.ogg]] || [[Overgrown depths]] || 
+|-
+| It's Chilly in Here || [[File:Itschillyinherecompressed.ogg]] || [[Frozen chasm]] || 
+|-
+| Thermal Shock || [[File:Thermalshock.ogg]] || [[Frozen chasm]] || 
+|-
+| Gaze Into the Pit || [[File:Coldsong.ogg]] || [[Frozen chasm]]/Pre-run || 
+|-
+| This Feels Weird || [[File:Thisfeelsweird.ogg]] || [[Fungal Pools]] || 
+|-
+| Rainfall Underground || [[File:RainfallUnderground.ogg]] || [[Fungal Pools]]/Pre-run || 
+|-
+| Refractions || [[File:Synth.ogg]] || [[Crystalline Hollow]]/Pre-run  || 
+|-
+| Six Thousand Feet Under || [[File:SixThousandFeetUnder.ogg]] || [[Crystalline Hollow]] || 
+|-
+| Downwards || [[File:Downwards.ogg]] || [[Geothermal Vents]] || 
+|-
+| Hydraulics || [[File:HydraulicsNew.ogg]] || [[Geothermal Vents]]/Pre-run || 
+|-
+| DEEP || [[File:Deep.ogg]] || Pre-run || 
+|-
+| Other || [[File:Other.ogg]] || Pre-run || 
+|-
+| Lab Testing || [[File:THETUTORIAL.ogg]] || Basic Course || 
+|-
+| Unethical Experiments || [[File:UnethicalExperiments.ogg]] || First Aid Course || Starts as soon as the tutorial's robotic arm cuts the Experiment for the first time to demonstrate bleeding.
+|}
+</div>
+
+== Combat ==
+These are considered drones, but play only when actively threatened by another creature (or as a result of [[Brain health#Effects|brain damage]]).
+<div style="text-align: center; width: 100%;">
+{| class="wikitable" style="margin: 0 auto; text-align: left;"
+|+ List of combat tracks
+|-
+! Name !! style="min-width: 300px;" | File !! Plays during !! Notes
+|-
+| Spiders in the Dark || [[File:Shadecrawlercombat.ogg]] || Plays during active combat with [[Shade crawler|shade crawlers]]. || 
+|-
+| Hostile Encounter || [[File:Combatnew.ogg]] || Plays during active combat when no specific threat theme is present. || 
+|-
+| There's Hundreds || [[File:Cavetickthreat.ogg]] || Plays during active combat with [[Cave tick|cave ticks]]. || 
+|-
+| RUN FOR YOUR LIFE || [[File:RUN FOR YOUR LIFE.ogg]] || Plays during active combat with an [[elder thornback]], when it's in stage 1 (>=3750 health). || 
+|-
+| Combat in the Cold || [[File:Snowstridertheme.ogg]] || Plays during active combat with [[Snow strider|snow striders]]. || 
+|-
+| A Murder of Your Own || [[File:Survivorcombat.ogg]] || Plays during active combat with [[Trader|other survivors]]. || 
+|-
+| CHASE IT DOWN || [[File:CHASE_IT_DOWN.ogg]] || Plays during active combat with an [[elder thornback]], when it's not in stage 1 (<3750 health). || 
+|-
+| Threat Simulacrum || [[File:THECOMBAT.ogg]] || Plays during active combat in the sandbox or tutorial. || 
+|-
+| Paranormal Threat || [[File:Hollowcombat.ogg]] || Plays during active combat with a [[Manifestation]] in [[Crystalline Hollow]]. || 
+|}
+</div>
+
+== Drones ==
+
+There are a few ambient drones that play when specific conditions are met. Normal ambient music is silenced when a drone is playing.
+
+<div style="text-align: center; width: 100%;">
+{| class="wikitable" style="margin: 0 auto; text-align: left;"
+|+ List of drones
+|-
+! Name !! style="min-width: 300px;" | File !! Plays when
+|-
+| Agony || [[File:PainDrone.ogg]] || Plays when above 60% [[Pain]]. Gets louder from 60% to 85%.
+|-
+| Is this the end..? || [[File:Isthistheend.ogg]] || Plays when the player is in dire physical health ([[Injuries|bleeding out]], [[Hunger|starving]], [[Radiation|severely irradiated]], [[Fibrillation|fibrillation progressing]], etc).
+|-
+| Exhausted || [[File:ExhaustedLoop.ogg]] || Plays when the player is below 50% [[stamina]]. Gets louder the lower stamina is.
+|-
+| Tired || [[File:Tired.ogg]] || Plays when the player is below 25% energy. Gets louder the lower energy is.
+|-
+| Bio-hazard || [[File:Biohazard.ogg]] || Plays when the player is currently getting irradiated (chipped only).
+|-
+| despair || [[File:Despair.ogg]] || Plays when the player's [[Mood]] is below -81.5.
+|-
+| What have I done..? || [[File:Whathaveidone.ogg]] || Plays after a suicide cut. Not technically a drone and will be muted by other drones, therefore requires quickly improving your mood and bandaging the cut to be heard.
+|-
+| Drowning || [[File:Drowning.ogg]] || Plays when the player is underwater without [[Advanced scuba diving gear]] and below 60% SpO2. Gets louder from 60% to 20% SpO2.
+|-
+| Draw Your Last Breath (1) || [[File:Dying.ogg]] || Plays when the player is unconscious and actively dying.
+|-
+| Draw Your Last Breath (2) || [[File:Death.ogg]] || Plays on deceased screen.
+|-
+| Cave-in || [[File:EarthquakeDrone.ogg]] || Plays during earthquakes.
+|-
+| Radiation pulse || [[File:Radlinepulse.ogg]]  || Plays when the player is within 22.5 meters of the radiation line. Gets louder the closer the radiation line is.
+|-
+| Familiar Face || [[File:Tradertheme.ogg]] || Plays when the trading menu is open.
+|-
+| Critical loop || [[File:Criticalloop.ogg]] || Plays when the player is in critical condition (but not actively dying) while conscious
+|-
+| Critical loop unconscious || [[File:Criticalloop-unconscious.ogg]] || Plays when the player is in critical condition (but not actively dying) while unconscious
+|}
+</div>
+
+== Stings ==
+
+These aren't considered actual tracks, instead being audio cues for certain events in the game.
+
+<div style="text-align: center; width: 100%;">
+{| class="wikitable" style="margin: 0 auto; text-align: left;"
+|+ List of stings
+|-
+! Name !! style="min-width: 300px;" |  File !! Plays when
+|-
+| Skill up || [[File:Levelup.ogg]] || Plays when any of the player's skills increase.
+|-
+| Last stand drone || [[File:Laststanddrone.ogg]] || Plays when [[Last stand]] activates.
+|-
+| Last stand heartbeat || [[File:Laststandheartbeat.ogg]] || Plays when [[Last stand]] activates.
+|-
+| Self harm || [[File:harmSting.ogg]] || Plays when the player cuts themselves. Pitched down for the suicide cut.
+|-
+| Cut eye ||[[File:Cuteye.ogg]] || Plays when the player cuts their eye.
+|-
+| Hunger (Up/Down) || [[File:hungerup.wav]] [[File:hungerdown.wav]]|| Plays when the player's hunger value changes.
+|-
+| Thirst (Up/Down) || [[File:thirstup.wav]] [[File:thirstdown.wav]]|| Plays when the player's thirst value changes.
+|-
+| Mood (Up/Down) || [[File:moodup.wav]] [[File:mooddown.wav]] || Plays when the player's mood value changes.
+|-
+| Vomit warning || [[File:vomitwarning.ogg]] || Plays when the player is about to vomit.
+|-
+| Blood vomit warning || [[File:bloodvomitwarning.ogg]] || Plays when the player is about to vomit blood.
+|-
+| Lobotomy || [[File:lobotomy.ogg]] || Plays during the frozen screen visual effect when the player is brain damaged.
+|-
+| Thornback Defeat || [[File:ThornbackDefeat.ogg]] || Plays after an [[Elder thornback]] has been defeated.
+|}
+</div>
+
+== Bonus tracks ==
+
+These only appear when using the [[MP3 player]].
+
+<div style="text-align: center; width: 100%;">
+{| class="wikitable" style="margin: 0 auto; text-align: left;"
+|+ List of bonus tracks
+|-
+! Name !! style="min-width: 300px;" |  File !! Notes
+|-
+| Always Watching || [[File:Bonus-Alwayswatching.ogg]] || Bonus-AlwaysWatching.ogg in files. [https://soundcloud.com/orsoniks/always-watching Always Watching] from Gooey.
+|-
+| Blade || [[File:Bonus-Blade.ogg]] || Bonus-Blade.ogg in files. [https://soundcloud.com/orsoniks/blade Blade] from Gooey.
+|-
+| Legacy Death || [[File:Bonus-legacydeath.ogg]] || Bonus-legacydeath.ogg in files
+|-
+| Microchip || [[File:Bonus-microchip.ogg]] || Bonus-microchip.ogg in files. [https://soundcloud.com/orsoniks/microchip Microchip] from Gooey.
+|-
+| Old D&B ||[[File:Bonus-olddnb.ogg]] || Bonus-olddnb.ogg in files. Appears to be an older version of RUN FOR YOUR LIFE and CHASE IT DOWN.
+|-
+| Scratched Steel || [[File:Bonus-ScratchedSteel.ogg]] || Bonus-ScratchedSteel.ogg in files. [https://soundcloud.com/orsoniks/scratched-steel Scratched Steel] from Gooey.
+|-
+|}
+</div>
+
+==Trivia==
+* Several songs in this game share leitmotifs with Orsoniks' previous works.
+** Biological Exclusion Zone has a leitmotif from [https://soundcloud.com/orsoniks/bio-synthesis Bio-synthesis] from Gooey.
+** Paranormal Threat has a leitmotif from [https://soundcloud.com/orsoniks/clear Clear] from Gooey.
+** Downwards has a leitmotif from [https://soundcloud.com/orsoniks/scratched-steel Scratched Steel] from Gooey.
+** Six Thousand Feet Under has a leitmotif from [https://soundcloud.com/orsoniks/lost-lights Lost Lights] from Gooey.
+** Combat in the Cold and Thermal Shock have leitmotifs from [https://soundcloud.com/orsoniks/uncertain Uncertain] from Gooey.
+* Most of the [[Soundtrack#Bonus tracks|bonus tracks]] are from Orsoniks' previous project, Gooey.
+
+[[zh:原声带]]
