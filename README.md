@@ -6,34 +6,61 @@
 
 > 《Causalities Unknown》本地桌面辅助工具 | Tauri 2 + Vue 3 + Python Sidecar
 
-## 简介
+## 项目状态
 
-本项目是一个基于 Tauri 2.x 的本地桌面应用，用于承载《Causalities Unknown》的游戏数据查询与辅助计算功能。
+### 当前进度
 
--   **当前状态 (v0.1)**：实现本地 Wiki 内容展示，通过内置 Python 爬虫同步数据至 SQLite。
--   **后续计划**：合成配方树可视化、资源规划计算器。
--   **设计目标**：离线可用、低资源占用（安装包 <10MB，内存 <60MB）。
-
-## 技术栈
-
-| 模块 | 选型 | 说明 |
+| 模块 | 状态 | 说明 |
 | :--- | :--- | :--- |
-| 桌面框架 | Tauri 2.x | 使用系统 WebView，Rust 后端处理 I/O |
-| 前端 | Vue 3 + Vite | SPA 模式，Hash 路由 |
-| 样式 | UnoCSS + Naive UI | 按需生成，支持暗色模式 |
-| 渲染 | markdown-it + Shiki | Wikitext/Markdown 解析与代码高亮 |
-| 数据源 | Python Sidecar | 独立进程运行爬虫，写入本地数据库 |
-| 存储 | SQLite (FTS5) | 全文检索，结构化数据存储 |
-| 状态 | Composables + Pinia | 局部数据直读，全局配置用 Pinia |
+| **Wiki 爬虫** | 🔧 进行中 | 完成入口页面爬取，可获取 Items/Buildings/Layers/Lore/Tiles/Soundtrack/Liquids/Moodles 原始 Wikitext |
+| **cu-helper** | 📦 框架搭建 | Tauri 2 + Vue 3 基础项目结构已初始化 |
+| **数据分类手册** | ✅ 完成 | 物品、建筑、状态效果、指令分类文档已生成 |
+
+### Wiki 爬虫 (crawler_test)
+
+用于从 [Scavengers Prototype Wiki](https://scavprototype.wiki.gg) 爬取游戏数据。
+
+```
+crawler_test/
+├── scripts/
+│   ├── fetch_entry_pages.py      # 获取入口页面 Wikitext
+│   └── convert_wiki_to_html.py   # 转换为 HTML
+├── output/
+│   ├── entry_pages/             # 生成的 HTML 文件
+│   └── entry_pages_raw.json     # 原始 API 响应
+└── venv/                        # Python 虚拟环境
+```
+
+**已实现的入口页面：**
+- Items (物品)
+- Buildings (建筑)
+- Layers (层/地图)
+- Lore (背景故事)
+- Tiles (地砖/地形)
+- Soundtrack (原声音乐)
+- Liquids (液体)
+- Moodles (状态效果)
+
+**依赖：** aiohttp, aiofiles
+
+### 辅助文档
+
+位于根目录的分类手册：
+
+- `物品分类手册.md` - 物品分类，包含液体类别
+- `建筑分类手册.md` - 建筑分类，包含环境方块
+- `状态效果手册.md` - Moodles 状态效果
+- `指令手册.md` - 控制台指令参考
 
 ## 功能规划
 
 ### Phase 1：本地 Wiki（进行中）
 
--   Python Sidecar 增量同步数据至 SQLite
--   Wikitext/HTML 安全解析，内部链接路由拦截
--   SQLite FTS5 全文检索（支持拼音/别名）
--   虚拟滚动列表、暗色模式、历史记录
+- [x] Wiki 入口页面爬取 (Items/Buildings/Layers/Lore/Tiles/Soundtrack/Liquids/Moodles)
+- [ ] Python Sidecar 增量同步数据至 SQLite
+- [ ] Wikitext/HTML 安全解析，内部链接路由拦截
+- [ ] SQLite FTS5 全文检索（支持拼音/别名）
+- [ ] 虚拟滚动列表、暗色模式、历史记录
 
 ### Phase 2：合成表 / 科技树
 
@@ -85,20 +112,38 @@
 -   Python >= 3.10
 -   [Tauri Prerequisites](https://tauri.app/start/prerequisites/)
 
-### 命令
+### 主项目 (cu-helper)
 
 ```bash
-git clone https://github.com/your-org/Causalities-Unknown-Helper-Test.git
+git clone https://github.com/Cynyun/Causalities-Unknown-Helper-Test.git
 cd Causalities-Unknown-Helper-Test
 
 npm install
-pip install -r src-tauri/sidecar/requirements.txt
 
 # 开发
 npm run tauri dev
 
 # 构建 Windows 便携版
 npm run tauri build -- --bundles nsis
+```
+
+### Wiki 爬虫 (crawler_test)
+
+```bash
+cd crawler_test
+
+# 创建虚拟环境
+python -m venv venv
+.\venv\Scripts\activate
+
+# 安装依赖
+pip install aiohttp aiofiles
+
+# 获取入口页面
+python scripts/fetch_entry_pages.py
+
+# 转换为 HTML
+python scripts/convert_wiki_to_html.py
 ```
 
 ## 技术选型备注
