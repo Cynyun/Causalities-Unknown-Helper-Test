@@ -1,0 +1,165 @@
+{{Outdated}}
+'''Buildings''' are static objects that spawn around the map during generation. Buildings include crates, plants, interactive objects, and large tile-based structures. Most buildings are not affected by gravity.
+
+== List of buildings ==
+
+=== [[File:Category item.png]] Crates ===
+
+
+{| class="wikitable sortable"
+! Building !! First appearance !! Health
+|-
+| [[File:dropcapsule.png|link=Drop capsule|14px]] [[Drop capsule]] || [[Gravel lands]] || 2500
+|-
+| [[File:lifepodchest.png|link=Life-pod chest|20px]] [[Life-pod chest]] || [[Gravel lands]] || 2000
+|-
+| [[File:medcrate.png|link=Medical crate|20px]] [[Medical crate]] || [[Gravel lands]] || 1000
+|-
+| [[File:containercrate.png|link=Container crate|20px]] [[Container crate]] || [[Gravel lands]] || 5000
+|-
+| [[File:Foodcrate.png|link=Food box|20px]] [[Food box]] || [[Gravel lands]] || 600
+|-
+| [[File:chipcapsule.png|link=Chip capsule|20px]] [[Chip capsule]] || [[Dried desert]] || 150
+|}
+
+=== [[File:Category_plant.png|link=]] Plants ===
+{| class="wikitable sortable"
+! Building !! First appearance !! Health
+|-
+| [[File:glowPlant.png|link=Glowplant|20px]] [[Glowplant]] || [[Gravel lands]] || 40
+|-
+| [[File:geotree transp.png|link=Geotree|15px]] [[Geotree]] || [[Gravel lands]] || 80
+|-
+| [[File:mushplant transp.png|link=Mushplant|20px]] [[Mushplant|Hydreed]] || [[Gravel lands]] || 250
+|-
+| [[File:stoneplant transp.png|link=Stoneplant|20px]] [[Stoneplant]] || [[Gravel lands]] || 200
+|-
+| [[File:Leadbush transp.png|link=Leadbush|20px]] [[Leadbush]] || [[Gravel lands]] || 120
+|-
+| [[File:driedbush transp.png|link=Dried bush|20px]] [[Dried bush]] || [[Dried desert]] ||100
+|-
+| [[File:Cactus transp.png|link=Cactus|20px]] [[Cactus]] || [[Dried desert]] || 100
+|-
+| [[File:Brownshroom transp.png|link=Brownshroom|20px]] [[Brownshroom]] || [[Dried desert]] || 50
+|-
+| [[File:Sandrose transp.png|link=Sand rose|20px]] [[Sand rose]] || [[Dried desert]] || 80
+|-
+| [[File:plantation transp.png|link=Plantation|20px]] [[Plantiation|Pop]] || [[Wasteland]] || 150
+|-
+| [[File:Bananaplant transp.png|link=Bananaplant|20px]] [[Banana-plant]] || [[Overgrown depths]] || 150
+|}
+
+=== [[File:Category structure.png]] Structures ===
+{| class="wikitable sortable"
+! Building !! First appearance
+|-
+| [[Wooden scaffolding]] || [[Gravel lands]]
+|-
+| [[Wooden bridge]] || [[Gravel lands]]
+|-
+|[[Wood cross]] || [[Gravel lands]]
+|-
+| [[Reactor core]] || [[Gravel lands]]
+|-
+| [[Crate pod]] || [[Gravel lands]]
+|-
+| [[Medical pod|Mini pod]] || [[Gravel lands]]
+|-
+| [[Life pod]] || [[Gravel lands]]
+|-
+|[[Life pod collapsed|Collapsed life pod]] || [[Gravel lands]]
+|-
+| [[Concrete scaffolding]] || [[Deeper gravel lands]]
+|-
+| [[Concrete bridge]] || [[Deeper gravel lands]]
+|-
+|[[Steel bridge]] || [[Deeper gravel lands]]
+|-
+| [[Bio-terminal]] || [[Deeper gravel lands]]
+|-
+|[[Bio container]] || [[Deeper gravel lands]]
+|-
+| [[Lab hallway]] || [[Deeper gravel lands]]
+|-
+| [[Medical station]] || [[Dried desert]]
+|-
+| [[Scrap-eater]] || [[Dried desert]]
+|-
+| [[Medical building]] || [[Dried desert]]
+|-
+| [[Brick block]] || [[Wasteland]]
+|-
+|[[Brick loot]] || [[Overgrown depths]]
+|}
+
+=== [[File:Category trap.png]] Hazards ===
+
+{| class="wikitable sortable"
+! Building !! First appearance !! Health
+|-
+| [[File:spikeStabberBase Transp.png|link=Spike trap|20px]] [[Spike trap]] || [[Gravel lands]] || 800
+|-
+| [[File:Jumppad2.png|link=Jump pad|20px]] [[Jump pad]] || [[Gravel lands]] || 600
+|-
+| [[File:geyser transp.png|link=Geyser|20px]] [[Geyser]] || [[Gravel lands]] || 250
+|-
+| [[File:beartrap transp.png|link=Bear trap|20px]] [[Bear trap]] || [[Deeper gravel lands]] || 500
+|-
+| [[File:barbedwirefence.png|link=Barbed fence|20px]] [[Barbed fence]] || [[Deeper gravel lands]] || 600
+|-
+| [[File:landmine.png|link=Landmine|20px]] [[Landmine]] || [[Dried desert]] || 100
+|-
+| [[File:turret.png|link=Turret|15px]] [[Turret]] || [[Dried desert]] || 500
+|-
+| [[File:coil transp.png|link=Coil|10px]] [[Coil]] || [[Dried desert]] || 500
+|-
+|  [[File:stalactite transp.png|link=Stalactite|8px]] [[Stalactite]] || [[Dried desert]] || 200
+|-
+| <!-- Has no applicable image, yet. [[File:?.png|link=Waste pipe|20px]] --> [[Waste pipe]] || [[Dried desert]] || 500
+|-
+| [[File:sound cannon.png|link=Sound cannon|20px]]  [[Sound cannon]] || [[Wasteland]] || 1500
+|-
+|  [[File:spentfuel transp.png|link=Spent Fuel|20px]]  [[Spent Fuel]] || [[Wasteland]] || 20000
+|-
+|  [[File:grabberplanttransparent.png|link=Grabber Plant|50px]]  [[Grabber Plant]] || [[Overgrown depths]] || 1500
+|-
+| [[File:skullcrusher.png|link=Skullcrusher|20px]] [[Skullcrusher]] || [[Overgrown depths]] || 800
+|-
+| [[File:glassshards.png|link=Glass shard|20px]] [[Glass shard]] || [[Gravel lands]] || 30
+|-
+| [[File:sawblade transp.png|link=Sawblade|20px]] [[Sawblade]] || [[Fungal Pools]] || 400
+|-
+| [[File:gunmine.png|link=Gunmine|20px]] [[Gunmine]] || Unknown || 400
+
+|}
+
+=== [[File:Category other.png]] Other ===
+{| class="wikitable sortable"
+! Building !! First appearance !! Health
+|-
+| [[File:corpse1.png|link=Corpse|20px]] [[Corpse]] || [[Gravel lands]] || 250
+|-
+| [[File:animalcorpse1.png|link=Animal corpse|20px]] [[Animal corpse]] || [[Gravel lands]] || 250
+|-
+| [[File:BloodCrystal transp.png|link=Blood crystal|15px]] [[Blood crystal]] || [[Gravel lands]] || 250
+|-
+| [[File:DigestionCrystal transp.png|link=Digestion crystal|15px]] [[Digestion crystal]] || [[Gravel lands]] || 250
+|-
+|  [[File:drillpod.png|link=Drill pod|8px]] [[Drill pod]] || [[Gravel lands]] || 10000/300
+|-
+|[[File:EmissiveCrystal transp.png|link=Emissive crystal|15px]] [[Emissive crystal]] || [[Gravel lands]] || 250
+|-
+| [[File:OxygenCrystal transp.png|link=Oxygen crystal|15px]] [[Oxygen crystal]] || [[Gravel lands]] || 250
+|-
+| [[File:ReliefCrystal transp.png|link=Relief crystal|15px]] [[Relief crystal]] || [[Gravel lands]] || 250
+|-
+| [[File:SoothingCrystal transp.png|link=Soothing crystal|15px]] [[Soothing crystal]] || [[Gravel lands]] || 250
+|-
+| [[File:TurbulentCrystal transp.png|link=Turbulent crystal|15px]]  [[Turbulent crystal]] || [[Gravel lands]] || 250
+|-
+| [[File:stalagmite.png|link=Stalagmite|8px]] [[Stalagmite]] || [[Dried desert]] || 500
+|-
+| [[File:vine.png|link=Vine|8px]] [[Vine]] || [[Dried desert]] || ''N/A''
+|}
+
+[[zh:环境物体]]

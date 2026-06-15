@@ -1,0 +1,102 @@
+{
+    "base_url": "https://scavprototype.wiki.gg/api.php",
+    "entry_pages": [
+        {
+            "name": "Items",
+            "api_type": "revisions",
+            "params": {
+                "action": "query",
+                "titles": "Items",
+                "prop": "revisions",
+                "rvprop": "content",
+                "format": "json",
+                "redirects": "1"
+            }
+        },
+        {
+            "name": "Buildings",
+            "api_type": "revisions",
+            "params": {
+                "action": "query",
+                "titles": "Buildings",
+                "prop": "revisions",
+                "rvprop": "content",
+                "format": "json",
+                "redirects": "1"
+            }
+        },
+        {
+            "name": "Layers",
+            "api_type": "revisions",
+            "params": {
+                "action": "query",
+                "titles": "Layers",
+                "prop": "revisions",
+                "rvprop": "content",
+                "format": "json",
+                "redirects": "1"
+            }
+        },
+        {
+            "name": "Lore",
+            "api_type": "revisions",
+            "params": {
+                "action": "query",
+                "titles": "Lore",
+                "prop": "revisions",
+                "rvprop": "content",
+                "format": "json",
+                "redirects": "1"
+            }
+        },
+        {
+            "name": "Tiles",
+            "api_type": "revisions",
+            "params": {
+                "action": "query",
+                "titles": "Tiles",
+                "prop": "revisions",
+                "rvprop": "content",
+                "format": "json",
+                "redirects": "1"
+            }
+        },
+        {
+            "name": "Soundtrack",
+            "api_type": "revisions",
+            "params": {
+                "action": "query",
+                "titles": "Soundtrack",
+                "prop": "revisions",
+                "rvprop": "content",
+                "format": "json",
+                "redirects": "1"
+            }
+        },
+        {
+            "name": "Liquids",
+            "api_type": "revisions",
+            "params": {
+                "action": "query",
+                "titles": "Liquids",
+                "prop": "revisions",
+                "rvprop": "content",
+                "format": "json",
+                "redirects": "1"
+            }
+        },
+        {
+            "name": "Mechanics/Moodles",
+            "api_type": "categorymembers",
+            "params": {
+                "action": "query",
+                "list": "categorymembers",
+                "cmtitle": "Category:Mechanics",
+                "cmtype": "subcat|page",
+                "cmlimit": 500,
+                "format": "json"
+            }
+        }
+    ],
+    "output_dir": "../../data/output_l1"
+}

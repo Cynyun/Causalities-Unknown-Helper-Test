@@ -1,0 +1,629 @@
+<!--
+As of the 25th of May, Orsoniks has stated that lore shared by them through social media is out of date and that we should rely on the game itself for concrete lore. All orange and red margins are added with editorial discretion. There is no update on this lore at the time of writing.
+
+> https://discord.com/channels/955738554129063947/1477034807052734706/1508478983669416069
+-->
+
+{{Disambiguation|Layers|topic=the setting of the game in the lore}}
+{{Outdated|1=Orsoniks has stated that any information shared through the discord is outdated and may be subject to change, however, lore sourced from in-game will remain accurate.}}
+== Info == 
+<div style="border-left: 5px solid green; padding: 10px 15px; margin-bottom: 1em;">
+Green margins indicate in-game confirmed lore, such as tooltips, comments, notes, and other sources of text within the game.
+</div>
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+Orange margins indicate lore sourced from developer notes and comments, usually found in the game's Discord. These are for the most part correct, but may be incomplete or planned. 
+</div>
+<div style="border-left: 5px solid red; padding: 10px 15px; margin-bottom: 1em;">
+Red margins indicate implied lore, from both in-game and developer comments, as well as other games. As such, this color may include slight speculation. Take red margins with a grain of salt. 
+</div>
+== Your Purpose ==
+{{Quote|Go down... Get the thing if I find it... Okay...|author=Experiment, [[Dialog#Upon_starting_the_game|in one of the lines that they can say after exiting their lifepod]]}}
+
+<div style="border-left: 5px solid green; padding: 10px 15px; margin-bottom: 1em;">
+Players control an [[Experiment]], forced on a mission amongst thousands of other Experiments to obtain a "piece of important experimental technology", which was lost by a "miscalibration error", as a form of behavioral research on the species. 
+
+Each run begins with a different specimen, with a randomized height, age, and ID at the top of the [[health panel]]. 
+
+Thousands have been sent before you, [[Corpse|you are not the first]].
+</div>
+
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+
+The experimental technology, or 'cargo', or 'battery', is a very powerful wireless power device. 
+
+In Gooey, another game from Orsoniks, the primary reason why every building, lamp, and outlet is powered is due to this device.
+</div>
+
+
+== World ==
+
+=== Prologue ===
+<tabber>
+
+Year 2XXX
+
+[[File:Intro1.png|right|150px]]
+|-|Line 1=
+Humanity has technologically progressed significantly. Things that seemed impossible before were now commonplace.
+
+[[File:Intro2.png|right|150px]]
+|-|Line 2=
+At the center of it was one company. Their progress seemed miraculous, but they guarded their secrets closely.
+
+[[File:Intro3.png|right|150px]]
+|-|Line 3=
+Years ago they had created a new species: a combination of animal and human DNA they simply called "Experiments."
+
+[[File:Intro4.png|right|150px]]
+|-|Line 4=
+These experiments were the perfect test subjects, close enough to humans, but theirs to do with as they pleased. They toiled over them, twisting their biology even further to suit their needs, and as the years went by, the population only increased.
+None would ever see the outside.
+
+[[File:Intro5.png|right|150px]]
+|-|Line 5=
+Now it seemed that the Earth could no longer contain their ambitions. With their newly devised teleportation technology, they set their sights on a gray planet teeming with life.
+
+[[File:Intro6.png|right|150px]]
+|-|Line 6=
+Soon enough, tons of miscellaneous cargo and trash was sent.
+
+[[File:Intro7.png|right|150px]]
+|-|Line 7=
+Due to calibration difficulties, just as much ended up in the planet's cave system as on the surface, but the project progressed smoothly.
+
+[[File:Intro8.png|right|150px]]
+|-|Line 8=
+That was, until an unknown error caused an important piece of technology to be sent deep into the caves instead.
+
+[[File:Intro9.png|right|150px]]
+|-|Line 9=
+Soon enough, the scientists had devised a plan. A plan with little risk to themselves.
+
+[[File:Intro10.png|right|150px]]
+|-|Line 10=
+The chance of success were low, but their living fodder was plenty.
+
+[[File:Intro11.png|right|150px]]
+|-|Line 11=
+You are one unfortunate specimen.
+
+Resistance is not an option.
+[[File:Intro12.png|right|150px]]
+</tabber>
+
+<div style="border-left: 5px solid green; padding: 10px 15px; margin-bottom: 1em;">
+[[Scav Prototype]] takes place in a sci-fi world where humanity progressed into an interstellar, spacefaring society. 
+</div>
+<div style="border-left: 5px solid red; padding: 10px 15px; margin-bottom: 1em;">
+Not much is directly said about this society, though it is implied that development and money have taken precedence over ethics. 
+</div>
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+The original [[Experiment]] (referred to as '''specimen'''), and base of every other Gunsawian species, was a secret experiment of combined Rat, Fox, and Human DNA, via unethical practice. 
+
+Despite their human-like behaviour, specimens were treated like animals. Held in labs, the first expies were experimented on, and had their genes cloned. 
+
+Humans are intentionally left vague on purpose, as to leave it up for interpretation.  
+
+However, it is stated that the companies involved with creating Gunsawians would "rather nuke the entire company and erase all evidence of the bioengineering stuff
+than let it get out to the public"
+</div>
+<div style="border-left: 5px solid green; padding: 10px 15px; margin-bottom: 1em;">
+Due to this, the lifespan of an experiment is short, fizzling out at the max age of 40. 
+</div>
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+You play as a non-lab creation in a non-distant future, created via reproduction from other experiment. You are trained and will eventually be sent to the Grey Planet between the age of 10-28.
+
+It is stated that the majority of Gunsawians are sent to the Grey Planet, and only a select few can live out their lives on Earth.
+</div>
+<div style="border-left: 5px solid green; padding: 10px 15px; margin-bottom: 1em;">
+Upon being sent into the Grey Planet, most experiments are [[Unchipped mode|chipped]]. 
+* This chip allows the experiment to see their health by focusing, as well as radiation levels. 
+
+However, this also acts as a kill switch, allowing death through [[Radiation_line|specialized radiation]]. 
+</div>
+
+
+=== The Grey Planet ===
+<div style="border-left: 5px solid green; padding: 10px 15px; margin-bottom: 1em;">
+The setting of the game is described as a Grey Planet flourishing with life. The game explores the many diverse [[layers]] of this planet.
+</div>
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+There are zero humans on the Grey Planet during any of the three games, a time period of 95 years since Causalities: Unknown.
+
+Given the existence of a very easy space travel path to the Grey Planet, Humanity has decided to send any excess junk to the planet. Because of this, the mountains of trash and scrap piles, alongside accidental sends of medical equipment, containers, and everything are found in the current game. 
+
+Due to a prior world war on earth, old guns, specialized booby traps and dangers are sent to the Grey Planet to be disposed of, thus forming the traps found in the game.
+
+</div>
+
+== Ending ==
+{{Hidden
+ | header = Endings (Spoilers) 
+ | content = 
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+=== Endings: ===
+
+- '''Normal:''' Die within the 12 layers. Nothing special will occur. A death screen and stats will show.
+
+- '''Cargo Surface Death:''' Staying on the surface for too long will blow up the cargo. There will be a special death screen of the character gored and the mission status will display 'CRITICAL FAILURE'.
+
+Upon reaching the surface in layer 12, the game is complete, with a potential optional lab escape sequence, if the player has a gun. Any following ending will unlock an additional character if the player does not have all playable characters already:
+
+- '''Test Tube Ending:''' Failing to bring a firearm or choosing the option to not use it will end with the player character ending in the test tube indefinitely for studying.
+
+- '''Chipped Lab Escape Ending''': When the character is chipped, starting the lab escape will have the player surgically removing the chip themselves, thus taking major brain damage. 
+
+- '''Unchipped Escape Ending''': Escaping the lab without brain damage when unchipped will lead to a good ending.
+
+- '''Dune Ending''': Escaping the lab as Dune, unchipped, and without brain damage will lead to a special ending...
+
+- '''Gunsaw Prelude / Mercenary Ending:''' Finding three exceptionally rare chip (levitation, reformation, mindswap) alongside a scarf, whilst ignoring the escape pod for a normal ending will trigger the Mercenary Ending, which leads into the events of [[Gunsaw]]. 
+</div>
+}}
+
+== Future ==
+
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+The canon ending of Casualties: Unknown has the battery explode, thus breaking. 
+
+Another game by Orsoniks, [[Gunsaw]], is set 10-15 <span title="Stated by the developer, however potentially contradictory" ><sup>[?]</sup></span> years after Casualties: Unknown. 
+
+Through natural death, radiation, and potentially another unknown cause, the majority of beings in CU do not live to see the Gunsaw world. The [[Gunsaw#Characters|Mercenary]] is one of the few, due to their body-swapping tech.
+</div>
+<div style="border-left: 5px solid green; padding: 10px 15px; margin-bottom: 1em;">
+In Gunsaw, several different species originating from the [[Experiment]] are present, as well as basic civilization and warfare. 
+
+These new species were sent by the Company, as they remove every Gunsawian from their labs. During the events of Gooey 78-85 years after CU, there are no more Gunsawians on Earth.
+
+Alongside the new species, the Company sent a incredibly large number of firearms onto the Grey Planet to observe what would happen. This naturally led to war, thus forming the setting for Gunsaw.
+
+On the Grey Planet, however, exist 100-200 thousands of Gunsawians. 
+</div>
+<div style="border-left: 5px solid orange; padding: 10px 15px; margin-bottom: 1em;">
+In the far future, 70 years after the events of Gunsaw, the same lab company that has created Gunsawians sends Goo monsters for testing to another planet, this one without a breathable atmosphere. During this time, there exists tens to hundreds of millions of Gunsawians on the Grey Planet. 
+
+As Earth no longer sends junk and supplies to the Grey Planet and instead dumps it on the alternative planet, the Gunsawian population stabilizes. 
+
+During this era, the events of another of Orson's games, Gooey, begins. 
+In Gooey, you play as a volunteer working for The Company. You control a Goo monster's brain via a specialized chip, and fight off other Goo monsters on this new planet.
+
+It has also been confirmed that goo monsters have been sent to the Grey Planet and interacted with Gunsawians, where Gunsawians have experimented with taking goo monsters down the planet's [[layers]] out of curiosity. 
+</div>
+
+== In-game Notes ==
+<tabber>
+
+|-|drown=
+<!--experiment-->
+[[File:Note_drawing_drown.png|thumb|180px]]
+i almost drowned just a moment ago. ive never swam before, and its very exhausting. its hard to keep myself above the surface when im tired. i imagine sinking forever to be pretty painful... be careful.
+
+|-|dune=
+<!--dune-->
+[[File:Note_drawing_dune.png|thumb|180px]]
+planet is good .  eat a lot of good flesh .  dune happy<br><br>(You can make out what looks to be a very poorly made self-portrait.)
+
+|-|experiment=
+<!--experiment-->
+[[File:Note_drawing_experiment.png|thumb|180px]]
+i overheard our captors calling us a mutated amalgamation of a "human, fox and rat", whatever any of that means. how much is there being kept from us? information wise? the thought scares me. ive never considered anything being outside of where we were raised. and now im here. i cant wrap my head around all of this.<br><br>(On the paper is what looks to be a self-portrait.)
+
+|-|glowplant=
+<!--experiment-->
+[[File:Note_drawing_glowplant.png|thumb|180px]]
+i really need to stop losing my lights. anything does the job, even those weird glowy plant things. i keep leaving and forgetting about them, then tripping up and getting hurt by accident. not good.
+
+|-|milky=
+<!--Milky-->
+[[File:Note_drawing_milky.png|thumb|180px]]
+The distribution of species here seems very disproportional. The Experiments are everywhere, yet other species like ours seem to be much lesser in numbers. Odd... Either way, I dislike the amount of casualties here. More of us need to be helped.
+
+|-|pool=
+<!--experiment-->
+[[File:Note_drawing_pool.png|thumb|180px]]
+its cold here. so cold. much colder than our previous home. honestly, i like it. bathing in the pools feels nice, its refreshing. im liking this vacation
+
+|-|puppet=
+<!--milky-->
+[[File:Note_drawing_puppet.png|thumb|180px]]
+I inquired others around the ability to see our physical status in our minds, and it turns out this is something shared by almost everyone else here. Quite interesting - this is not something we've ever been able to do back in our homes. Have we been implanted with something? There are no visible attachments on any of us. I have also noted that very few people here do not share this experience, seemingly lacking whatever lets us do this. Odd.
+
+|-|radiation=
+<!--experiment-->
+[[File:Note_drawing_radiation.png|thumb|180px]]
+i met up with someone, we agreed to try to go out to the surface through one of those holes to the outside. my friend stepped out first, and immediately they started stumbling in shock. they seemed to be in a lot of pain. they vomited a bunch, then collapsed and stopped breathing soon after. their skin started blistering too, especially around the head and neck. something is preventing us from leaving. im scared.
+
+|-|scientist=
+<!--anonnymous note, just leave it with the default wiki font-->
+[[File:Note_drawing_scientist.png|thumb|180px]]
+(There is a poorly made drawing of what looks to be one of your captors. They are holding what you can make out as a taser. Their face is scratched out with a big X. The weapon brings back horrible memories.)
+
+|-|spider=
+<!--experiment-->
+[[File:Note_drawing_spider.png|thumb|180px]]
+ugh, this place sucks. i keep being bitten by random spiders i cant see in time. i think theyre venomous, as they leave nasty looking infected wounds in me... the glowplant fruit do help with those though
+
+|-|underweight=
+<!--experiment-->
+[[File:Note_drawing_underweight.png|thumb|180px]]
+i keep losing weight. i need to eat more to stay in shape. all this running around makes you consume calories really fast. i guess i need to be full more often.
+
+|-|x=
+<!--experiment-->
+[[File:Note_drawing_x.png|thumb|180px]]
+this is horrible. this is fucking horrible. i cant do it anymore. this is a death mission. abandon all hope. there is no point to this
+
+
+|-|alone=
+<!--experiment-->
+[[File:Note_drawing_alone.png|thumb|180px]]
+i dont get why we're here. what for? i know im supposed to retrieve some kind of battery cell or something. im assuming others have the same mission. arent there more efficient ways of doing this? logically? why send us here. i miss my friends. i dont want to die.
+
+|-|bloodbag=
+<!--experiment-->
+[[File:Note_drawing_bloodbag.png|thumb|180px]]
+apparently those boxes with the weird computers next to them can be opened if you spill some red blood on them. it has to specifically be red blood, otherwise it wont work. it has some crates inside, you can open them and take stuff with you. useful.
+
+|-|brokenleg=
+<!--experiment-->
+[[File:Note_drawing_brokenleg.png|thumb|180px]]
+i fell down. bad. my leg is mangled. this is really bad. trying to move at all is a pain. i need some painkillers for this.
+
+|-|corpses=
+<!--experiment-->
+this is horrifying. there's so many corpses... im scared. why did they send so many of us here? i dont understand. i really dont understand. they knocked me out cold with some kind of dart and forced me into a pod to be sent here. i hate this planet.
+
+|-|artist=
+<!--Milky-->
+I have found drawing to be a decent escape to the situation I have found myself in. It seems all of us are struggling with our mental states, one way or another. It is nice to get a distraction from the harsh reality at times.
+
+|-|spikes=
+<!--experiment-->
+the red blinking lights in the dark are spike traps. watch out for them. please. please. someone just walked into one in the distance, i just heard a yelp and silence after. stay safe
+
+|-|hypothermia=
+<!--milky-->
+Getting wet seems to be rather dangerous if you're not careful. The temperature here is much lower than at our home, and it seems being drenched for too long can get us in a hypothermic state. Try doing some physical exercise if you need to warm up quickly, I've discovered that helps.
+
+|-|bloodbag=
+<!--milky-->
+Investigating the chemical composition of the different colored blood bags I have found here, it seems they are considerably different in their composition. The red blood is completely different than ours and the blood that the creatures here possess. It seems to be somewhat metallic in composition for whatever reason, how odd. Better not use that on ourselves.
+
+|-|cargo=
+<!--experiment-->
+overhearing a little bit from our captors, apparently the cargo we are supposed to get is some kind "advanced energy source". something about storing a large amount of power and distributing it "wirelessy". i do not know what most of that means, but maybe it will be useful to know. stay safe
+
+|-|drillpod=
+<!--milky-->
+Recently found a drill of sorts, but it's missing a few parts. I can't seem to figure out what it needs, aside from the covering panel for all the mechanisms... Could prove helpful if I was to get it to a working state.
+
+|-|ragdoll=
+<!--milky-->
+Curious, I attempted to traverse in a prone position.<br><br>The utility was unexpected. Not only does it allow one to rinse off contaminants in shallow puddles and squeeze through narrow gaps, but remarkably, even crawling over scattered glass shards resulted in no injury.<br><br>However, complacency is dangerous. I misjudged a slight drop and injured myself. <br><br>Scuttling around like that... I must have looked just like one of those "worms" I heard about.
+
+|-|radwater=
+<!--dune-->
+glowing woter taste bed
+
+|-|gravbag=
+<!--milky-->
+It hurts me to admit, but the frailty of my kind cannot be denied. Luckily, I have found a wonderful container that outright nullifies the weight of most items, allowing me to carry more supplies than I'd normally be able to.<br><br>It runs on batteries, and that worries me. I am not sure what will happen once the power runs out, so I'll check it now, to be safe.<br><br>I don't want it to become heavy mid-jump. I have an almost dead battery on me.<br>Time to see how the bag behaves once its power runs out.<br><br>(The rest of the note is unreadable; whatever text was written below is covered up by a copious amount of dried blood.)
+
+|-|pinball=
+<!--milky-->
+Not even out of this rocky hellscape, and I already feel like death is near,<br>All they gave me was a shitty torch that didnt even last an hour; not even any safety gear to help cushon these falls i've been taking.<br><br>FUCK ME, I feel like a ball from one of those gambling machines I would see those humans using!<br><br>I think I might be slowly dying, ever since the last fall, I've been feeling pretty heavy headed, I feel tired; but I feel if i sleep, I will die.<br><br>God save me.<br>FUCK, man.<br>I really don't want to die, not like this..<br>Though what even is the point of all this?<br>I don't even have a name for myself, just a tag..<br>Fuck...
+
+|-|heat=
+<!--experiment-->
+ugh. its so hot in here. really need to space out my movements and be careful as to not fall numb from the heat. ive found that taking dives in the water pools here helps... maybe even the brown ones if desperate.
+
+|-|miserable=
+<!--experiment-->
+i cant anymore. why.<br>everyone is dead<br>i cant.<br>i want this to stop<br>i cant<br>i want freedom<br>why<br>cant i. i dont want to see any more of this. i've seen too many bad things. im so sick.<br>my leg is fucked. blown up by a mine<br>my hand, the right one, is also killing me really hard<br>i want to put everything to an end<br>everything is misery<br>i cannot anymore<br>in a bit ill claw my artery out and turn into another corpse for you to have a glance at - as long as they hadnt eaten me by the time you get here.<br><br>thank you for everything. goodbye
+
+|-|vines=
+<!--milky-->
+[[File:Note_drawing_sandvine.png|thumb|180px]]
+The vines spread around the area are surprisingly climbable. The thin ones less so, but you can use the large ones as natural ladders. Definitely saved me a few fractured legs.
+
+|-|mp3player=
+<!--milky-->
+Today I happened upon a door for which unlocking was contingent upon the insertion of some scrap. I did not possess any on my person; however, I was fortunately equipped with a laser-action drill, which made quick work of the surrounding walls. Inside, I obtained an electronic device on which some exquisite music had been stored. I listen to it from time to time.
+
+|-|oilpipe=
+<!--milky-->
+The oil pools on this planet are definitely unnatural. Trying to understand their origin, I crawled through one of the empty pipes only to find a tough metallic screen that stopped me from progressing.<br><br>There was a sign behind it that said "Waste Disposal Source". I drilled through the pipe to go around the screen, but the pipe stopped abruptly. It has to be connected to something from our old home, but I don't understand how.<br><br>That sign keeps worrying me. Did the humans want to dispose of us too?
+
+|-|wallbiter=
+<!--dune-->
+[[File:Note_drawing_wallbiter.png|thumb|180px]]
+see evil creature... orange evil creature... creature want eat dune!   but dune fight back.   dune kill and eat evil creature!   creature very tasty!
+
+|-|driedbush=
+<!--experiment-->
+tons of bushes around this place, though i cant say ive seen any that are alive. i think theyre pretty useful for making ropes and cushioning falls, but they also tend to hide traps...
+
+|-|desert=
+<!--experiment-->
+its so hot down here. i feel like i am just rushing from lifepod to lifepod. i don't even want to open the drop capsules, those heat me up too. yet my dune friend stimpy seems to not mind too much. are they just not complaining, or is all that skin cooling them down?
+
+|-|landmine=
+<!--experiment-->
+help me    stepped on   exploding plate   im  in so much   pain  help    help me  please   im passi n g    o
+
+|-|turret=
+<!--experiment-->
+i hear ringing.. my head hurts so, so much, i heard a loud beeping sound as i descended down a bit and then there was that loud banging sound     i dont know where it came from . i can't see that much further but there is something very dangerous in these caves, be careful with big open spaces
+
+|-|radiation=
+<!--milky-->
+There seems to be a high amount of radioactive waste in this area. While that does make it difficult to navigate, we should keep in mind that we can take brief doses of ionizing radiation without too much issue, as long as the exposure doesn't last too long. We're already riddled with cancer due to presumably being unnatural, thus the effect on our entire lifespan is negligible.
+
+|-|spentfuel=
+<!--milky-->
+[[File:Note_drawing_wasteland.png|thumb|180px]]
+Something is wrong with the environment here. In the air, I can feel it- those dilapidated fuel cells make my fur stand on end. My skin flakes when I pass them, and my body burns. Even when I can't see them, I can feel that uneasy sensation building in the air around them. I've had to use my rope spool and even claw through the rocks here to find routes around them, but even then, there are purple stones that seem to carry the same effect, just in different doses.
+
+|-|toxirock=
+<!--milky-->
+[[File:Note_drawing_wasteland.png|thumb|180px]]
+one of the others I found fell onto a bunch of those purple rocks. i managed to pull them away but both of our coats are shedding. i don't know what's happening.<br><br><br><br><br>i ate one of the popping fruits by a life pod… things stopped hurting. but when they bit into one they started throwing up blood just minutes later. they're not breathing. what was different? they looked the same. am i just lucky to be alive? why didn't they get better.
+
+|-|pistol=
+<!--milky-->
+[[File:Note_drawing_pistol.png|thumb|180px]]
+The button next to the trigger on a pistol is the magazine release, whereas on a shotgun, it's typically the safety. Also, whenever you work the action (like pulling the bolt), it ejects the round in the chamber. Last time I did that, I lost a buckshot - pretty unfortunate.
+
+|-|watersource=
+<!--experiment-->
+drinkable water here is really scarce, and i dont think that tar-looking stuff is safe. some of the vegetation here has enough water content to be crushed into a juice, although the taste isnt very pleasant. it beats being thirsty though
+
+|-|coil=
+<!--experiment-->
+i steped in another one of theose damned coils again today, it was hidden in a bush, I noticed it too late to pull back.<br><br>it was horrible, like i was being cooked from the inside, even after the initial shock. cold drinks seem to help though, i had to drink most of my rationed milk, and some apple juice, not sure if my brain would have survived without it. evrything is still spinning, could barely even make it back to my pod.
+
+|-|waterbottle=
+<!--experiment-->
+[[File:Note_drawing_waterbottle.png|thumb|180px]]
+I do not have any water left in my bottle in this desert. I was very dirty and thirsty. I stepped in a puddle I found to drink it and take a bath, then all the dirt made it cloudy. I couldnt drink it anymore. I should have tossed my bottle in. I need water...
+
+|-|dunewuzhere=
+<!--dune-->
+dune see big monster. motivated to kill       dune chase monster and kill and eat . great food . great hunter of beast !
+
+|-|dunefriend=
+<!--dune-->
+DUNE FIND NEW FRIEND<br>DUNE EXCITED WHEN FRIEND NEAR<br>FIREND IS LIKE DUNE.<br>FRIEND BIG AND STRONG.<br>DUNE BIG AND STRONG<br>FRIEND CAN DIG QUICK.<br>DUNE CAN DIG QUICK<br>FRIEND BITE DUNE ARM OFF.<br>DUNE BITE FRIEND ARM OFF<br>FRIEND LEAVE.<br>DUNE LOOKING<br>WILL FIND AGAIN
+
+|-|laststand=
+<!--experiment-->
+[[File:Note_drawing_laststand.png|thumb|180px]]
+i... i felt myself dying. it was all so sudden, there was blood everywhere and i couldnt keep my eyes open. i was scared... but i didnt want to give up. i found so many cool things in this place and i feel like ive made so much progress in this mission. im not gonna stop here. i will make it through all of this shit. i will see my friends again.
+
+|-|thornback1=
+<!--experiment-->
+[[File:Note_drawing_thornback.png|thumb|180px]]
+i didnt think that monster would find me again, but it did. it knew my face, my mistakes... but not my rifle. when it finally burst open, i saw that pickaxe. i saw the etching i scratched into it, the same as the etching they scratched into my pickaxe. i saw the chip from when they tried to dig up some titanium to gift me. and then, suddenly, i saw it happening again. the smell of grating steel. the tremours of the ground. the sound of dismembering flesh. the taste of sweat and blood, as i tried to run, dropping the food i was bringing back to the pod-<br><br>am i supposed to feel at ease now? or am i just bargaining for peace, to be broken when another finds me?
+
+|-|thornback2=
+<!--milky-->
+[[File:Note_drawing_thornback.png|thumb|180px]]
+I want to leave this place, I am terrorized, I don't have words to describe what I just experienced, it was a big, horrid creature with hundreds of teeth, ready to devour me, it chase after me for what I've felt hours, it destroys everything on its path. It stopped only after I've went so far away that I was completely lost, it drained my food, water, tools, even my own sanity, I just want this to end.
+
+|-|xaloris1=
+<!--experiment-->
+[[File:Note_drawing_xaloris.png|thumb|180px]]
+way too cold in here. have to try my best to not get wet at all, or ill be in big trouble. lucky us, there are a lot of those weird sporey plants that give off some heat, along with those weird machines. run between those when possible, i guess. better not get stuck in the freezing cold.
+
+|-|cannibal=
+<!--dune-->
+dune cold. dig warm not warm enough. dune eat fur friend. eat raw! dune has fur. fur warm for dune. dune full and warm. dune happy not cold
+
+|-|xaloris2=
+<!--experiment-->
+its cold down here, i keep having to duck into lifepods to warm up… although sometimes theres these little humming stoves that i can stop by for warmth, i just need to be careful not to touch them for too long, they make me feel sick. just enough to warm up and then keep going. if i were you id play it safe and look out for anything digging towards me when im resting. i can hear stuff tunneling around me.
+
+
+|-|rain=
+<!--milky-->
+It's odd how it rains here. I've never actually seen real rain before... It's rather pretty, even if unsanitary. I still wonder how it is possible for there to be such a higher water concentration down here. Perhaps, the water from the above ice cap is dripping down to here?
+
+|-|mindwipe=
+<!--milky-->
+Humans do strange things. You should never trust them to be nice.<br>But you can trust them to keep you alive.<br>I broke my arm once, and they put it in a “cast.” I did not like it. It was heavy and stopped my arm from moving at all. It seemed they made it worse on purpose, and they made me wear it for a long time.<br>They removed it one day, and my arm was fine.<br>The humans made it worse, so it could get better.<br><br>I think they did something similar to Jumper's head.<br>Jumper used to scream and cry a lot. One time they hurt themselves, and the humans took them away.<br>Jumper is back now. They don't cry anymore. They don't talk. They look sleepy all the time. Their head is like my arm used to be. I can't see any “casts” around it, and their behavior worries me, but at least they don't hurt themselves anymore. I hope the humans undo whatever they did once Jumper's head is fixed.<br><br>I miss them.
+
+
+|-|rage=
+<!--milky-->
+the captors will get what they deserve.
+
+|-|cancer=
+<!--milky-->
+I was performing a self check-up following a painful incident when I noticed a dark, nodular bump on my skin. It appeared irregular in shape and was oddly multicoloured and variegated. I estimated its diameter to be approximately eight millimetres. Upon further inspection, I found several more in various locations on my body. I corresponded with a younger friend and they seemed to have none, but my older friend had many more. Should I keep track of the evolution of this potential malignancy?
+
+|-|chest drain=
+<!--experiment-->
+i didnt want to do it. they had a chest drain. what could i do? drown in my own blood? all i had was a stick of dynamite... if only i could be home, even just listening to the training radio, i would give anything. its not my fault. its not my fault.
+
+|-|long live the cave=
+<!--experiment-->
+i love this place! i still meet new creatures, they are so sweet! there are so many cool things here! i will never go back to the lab, long live the cave!
+
+|-|dune taste testing=
+<!--dune-->
+dune love tasting friend .  all friend taste different .  dark fur friend is stiff .  light fur friend is chewy .  what dune me taste like ?
+
+|-|company=
+<!--experiment-->
+hugging others makes me happier... but some of survivors refuse hugs, i think they can be appeased somehow. also sleeping next to them is much better than on the cold floor alone.
+
+|-|punishment protocol=
+<!--milky-->
+To anyone who finds this, they can and will control you, even in this hell. With no previous alert I started to hear a loud alarm inside me, I could see a message saying "DEPTH UNSATISFACTORY" with red flashing lights materializing in the corner of my vision.<br><br>I started running, panicked, without knowing why they would do this. Only after I went into another region of this cave network it stopped. They know how much time you are spending here, they know that you'll be frightened, and they want you to die. This is all a mass genocide.
+
+|-|guns=
+<!--experiment-->
+i found a weapon. a firearm. gosh... im not used to operating this thing... i shouldve been more careful during the training sessions... i have zero idea of how ive even been sent here, being this unprepared, instead of getting culled. i almost shot someone by accident. i shouldve turned on the gun safety... who am i to know. the others tend to really panic when they see you holding a weapon in hand. so maybe it would be best to put it inside of something, so that they dont see it. they think youd shoot them, they dont know your intentions. well, id think the same if someone were to point a gun at me.
+
+|-|rude=
+<!--experiment-->
+im so mad at myself for acting like a dumbass with the others up there... now all of the survivors i find chase me away from their pods... man, if you knew how hard they were swearing... they tried to scratch me... and im just saying to myself: "okay, im sorry. for fucks sake, do you realize that currently every life matters? theres no room for hurting and killing each other.". i wish i was a better person... its my own fault.
+
+|-|"lemonade" barrel=
+<!--experiment-->
+dont always trust the barrels of liquid lying around. got my hands on a big minibarrel of what i thought was lemondade, but one bitter sip was enough to tell me that it wasnt. i tried to wash it down with another barrel of water, but the water made me very cold and my hair started falling out
+
+|-|unlabelled can=
+<!--experiment-->
+today i found a few weird metal cans that had the label ripped off. i couldnt tell what it was and the liquid was too thick to pour out, but it is surprisingly filling, i feel like i just had a nice steak... i feel so sleepy. im about to drink the next can, i love these cans!<br><br>(The bottom of the paper looks like something with black chunks in it was forcibly ejected onto it.)
+
+|-|peace=
+<!--experiment-->
+this might be a strange thing to say but I've made my peace with this situation. ive been trying to take care of myself as much as i can and trying to comfort all the others ive met down here. it makes me feel... content? even though I've gotten hurt a lot ive been able to handle it without feeling down.<br>i'll try to get as far as i can, and even though i probably wont make it, i know i did my best and helped as many others as i could. that's all any of us can do.<br>if you're reading this, don't give up, ok?
+
+|-|bad food=
+<!--experiment-->
+i have been seeing more and more of these broken down drop pods recently, kind of like the ones that they sent us down here with except these ones all exploded somehow <br>inside the wreckages i usually find some type of gun ammunition along with a gross ball of some sort of meat? <br><br>it looks awful but it might be edible???<br>that dune person i met earlier told me it was good to eat<br>i could try having some of it<br><br><br>ate it and vomited my guts out for twenty minutes straight, worst mistake of my life <br>for the love of god, dont eat whatever that is
+
+|-|wings=
+<!--experiment-->
+[[File:Note_drawing_wings.png|thumb|180px]]
+i keep having the same dream. i have huge wings and i can keep flying up and up and up. nothing can stop me. i burst through the ceilings of these caverns and out into the world beyond. it's beautiful out there but i keep flying. i leave everything behind until there's nothing but a huge void. that's when i finally realize. im safe. im free.<br><br>every time i wake up, i cant stop crying. i wish i could keep dreaming forever.<br><br>(There is a tear-stained drawing of some very inaccurate wings.)
+
+|-|journaling=
+<!--experiment-->
+can the scientists really see me here? they always wanted me to say out loud what i was thinking, but here, im just talking to myself. i suppose i have the freedom to stop, but... it feels therapeutic. if i dont make it, maybe at least these notes will.
+
+|-|tools=
+<!--experiment-->
+i didnt realize how bad it had gotten until i tried to dig again and my claws just... scraped. no bite to them anymore. ive been clawing through rock nonstop without even thinking about it. i felt naked. turns out flesh isnt meant to replace tools.<br><br>i kept assuming i needed a pickaxe for everything. but i figured out my machete works just fine for the lighter stuff. dirt, plants, sand, it slices right through. saves my hands a lot of pain.<br><br>found a bottle labeled keratin booster. figures they planned for our parts to break down. took a sip. after a while the old layers started flaking off like fur. underneath, they felt sharper. stronger. it was weirdly satisfying watching the worn parts peel away. i like how my claws let me grip the walls better<br><br>i remembered the humans. they had nails on every finger. all of them. no claws at all. it looked so wrong up close. soft. blunt. freaky how they managed anything with hands like that.<br><br>i used to think that made them weak.<br><br>now i wonder if that was the point.
+
+|-|pacifist=
+<!--milky-->
+It's full of all kinds of critters that constantly roam around everywhere. I'm a bit of a pacifist, so I try running away from them, rather than fighting them, as I don't know who's gonna kill whom first... After all, the wounds they leave in me hurt like hell... I don't know anymore... Do our captors even know what we're going through down here?
+
+|-|building=
+<!--milky-->
+I took a bad fall. REAL bad. Right into a hole and couldn't climb or dig out of with my injuries. But I made it out with these bits of scrap metal, and want to let others know this, too. <br><br>Its the cavern walls! Nothing I've found- even dynamite -seems to be able to penetrate the outer boundaries of the caverns. But they are uneven, and if you stack enough bits of scrap metal on top of each other, you can wedge them in these tiny gaps and make an entire scrap foothold. When I was bleeding out in that dark hole, I used my collected debris to make a sort of staircase to escape and find emergency supplies.<br><br>I hope you never wind up in that situation, though. Maybe you could use this trick to protect you from injury in the first place? Who knows what other nasty things are in here with us. <br><br>Maybe you'll catch up to me and we can share strategies. <br>I hope I'll be there to meet you.
+
+|-|another artist=
+<!--milky-->
+I'm feeling lonely... so I decided to distract myself:<br>I found some kind of miniature fax that I was able to crush open, and I pulled its paper sheets out. Then I took a stick, and squeezed one of the glowy fruits onto it. It turned out like a brush and drawing canvas! If only you know... I started drawing alternate realities where we're free and live peacefully together; without those scientist scumbags... I felt so happy, and cried for a bit.<br>But now I have to go: feeling peckish! Maybe if we meet each other, I'll draw you, too...? I got really good at using the "brush". I'll try teaching the others to draw, too...
+
+|-|cooperation=
+<!--milky-->
+I'm not very strong, so I've been hoping to team up with others. We'd have a much higher chance of survival that way, but nobody I've asked is interested. Everyone is scared and some of us are dangerous. There are so many traps that it's impossible to travel in large groups. I know I'm going to die for a completely stupid reason...<br><br>Humans are so cruel. I can't understand it.
+
+|-|suicide=
+<!--milky-->
+(The note is crumpled up and crushed, as if it was meant to be thrown away.)<br><br>my friend they... i think they killed themselves. after another bad fall i tried fixing up their legs but they kept telling me to fuck off. they kept shooing me away like some sort of fly, telling me to leave them alone. i didnt get it. i left to grab some of the plants here to try and bandage them up but... when i came back they had another wound. one on their arm. i still remember what it looked like, it was bad, practically ripped apart. i tried to use the plants i found to fix up the new wound but they kept pushing me away. their eyes were... looked just... empty. i told them to fucking stop and just let me help but they didnt respond. i tried to help a couple more times and theyd shove me away until they just... stopped. i remember seeing their body relax, i think thats when they stopped breathing. i cant get that image out of my head...<br><br>did... did i do something wrong? i swear i didnt... what did i do wrong? why did they do that? i... i didnt do anything. i dont understand, i dont want to die... i dont... i...<br><br>...<br><br>haha...<br><br>its so lonely in here.<br><br>(You notice faint, dried tear drops and dried blood riddled among the wrinkled up note.)
+
+|-|ad=
+<!--just an empty string in the lang file, just use the default wiki font-->
+(There are colorful graphics on the paper, and it doesn't appear to be handwritten)<br><br>Soup! Try our Specialty Pot - just put the meat and ingredients in and simmer. Don't worry. You'll agree it's worth its weight in flavor. Can be stored for up to 737 years!
+
+|-|contentment=
+<!--experiment-->
+things are going good for me. tasty food in my belly and maybe a mushtail or two makes me happy. the traders smile back at me too! i just hate seeing myself bleed, it scares me
+
+|-|helplessness=
+<!--experiment-->
+i dont like not knowing what to do. back at home they would always tell me. play this game, be quiet when a human is talking, get stabbed by these pokey things.<br><br>now im supposed to complete this mission but i dont know how to do it. im thirsty and i hurt my leg but im also really dirty and cold and i have no idea where to go other than down.<br><br>i guess ill try to stop what's going to kill me the fastest. i hope it works.
+
+|-|lightbulb=
+<!--experiment-->
+[[File:Note_drawing_lightbulb.png|thumb|180px]]
+light is valuable resource here, especially as it gets darker the further we go. dont want to accidentally step on a trap. with the carcass of a spider and pieces of glowplant, i can fashion a headlamp so my hands remain free. in a pinch lightbulbs in the pods seem to run on a depleted battery, and can be broken off with relative ease, much to the aggression of the pods owner
+
+|-|lifepod=
+<!--experiment-->
+theres a lot of pods out here just like the one i woke up in. i got in one through the window but i stepped on the broken glass. had to be really careful, but i pulled it out of my paw. need to make sure i clear the shards next time.
+
+|-|
+<!>
+</tabber>
+==EPDA notes==
+<tabber>
+
+|-|Biometric report: Sawian=
+
+[BIOMETRIC REPORT - 25##-11-19-18-49-58-4587]<br><br>ENTITY CLASS: Biological<br>ENTITY SUBCLASS: Sawian<br>ENTITY NAME: Experiment<br><br>[CONTENTS]<br><br>The stable biological version of our newest project is ready.<br>It appears that, mentally, there wasn't and will be nothing left of our original human volunteer, not to mention the rest of the subjects.<br>Despite that, they seem to be learning fast, and are not retaliating.<br><br>The DNA combination caused the Experiment to be considerably smaller in stature than a human person, and lack fat and muscle mass.<br>Despite this, it's muscle and bone density is much higher. This will assumbly result in the specimen being resilient to various forms of physical trauma... And give it a hard time swimming.<br>It has three protrusions at the back of its skull, of form similar to ear cartilage. Somehow, it has an ear structure similar to that of an avian - must've been lying around somewhere in the DNA we spliced.<br>It is thinly furred, and has pink-ish yellow-ish flesh, as seen on wounds and on the inside of the mouth.<br>Its hands are some kind of combination between a canine's and a homosapiens'. I know one of my co-workers is going to enjoy this-<br>Somehow, the bioluminescent eyes from our earlier prototypes of this species have stayed. We are yet to determine the exact effects this has on their sight.<br><br>We will soon clone this specimen 30 times to conduct destructive testing on the clones. We will leave a few to naturally reproduce, to save on resources.<br><br>[END]
+
+|-|Befriending Sawians=
+
+[EMAIL - 25##-12-26-14-27-52-0189]<br><br>SUBJECT: Announcement on befriending Sawians<br>FROM: Project Manager<br>TO: All Employees<br><br>[CONTENTS]<br><br>Dear staff,<br><br>It has come to our attention that one of our employees had been consistently meeting up with a SAW-03 and disclosing private information to it. Not only was this an egregious breach of confidentiality, but having such relationships with the specimens is completely unacceptable. The scientist in question was swiftly terminated and the SAW-03 committed suicide shortly after.<br><br>Do YOU have any Sawian friends? We are closing in on you. It's not too late to turn back. But if we catch you befriending them, you will meet the same fate.<br><br>Yours in good faith,<br>Project Manager<br><br>[END]
+
+|-|Riot=
+
+[EMAIL - 25##-12-29-13-10-50-0119]<br><br>SUBJECT: Too late for your questions<br>FROM: Researcher<br>TO: Psychologist<br><br>[CONTENTS]<br><br>I am writing to let you know that all of the Sawians that rioted last week have ALREADY been euthanized, so I'm afraid you will not be able to get your questions in.<br><br>They were already interviewed thoroughly, and they confessed that everything they knew came from that SAW-03, so the mystery is solved. Concerningly, some of the scientists they killed were their own handlers, and they admitted to targeting them on purpose. <br><br>I heard security will be tightened up, so hopefully this mess will not happen again.<br><br>Regards,<br>Researcher<br><br>[END]
+
+|-|Meat consumption=
+
+[BIOMETRIC REPORT - 25##-04-01-15-29-18-1058]<br><br>ENTITY CLASS: Biological<br>ENTITY SUBCLASS: Sawian<br>ENTITY NAME: Meat-Consumption Report<br><br>[CONTENTS]<br><br>Reduction of Corporate Waste Objective<br><br>32 Sawians were recruited randomly among those at our site fro<corrupt:0xFFFFFF> Baseline characteristics were: 25 SAW-01, 4 SAW-05, 3 SAW-12. The subjects were randomly assigned to 8 groups of 4 subjects each. Each group were subject to one choice in three types of conditions: consuming Sawian or Terran meat, consuming raw or as soup, and observing or being ignorant of the source of the meat.<br><br>Meat was sourced from the Indicent on [25##-12-30].<br><br>While the SAW-01 and SAW-05 in all groups which consumed the Sawian meat, regardless of whether they observed the source of the meat, displayed extreme negative emotion upon consumption, the SAW-12 did not display the same negative emotions. No Sawians which consumed the terran meat displayed negative emotions, presumably as they did not recognize the meat as their own, although complaints were raised about eating noncooked food. No Sawians which consumed the meat in soup form displayed negative emotions, even if they had observed the source.<br><br>The SAW-12 displayed an aberrant apathy towards consuming raw Sawian meat, as expected. We might be able to repurpose discarded specimens as food for any SAW-12s on site.<br><br>[END]
+
+|-|Sawian descriptions 1/2=
+
+[BIOMETRIC REPORT - 25##-04-08-09-06-08-0002]<br><br>DATABASE INDEX: Sawian Project Registry<br>DATABASE SUBINDEX: Species<br><br>[CONTENTS]<br><br>[FOR ALL ENTITIES IN REGISTRY]<br>- ENTITY TYPE OVERRIDE: Template<br>- ENTITY CLASS: Biological<br>- ENTITY SUBCLASS: Sawian<br><br>ENTITY NAME: SAW-01 "Experiment"<br>COUNT: [Undefined]<br>- The final prototype of our first giant breakthrough in bioengineering.<br>A refined DNA-Spliced combination of one of our testing rats and an employee along with their pet.<br>Canine. Small and relatively frail. Cowardly and fearful. Not very useful as anything other than fodder.<br><br>ENTITY NAME: SAW-02 "Orange"<br>COUNT: 52082<br>- A mutated version of the SAW-01. Large, brutish, dumb and with four arms. Good for dumb labor and any physically strenuous testing where death is inadvised.<br><br>ENTITY NAME: SAW-03 "Milky"<br>COUNT: 32184<br>- Mutated SAW-01 spliced with unspecified marine DNA. Tiny, arrogant but intelligent. Excellent vision properties. Good for mental labor.<br><br>ENTITY NAME: SAW-04 "Leapy"<br>COUNT: 2046<br>- Mutated SAW-01 spliced with moss DNA. It took a while to get this one in a somewhat functioning state. Their comparitively quick onset of cancer renders them neigh useless for labor. Also a flight risk.<br><br>ENTITY NAME: SAW-05 "Chompy"<br>COUNT: 6084<br>- Mutated SAW-03 spliced with "Shark" DNA. Carnivorous and aquatic. No fur. Oddly friendly. Good for solving conflicts when violence is undesirable. Their large tail encumbers them heavily, confirming our long standing theories.<br>- Sharks were a species of predatory marine fish. They are extinct, but their DNA was kept for scientific purposes.<br><br>ENTITY NAME: SAW-06 "Roza"<br>COUNT: 7848<br>- Mutated SAW-01 spliced with "Snow Strider" DNA. Oddly low body temperature. Volatile and prone to irritation, but docile when not threatened. Encumbering tail. Has conventionally feminine creatures, likely as a result of the Snow Strider mix interacting with earth DNA.<br>- See <corrupt:0xFFF853> for further detail on "Snow Stiders".<br><br>[PAGE 1 OF 2]
+
+|-|Sawian descriptions 2/2=
+
+[BIOMETRIC REPORT - 25##-04-08-09-06-19-3953]<br><br>DATABASE INDEX: Sawian Project Registry<br>DATABASE SUBINDEX: Species<br><br>[CONTENTS]<br><br>[FOR ALL ENTITIES IN REGISTRY]<br>- ENTITY TYPE OVERRIDE: Template<br>- ENTITY CLASS: Biological<br>- ENTITY SUBCLASS: Sawian<br><br>ENTITY NAME: SAW-07 "Voyager"<br>COUNT: 3604<br>- Mutated SAW-01 with spliced feline DNA. Prominent asshole. They hate other species for whatever reason, but hold us in high regard. Highly agile, but they aren't much of a flight risk. They like hiding, much to the detriment of our testing procedures.<br><br>ENTITY NAME: SAW-08 "Baron"<br>COUNT: 73<br>- Mutated SAW-02 spliced with <corrupt:0xFFDED0> DNA. Towering. About twice the size of a human being. Extremely powerful, yet emotionally stable. While not a flight risk, keeping them under tighter protocol is recommended. Their size makes them hard to both clone and reproduce - avoid killing if possible.<br><br>ENTITY NAME: <corrupt:0xFFFFEA><br>COUNT: 3067<br>- Mutated SAW-03 spliced with insectoid DNA. Hollow bones. Oddly bright pink fur color. Has wing-like appendages and insectoid features. They tend to act like pricks, though seemingly not maliciously. Their look seems to attract the gaze of other sawians.<br><br>ENTITY NAME: SAW-10 "Crystal"<br>COUNT: 2360<br>- Mutated SAW-06 spliced with lizard DNA. Has hard, crystal-like growths all over it. Long, extremely sticky tongue, durable enough to hold their body weight. They seem to enjoy hanging from ceilings for some reason. Mental testing is yet to be done, but they seem somewhat arrogant. Same feminine features as SAW-06.<br><br>ENTITY NAME: SAW-11 "Velvet"<br>COUNT: 158<br>- Mutated SAW-06 spliced with arthropod DNA. Looks conventionally spider-like. Very little testing has been done on them, as usually creep employees out, both via behaviour and physical appearance. Strict protocol is required - an unfortunate janitor is reported to have been seduced into coming in contact with a SAW-11. His half-eaten corpse was found hours later, with visible blood marks around all SAW-11's stored in the same unit.<br><br>ENTITY NAME: SAW-12 "Dune"<br>COUNT: 1839<br>- Mutated SAW-05 spliced with arthropod DNA. STRICT PROTOCOL IS NECCESARY - Multiple employee and sawian murders have been reported. Only come in contact at a distance and with a lethal weapon. Do not let their appearance decieve you. They have cannibalistic tendencies and neigh-insatiable hunger. Their very poor intelligence only accentuates that fact. A vast majority of their population is planned to be deported to <corrupt:0xFF0011> to ensure continued safety of our employees, as eliminating all of them is not viable.<br><br>ENTITY NAME: SAW-13 "Shelly"<br>COUNT: 784<br>- Mutated SAW-10 spliced with arthropod DNA. Do not fear their appearance - SAW-10's are generally docile. They lack a mouth and seemingly feed off of the background radiation. They are unable to speak, but seemingly have relatively high intelligence. Employees that know Universal Sign Language are recommended to conduct their testing. Their shell limits their reproduction, but cloning them is still relatively easy. Limit destructive testing if possible.<br><br>[PAGE 2 OF 2]
+
+|-|Chip=
+
+(The PDA takes a moment to load. A warning about drive integrity is the first thing you notice.)<br><br>[INTERNAL MESSAGE]<br>[PROJECT <corrupt:0xFFAFD6>]<br>-----------------------------------------------------------------------<br>LOCATION: <corrupt:0xFBC00F> Biometrics Division<br>DATE: <corrupt:0xFFFFFF><br>DECLARED OWNER: Lead Engineer <corrupt:0xEF0AD2><br>-----------------------------------------------------------------------<br><br>OWNERS NOTE: <br><br>We've made a breakthrough concerning the nanotechnological status chip. WE FINALLY DID IT! Testing on rats by the biological division showed that they could in fact react to their biological status and perform tasks as they reach certain biological value   <corrupt:0xFFFFFF>     <corrupt:0xFFFFFF>   mazing what human determination can accomplish with nearly unlimited funding. I honestly can't imagine how many people this tech could help keep better care of themselves. If our new Sawian program goes well, we could test the <corrupt:0xFFFD5E> on them.<br><br>NOTED CHIP SPECIFICATIONS: <br><br>The <corrupt:0xFFFD5E> is an irregular plate wi        <corrupt:0xFFFFFF>        <corrupt:0xFFFFFF>   onstructed in such a way that it can be implemented near the brain at the back of the head. Two possible configurations have been created so far, one on the inside of the skull and one on the outside. Both variants connect to neurons via elastic conductive nanorods.<br><br><corrupt:0xFFFD5E> works by intaking certain electrical signals from the brain, boosting those signals,  processing received information, and then outputting final data to the brain's visual cortex, creating a loop allowing for direct viewing of bodily functions by the patient. This data includes heart rate, skin irritation, muscle irritation, oxygen exchang   <corrupt:0xFFFFFF>                   <corrupt:0xFFFFFF>   <corrupt:0xFFFD5E> 's power source is currently a small secured battery based on company <corrupt:0xFFBD5A> patent. Since it recharges itself using the background radiation, it should last indefinitely unless damaged.<br><br>The production cost is estimated to b   <corrupt:0xFFFFFF>      <corrupt:0xFFFFFF>           tion is based on the fact that most internal components and the nanoprocessor are already being produced for other unrelated products.<br><br>The <corrupt:0xFFFD5E> has modular slots for other chip attachments, leaving it easily expandable for the future.<br><br>ATTACHED CHIP BLUEP   <corrupt:0xFFFFFF>           <corrupt:0xFFFFFF><br><br><br><corrupt:0xFFFFFF><br><corrupt:0xFFFFFF><br><corrupt:0x00000000000000000FF ILLEGAL MEMORY ACCESS><br><br><br>(The PDA suddenly seizes up and shuts off.)
+
+|-|Androgyny=
+
+[EMAIL - 25##-12-07-11-23-10-6017]<br><br>SUBJECT: Congratulations!!<br>FROM: <corrupt:0xFF0BEA><br>TO: GROUP <corrupt:0xFC0002><br><br>[CONTENTS]<br><br>Dear scientists,<br><br>The creation of a gonosimulistic (use the term correctly) mammal capable of asexual reproduction is an astonishing breakthrough of science. This has never been seen before in nature. Not sure we can call them mammals anymore... It proves to me and to <corrupt:0x0001FC> that there is nothing this team cannot do.<br><br>I wish to thank everybody who contributed to this amazing feat. It greatly reduces the cost and complexity of their production, as it is not necessary to create and organize separate male and female Sawians. The lack of sex drive also curbs overpopulation and avoids any incidents while still allowing them to reproduce.<br><br>You can expect a reward from me soon.<br><br>Yours in good faith,<br><corrupt:0xFF0BEA><br><br>[ATTACHMENTS]<br><br>REF: [INTERNAL MEMORANDUM - 25##-12-07-09-12-40-0157]<br><br>ENTITY CLASS: Biological<br>ENTITY SUBCLASS: Sawian<br><br>[CONTENTS]<br><br>This memorandum establishes mandatory terminology policy regarding the Sawian species and supersedes all prior documentation, annotations, and informal usage.<br><br>Effective immediately, the term "hermaphrodite" is ''''banned in all corporate communications'''', including scientific, operational, cultural, and casual contexts. The sole exception is explicit historical reference (e.g., quotations, legacy documentation analysis, or discussion of obsolete Earth taxonomies), which must be clearly labeled as such.<br><br>The approved descriptor for Sawian reproductive biology is "gonosimulistic."  <br>Context-dependent alternatives include "cosexual" and "monoecious."<br><br>Use of the term outside of these narrow historical contexts is considered inappropriate, reductive, and professionally suspect. This introduces avoidable interpretive risk and will be reviewed under the Stakeholder-Facing Language Control Framework.<br><br>No human naturally possesses two fully functional reproductive systems. The appropriate human medical and social term is "intersex", not "hermaphrodite". The latter term originated from the mythological figure Hermaphroditus and has long been associated with stigma, violence, and dehumanization. This includes the use of this term to refer to animals, thus equating intersex humans with animals. This has thus proven volatile in public, academic, and media-facing environments.<br><br>The application of this term to non-human species arose from that same framework and is therefore neither neutral nor acceptable, regardless of biological differences.<br><br>While historical alternatives exist, such as "eunuch", "bisexual", and "androgyny", these have taken on new meanings and connotations and are not appropriate to use in this way either.<br><br>Do not project human gender or sex frameworks onto Sawian subjects. Reproductive biology does not imply gender identity, presentation, orientation, or social function.<br><br>Reproductive terminology is not casual vocabulary and should not be treated as such.<br><br>This policy does not constitute a moral position, medical guidance, or cultural endorsement. Its purpose is strictly to ensure consistency, reduce ambiguity, and protect the organization from reputational exposure.<br><br>[ATTACHMENTS END]<br><br>[END]
+
+|-|Plushy production=
+
+[EMAIL - 25##-06-21-18-20-06-1075]<br><br>SUBJECT: <corrupt:0xFFFFFF><br>FROM: <corrupt:0xFFF0CE><br>TO: <corrupt:0xFA05F2><br><br>[CONTENTS]<br><br>Good morning.<br>As per my last e-mail, I am highly concerned with the rate at which our manufacturing division is producing designs for plush toys. I understand that having multiple sapient designs has been good at diverting attention to our current objectives, along with confusing any attempts at leaking information, I've ran ballpark numbers and have noticed that of our current budget; 43.7% of it is going towards research and development for these toys.<br><br>As you should know, we've already been dealing with a deficit thanks to the food we've been importing for the Sawians. I understand that keeping the public in the dark about our actions is the primary agenda but when we could be spending <corrupt:0xFFFFFF> on actually feeding the specimens and avoiding any unrest within them, I see little reason to be funnelling this much money into these toys.<br><br>Regards,<br><corrupt:0x0000000000><br><corrupt:0x0000000000><br><corrupt:0x0000000000><br><corrupt:0x0000000000><br><corrupt:0x0000000000><br><corrupt:0x00000000000000><br><corrupt:0xMEM ACCESS VIOLATION>
+
+|-|Traps=
+
+[Inventory log 11-34X]<br>[On-Site Personnel Retention Measures]<br>--------------------------------------------------------<br>RR-104 Pneumatic Area Access Denier - "Spike Trap"<br><br>A steel, sharpened rod (180 cm in length, 10 cm in diameter) attached to a launching mechanism, capable of fully extending the spike in 0.3 seconds.<br>Meant to deliver disabling piercing wounds, immediately stripping the target of the ability to move. Triggered by a motion sensor.<br><br>[Note: This is stupid. Those things can be seen from a mile away, and the launching mechanism requires rearming after a single use. It won’t stop anything but the most dull of escapees. Project discontinued. Trash the supply.]<br>--------------------------------------------------------<br>TG-22 Thermal-guided Projectile Distributor - "Turret"<br><br>A 9mm caliber rifle attached to <corrupt:0xFB387A> brand mount.<br>The firing mechanism is controlled by a thermal sensor with a range of 100 meters.<br>Includes variants using higher caliber ammo for field use, but the 9mm should be sufficient for now.<br><br>[Note: You stuck a gun atop a thermal camera. But it is effective. I’d recommend a higher caliber, given our recently emerged new specimens. This will not do, though. You’ve solved the problem of effectiveness, but its lethality is not a desired feature either. Both the Subjects and employees pose a security risk, but they are also not without value.]<br>--------------------------------------------------------<br>DD-6X1 Acoustic Compliance Enforcement System - "Sound Cannon"<br><br>A modified directional speaker utilizing high-yield capacitor banks. Designed to enforce rapid compliance through acoustic stimulus.<br>Exposure causes immediate loss of motor control, mild to medium internal bleeding, and severe pain.<br>Output power listed in restricted documentation only.<br><br>[Note: This will do.]
+
+|-|damaged PDA=
+
+(The PDA is damaged; the screen is cracked, and some electronics are exposed. With some work, you can get it running.)<br><br>[INTERNAL MESSAGE]<br>[PROJECT <corrupt:0xFFF0CE>]<br>-----------------------------------------------------------------------<br>LOCATION: <corrupt:0xFBC00F> Biometrics Division<br>DATE: <corrupt:0xFFFFFF><br>DECLARED OWNER: Mechanical Engineer <corrupt:0xFFF0CE><br>-----------------------------------------------------------------------<br><br><br>MESSAGE ON INTERNAL COMMUNICATION NETWORK<br><br><br>FROM: <corrupt:0xFFFFFF><br>TO:  <corrupt:0xFA05F2><br><br>I don't like this one bit. Our main task for this quarter was to develo <corrupt:0xFFF0CE> So why are we back here again. I had already planned a week's vacation with some friends and had to cancel those plans because some m <corrupt:0xFFFFFF> o wait? This current task is also sketchy as hell. I'd understand expanding our new neural platform for betterment of patients, but "p <corrupt:0xFF0BEA> o is this for? Convicts? I mean our government, even our company wouldn't put this into a civilian package right? Maybe it's for the army? So they can give basic orders directly to soldiers and make sure that people don't leak restricted informations? Even tha <corrupt:0xFBC00F> Anyway looks like we have to find a way of allowing for better information transfer while using our base battery. Actually scratch that, They wanted this addon to be used for control with a lethal failsafe, right? Then we ca <corrupt:0xFFFFFF> s way we'll have two power sources with the ability to destabilize one of them by overcharging. I'll draw something up, let me know whe<br><br><corrupt:0x0000000000><br><corrupt:0x0000000000><br><corrupt:0xFFFFFF><br><corrupt:0xFFFFFF><br><corrupt:0x00000000000000000FF ILLEGAL MEMORY ACCESS><br><br><br>(You hear a “bzzzz” sound and can see faint smoke rising from the device.)
+
+|-|Punishment chip=
+
+The PDA looks like it's barely holding on)<br><br>[INTERNAL MESSAGE]<br>[NEUROLOGIC <corrupt:0xFFF0CE>]<br>-----------------------------------------------------------------------<br>LOCATION: <corrupt:0xFFFFFF> Surgery Bureau<br>DATE: <corrupt:0xFBC00F><br>DECLARED OWNER: Designated Lab <corrupt:0xFFF0CE><br>-----------------------------------------------------------------------<br><br>MESSAGE ON INTERNAL COMMUNICATION NETWORK<br><br>FROM: <corrupt:0xFFFFFF><br>TO:  <corrupt:0xFA05F2><br><br>Hey, looks like we got an update on the current assignment. We are to refrain from installing those new "punishment" chips i <corrupt:0xFFFFFF> ming Sawians. Leadership wants to test how they'll behave with no oversight from the company. However, they still want us to implement the platforms. Why just the platforms and not the addons? My guess is tha <corrupt:0xFA05F2> ack, some food for thought. Anyway, once you're ready with this batch come by the cafeteria, apparently today they'll be serving some <corrupt:0xFFFFFF> with <corrupt:0xFFF0CE>. Also don't worry about more subjects coming in today, apparently training grounds are locked up for the day because of some incident. Apparen<br><br><corrupt:0x0000000000><br><corrupt:0xFFFFFF><br><corrupt:0x0000000000><br><corrupt:0xFFFFFF><br><corrupt:0x00000000000000000FA INTERNAL STORAGE DAMAGE><br><br>(PDA turns off.)",
+
+|-|Suspicion=
+
+[EMAIL - 25##-1-25-9-06-42-2810]<br><br>SUBJECT: Watch it!<br>FROM: <corrupt:0xFBF010><br>TO: <corrupt:0xFF0BEA><br><br>[CONTENTS]<br><br>Be careful how you spend company money. Uncle Sam is nosy. I had to sit through a very uncomfortable phone call because of you. All this food is making them suspicious, and I would rather admit to anything BUT what we're actually doing.<br><br><corrupt:0xFBF010><br><br>[END]
+
+|-|High suspicion=
+
+(As you tap the PDA screen a few times, it starts to boot up in emergency mode.)<br><br>[INTERNAL MESSAGE]<br>[LAW <corrupt:0xFFFFFF>]<br>-----------------------------------------------------------------------<br>LOCATION: LAW FIRM O<corrupt:0xFFFFFF> <br>DATE: <corrupt:0xFBC00F><br>DECLARED OWNER: Lawyer <corrupt:0xFFF0CE><br>-----------------------------------------------------------------------<br><br>MESSAGE ON INTERNAL COMMUNICATION NETWORK<br><br>FROM: <corrupt:0xFFFFFF><br>TO:  <corrupt:0xFFFFFF><br><br>This is insane. Recent bulk orders of different foods and ingredients, brought so much unnecessary attention to us that god da <corrupt:0xFA05F2> at us. Do you understand that if the government finds out about the hybrids we are done for? I can explain the water or bananas, hell I won't have a problem with explaining those tankers of chocolate milk. Do you want to know what won't be so easy to explain? WHY 2 FULL SEMI TRUCKS OF DOG FOOD WERE UNLOADED JUST THIS EVENING BY THE WAREHOUSES. What am I supposed to say to <corrupt:0xFA05F2>  eird orders? "Oh don't worry, it's just because the company had declared record profits this year and wanted to stock up on food for the future". I'm not joking, that's one of the ideas that I got fro <corrupt:0xFFFFFF> It's like those people are deaf and can't hear their own stupid ideas. What do you mean "stock up on food"? We have at most <corrupt:0xFFFFFF> ogs on this site, this one order would be enough to feed them, their pups and their pups pups. We'll have to improvise, tell them about bioenergy, confuse their senile executives with professional language and pretend that most of those <corrupt:0xFBC00F> reactors. We can't slip up her <br><br><corrupt:0x0000000000><br><corrupt:0xFFFFFF><br><corrupt:0x0000000000><br><corrupt:0xFFFFFF><br><corrupt:0x00000000000000000FE RANDOM-ACCES MEMORY FAILURE><br><br>(The PDA turns off with unpleasant noises accompanying it.)
+
+|-|Secure and contain=
+
+(The PDA seems to be extremely damaged)<br><br>[RECEIVED DIRECTIVE]<br>[SPACE <corrupt:0xFFFFFF>]<br>-----------------------------------------------------------------------<br>LOCATION: UNDER G<corrupt:0xFFFFFF> <br>DATE: <corrupt:0xFFFFFF><br>DECLARED OWNER: <corrupt:0xFFFFFF><br>-----------------------------------------------------------------------<br><br>WARNING SITE PERSONNEL<br><br>AN ACCIDENT HAPPENED TODAY I <corrupt:0xFFFFFF> <br><br>ALL TESTS CONCERN <corrupt:0xFFFFFF> RE TO BE HALTED. <br>EFFECTIVE IMMEDIATELY<br><br>INCIDENT REPORT:<br><br>On <corrupt:0xFFFFFF> during routine tests on the drop pod capsules codename <corrupt:0xFFFFFF> there was an unexpected anomaly concerning the telepo <corrupt:0xFFFFFF><br>The pod was teleported partially into a wall, destabilizing the tele-landing procedure and causing a brief black-hole pr <corrupt:0xFFFFFF>ecause o <corrupt:0xFFFFFF> a number of scientists and engineers suffered extreme damage caused by the implosion. The sawian occupying the pod did not survive.<br><br>From now on all teleportation tech resear   <corrupt:0xFFFFFF>topped until further notice. Unit <corrupt:0xFFFFFF> is under lockdown until <corrupt:0xFFFFFF><br><br><br>All available personnel are to report to s<corrupt:0xFFFFFF><br><br><corrupt:0x0000000000><br><corrupt:0x0000000000><br><corrupt:0x00000000000000000FF ILLEGAL MEMORY ACCESS><br><br>(There seems to be no more text except errors)
+
+|-|A day in the life1/2=
+
+[BIOMETRIC REPORT - 25##-08-04-09-05-25-1057]<br>[Project: \"A day in the life\"]<br>----------------------------------------------<br>So.<br>This is my \"journal\" now. Which is apparently a written work describing one's life and experiences.<br>I am not entirely sure why the coats have me doing this, but the same can be said about most things they make us do.<br>Still, I got lucky today. It can get way worse than a writing exercise.<br>I find this device quite fascinating, and it is a shame that I will part with it in just a few hours. But I have been given a task, and I shall complete it.<br><br>We usually are woken up either by eachother, or by the first food buzzer ringing. Rarely do we wake up to testing immediately.<br>I'm not sure what \"hour\" this happens at... Hell, I barely understand the concept. Though, I hear the coats talking about it all the time...<br><br>Anyway, we wake up and soon it's time for our very first meal of the day.<br>What they feed us is slightly varied, which wasn't the case just a few years ago. Still mostly just nutrient bars, though. They're really bland, but I can't complain...<br><br>--------------------------------------------------<br>It's some hours later now.<br><br>This is the time when the coats hunt.<br>They call you out by the number, and you have to come to them.<br>Or they come for you. <br>You do not want that.<br>Sometimes, they call out multiple numbers... It's usually a good sign, though.<br><br>What they'll do to you is up to chance, really.<br>The tests can be harmless, they can be terrible, or they can be beneficial.<br>It's worth noting that the coats merely TRY to do things, and while sometimes they try to help, those attempts are usually far less successful than the ones where they try to mess you up.<br><br>Two numbers are called, and two others stand up, their faces worried.<br>One of them is healthy. Far more likely to get hurt.<br><br>The other has four arms.<br>One on the left, and three on the right.<br>Well, if you could call the weird growths arms. They look kinda close?<br>They were originally born with two. The coats decided that to be too much one day, and removed one.<br>The next day, they came back with ELEVEN arms.<br>The humans removed ten of those, only to grace them with seven new ones.<br>The next day it was five.<br>Today it's four.<br><br>They are getting close now.<br><br>The poor fellow is called Arms. And I swear, this was their name BEFORE this whole ordeal, and it's widely believed that humans picked them because of that.<br>Perhaps it's their idea of a joke?<br><br>[PAGE 1 OF 2]
+
+|-|A day in the life2/2=
+
+[BIOMETRIC REPORT - 25##-08-04-09-05-25-1057]<br>[Project: \"A day in the life\"]<br>----------------------------------------------<br><br>It's quiet. Those who get lucky often just rest; sometimes they socialize. Usually, they just worry about those who got taken.<br>This concept of \"Hours\", this cycle, schedule... It's terrifying.<br>I don't understand it. Why is each sleep cycle divided into 24 (?) hours? What governs such rules? Even the humans play by it.<br>Is something above them controlling it?<br><br><br>Some more hours later, the first test subjects start to trickle back in.<br>Best-case scenario, they walk in on their own. Quite common, actually.<br>Sometimes they are carried in.<br>Rarely, two guards come in instead. They head straight to someone's cot and take away their things.<br>If it were your friend, and the guards are some of the nicer ones, they will let you keep a thing or two.<br>I don't really have anyone to wait for anymore, so I just watch those who do. Everyone is used to this, but the nerves are always present.<br><br><br>Dinner time.<br>The meal dispensers dropped some cooked meat on my plate. Lucky. Better than breakfast, for sure.<br>Some others hum approvingly, as they get similarly lucky. Others grumble as they get served the same old nutrient bars. It's really like they are feeding us with whatever they have on hand... Maybe this is a test, too?<br>Sometimes fights break out over the food, but that's rare. The guards are not happy anytime this happens.<br> <br>People talk. They play. They sing.<br>Some nurse their wounds, or help others nurse theirs.<br>It's a calm time.<br>The coats are done for the time being.<br><br>Later.<br>In about an \"hour\", our last meal of the day will be served.<br>Bedtime soon after that.<br>There is not much more to say, really.<br><br>Actually, there is one thing. Very rarely, extra tests will be called around this time. Well, the humans call them \"Relocations\" or \"Assignments.\"<br><br>You never come back when you get called to one of those. But they always allow you to take your things. I am not sure if it's because they are really taking you somewhere else, or they simply want to expedite the process of emptying your place by having you do it yourself.<br><br><br>Everyone wonders what reaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>fddda<br>shit<br>Froze up for a moment there. I can't remove the letters. The device won't let me. It's bery<br>crap<br><br>my hands are shaking its difficult to type<br>they called the tests tonight<br>i dont know where those called go<br>but they called my number<br>i am about to find out<br><br>wish me luck<br><br>[PAGE 2 OF 2]
+
+|-|Regulations=
+
+[EMAIL - 24##-06-25-13-51-18-1905]<br><br>SUBJECT: Regulations Approval<br>FROM: <corrupt:0xFFFFDC><br>TO: <corrupt:0xFFFF0A><br><br>I just got off a holocall with the national regulation board. The food teleportation systems are good to sell! Now we can really push for that single-use packaging ban - and given that our food-boxes already resist spoilage, food waste (and our unprofitable years) will be a thing of the past. And with how lazy people are nowadays, we can certainly adapt this tech to other things.<br><br>Don't forget to strengthen the thermal shielding of the dropbox. The failure rate is less than 1 in 500, but still... As you know, when E=mc2, and c is so large, that means just the mass of a raisin collapsing into a black hole will immediately (within 10^-25 seconds) evaporate to Hawking radiation, and generate the energy equivalent to the nuclear bomb dropped on Hiroshima. Our systems for reversing the teleportation when this happens are getting better and can take away most of that energy, but we can't let any more leak out.<br><br>Serendipitously, this solves our abnormally high food usage problem, for now. No one will question why our food delivery department is using food.<br><br>Do you ever wonder, in an alternate universe, we would have pursued that infinite energy idea?<br><br>[END]
+
+|-|Executive Board Meeting=
+
+(The PDA is heavily damaged. Countless warnings pop up on the screen, but some of the data is readable...)<br><br>[Executive Board Meeting 542-23-145C Transcript]<br>---------------------------------------------------------------<br>LOCATION: Company Headquarters at <corrupt:0xFFFF43><br>DATE: 12-04-[fetch.year(): failed]<br>---------------------------------------------------------------<br><corrupt:0xFFFFD9>: -you surely realize what we have on our hands here. The Sawians- they… they are our golden ticket! The data we have right now would be enough for a Nobel Prize for every single person in this room!<br><br><corrupt:0xFFFFF7>: Yes. That's nine prizes. If we all agreed to donate the cash from those to [<corrupt:0xFFFBc3>], we'd end up with roughly fifteen million dollars. A drop in a bucket compared to the financial black hole that is your idiotic project!<br><br>[<corrupt:0xFFFFD9> rises from his chair.]<br><br><corrupt:0xFFFFD9>: IDIOTIC?! IDIOTIC?! WE ARE CREATING LIFE! You are a witness to the infancy of a new intelligent species! Our colleagues would ''kill'' for such an opportunity mere ten years ago!<br><br><corrupt:0xFFFFF7>: Kill? Sure. Pay what you ask? Hell. No.<br><br><corrupt:0xFFFFD9>: Is it always money with you? Fine! We are making money! Even our plushie line is more than enough to cover-<br><br><corrupt:0xFFFFF7>: Pay more than cash, you cretin! The moment this whole affair ends up on some nosy journalist's desk, we will all pay with our ''lives.'' Hell, our families will be lynched. Besides, the plushies do not require us to keep your colony of… talking rats alive.<br><br><corrupt:0xFFFFD9>: The Sawians are not talking rats! They are a mix of-<br><br><corrupt:0xFFFFF7>: OH, EXCUUUSE ME! I meant to say walking tickets to a dematerializer! OUR TICKETS! I am not ending up before the ICC, just because you are a greedy little fu-<br><br><corrupt:0xFA05F2>: Gentlemen. Please.<br><br><corrupt:0xFFFFF7>: I- Ah. Apologies <corrupt:0xFA05F2>.<br><br><corrupt:0xFA05F2>: Doctor <corrupt:0xFFFFD9>. Please make your case. Why are those creatures worth keeping?<br><br>[Silence. <corrupt:0xFFFFD9> sits down.]<br><br><corrupt:0xFFFFD9>:  I mean... There are so many reasons to pick, I-<br><br><corrupt:0xFA05F2>: Then I trust that you will be able to pick the right one.<br><br><corrupt:0xFFFFD9>:  Uh. Right. Okay. Braingrow! We have Braingrow!<br><br><corrupt:0xFFFFF7>: Yes, the commercially available medicine that one can purchase at the corner store.<br><br><corrupt:0xFFFFD9>: No. Not this one. I could bash someone's head straight open. Introduce the frontal lobe to a hammer. Corner store Braingrow won't help here. Ours will have the fellow walking and talking within a WEEK. Without such an ample supply of human-like test subjects, we'd need decades to perfect the nanomachines' operational directives. Twice that for testing.<br><br><corrupt:0xFA05F2>: Of course. <corrupt:0xFFFFF7>. Your counterpoint?<br><br><corrupt:0xFFFFF7>: Yeah. He's got results. The moment the public finds out just HOW he got them, we are all done for. What are you going to say, [#######]? That the creatures whose likeness we sell to kids exist, and that you enjoy cracking their heads in your spare time? There will be no shifting the blame. We will answer for this; the entire Company will. They'll even lynch our goddamned janitor!<br><br>[The <corrupt:0xFA05F2> nods, watching the two silently for a moment.]<br><br><corrupt:0xFA05F2>: I now understand why you clash with such intensity. It is not in our nature to back down when the truth is on our side. And the truth is… You are both correct.<br><br>[Silence.]<br><br><corrupt:0xFA05F2>: The Sawians pose a risk that we cannot afford to take. They are also an opportunity that we cannot afford to let go. We have them in our grasp. And we must make sure things remain that way.<br><br><corrupt:0xFFFFD9>: But… how, <corrupt:0xFA05F2>?<br><br>[<corrupt:0xFA05F2> smiles, and- <br><br><corrupt:0xA1CF43><br><br>[Meeting summary]<br>-Facility put on lockdown until further notice.<br>-Sawians confined to their cells until further notice.<br>-Employees are forbidden from leaving the grounds until further notice.<br>-Employee contracts extended indefinitely.<br>-Carrying firearms made mandatory for Security personnel<br>-Facility-wide thermal remediation procedures approved and pre-authorized.
+
+</tabber>
+== Trivia ==
+
+'' The world shares similar characteristics with the world of [[Gunsaw]], another game made by the same developer. Species such as the [[Experiment]], Milky, and Dune can be seen, far down in the future of the Grey Planet.
+
+[[zh:设定]]

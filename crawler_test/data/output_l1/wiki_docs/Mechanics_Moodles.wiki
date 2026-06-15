@@ -1,0 +1,34 @@
+<!-- Category: Category:Mechanics -->
+<!-- This page contains 31 sub-pages -->
+<!-- Sub-pages list: -->
+<!-- - Blood (pageid: 832) -->
+<!-- - Body statuses (pageid: 1057) -->
+<!-- - Brain health (pageid: 824) -->
+<!-- - Commands (pageid: 950) -->
+<!-- - Consciousness (pageid: 1820) -->
+<!-- - Crafting (pageid: 912) -->
+<!-- - Dirtiness (pageid: 1838) -->
+<!-- - Encumbrance (pageid: 1249) -->
+<!-- - Energy (pageid: 474) -->
+<!-- - Heart rate (pageid: 2056) -->
+<!-- - Hunger (pageid: 286) -->
+<!-- - Immunity (pageid: 1275) -->
+<!-- - Infection (pageid: 836) -->
+<!-- - Injuries (pageid: 535) -->
+<!-- - Limb health (pageid: 564) -->
+<!-- - Limb health/zh-cn (pageid: 1998) -->
+<!-- - Limb statuses (pageid: 1056) -->
+<!-- - Mood (pageid: 375) -->
+<!-- - Moodles (pageid: 1204) -->
+<!-- - Opiates (pageid: 843) -->
+<!-- - Oxygen (pageid: 1682) -->
+<!-- - Pain (pageid: 473) -->
+<!-- - Saving (pageid: 1248) -->
+<!-- - Sickness (pageid: 472) -->
+<!-- - Stamina (pageid: 1539) -->
+<!-- - Stroke (pageid: 4475) -->
+<!-- - Temperature (pageid: 1302) -->
+<!-- - Thirst (pageid: 1372) -->
+<!-- - Unchipped mode (pageid: 1276) -->
+<!-- - Vomit (pageid: 1521) -->
+<!-- - Weight (pageid: 374) -->
