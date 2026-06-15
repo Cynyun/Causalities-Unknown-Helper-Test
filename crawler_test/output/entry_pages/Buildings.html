@@ -50,28 +50,27 @@
         
         h2 {
             color: #00d4ff;
-            margin: 20px 0 10px;
-            padding-bottom: 5px;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
             border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+            font-size: 1.4em;
         }
         
         h3 {
             color: #7b2fff;
-            margin: 18px 0 8px;
+            margin: 20px 0 12px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
-        h4 {
-            color: #a0a0a0;
-            margin: 15px 0 5px;
-        }
-        
-        strong {
-            color: #fff;
-        }
-        
-        em {
-            color: #aaa;
-            font-style: italic;
+        .category-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
         }
         
         .wiki-link {
@@ -86,11 +85,18 @@
         }
         
         .wiki-image {
-            max-width: 50px;
-            height: auto;
-            border-radius: 4px;
-            margin: 5px;
+            width: 24px;
+            height: 24px;
+            border-radius: 3px;
+            margin-right: 8px;
             vertical-align: middle;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+        }
+        
+        .wiki-image.hidden {
+            display: none;
         }
         
         .wiki-table {
@@ -103,7 +109,7 @@
         }
         
         .wiki-table th, .wiki-table td {
-            padding: 10px 15px;
+            padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -112,18 +118,38 @@
             background: rgba(0, 212, 255, 0.1);
             color: #00d4ff;
             font-weight: 600;
+            font-size: 0.9em;
         }
         
         .wiki-table tr:hover {
             background: rgba(255, 255, 255, 0.05);
         }
         
-        ul {
-            margin: 10px 0 10px 30px;
+        .wiki-table tr:last-child td {
+            border-bottom: none;
         }
         
-        li {
-            margin: 5px 0;
+        .health-value {
+            font-family: 'Consolas', monospace;
+            color: #ffd700;
+        }
+        
+        .appearance-tag {
+            background: rgba(123, 47, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        
+        .outdated-badge {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
         
         @media (max-width: 600px) {
@@ -132,8 +158,12 @@
             }
             
             .wiki-table th, .wiki-table td {
-                padding: 8px 10px;
-                font-size: 0.9em;
+                padding: 10px 8px;
+                font-size: 0.85em;
+            }
+            
+            h3 {
+                font-size: 1.1em;
             }
         }
     </style>
@@ -142,9 +172,381 @@
     <div class="container">
         <header>
             <h1>Buildings</h1>
+            <div class="outdated-badge">⚠️ Outdated</div>
+            <p>Buildings are static objects that spawn around the map during generation. Buildings include crates, plants, interactive objects, and large tile-based structures. Most buildings are not affected by gravity.</p>
         </header>
         <div class="content">
-            <br><strong>Buildings</strong> are static objects that spawn around the map during generation. Buildings include crates, plants, interactive objects, and large tile-based structures. Most buildings are not affected by gravity.<br><br><h2>List of buildings</h2><br><br><h3><img src="https://scavprototype.wiki.gg/images/thumb/Category item.png/80px-Category item.png" alt="Category item.png" class="wiki-image"> Crates</h3><br><br><br><table class="wiki-table"><tr><th>Building !! First appearance !! Health</th></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/dropcapsule.png/30px-dropcapsule.png" alt="Drop capsule" class="wiki-image"> <a href="#/Drop capsule" class="wiki-link">Drop capsule</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>2500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/lifepodchest.png/30px-lifepodchest.png" alt="Life-pod chest" class="wiki-image"> <a href="#/Life-pod chest" class="wiki-link">Life-pod chest</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>2000</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/medcrate.png/30px-medcrate.png" alt="Medical crate" class="wiki-image"> <a href="#/Medical crate" class="wiki-link">Medical crate</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>1000</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/containercrate.png/30px-containercrate.png" alt="Container crate" class="wiki-image"> <a href="#/Container crate" class="wiki-link">Container crate</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>5000</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/Foodcrate.png/30px-Foodcrate.png" alt="Food box" class="wiki-image"> <a href="#/Food box" class="wiki-link">Food box</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>600</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/chipcapsule.png/30px-chipcapsule.png" alt="Chip capsule" class="wiki-image"> <a href="#/Chip capsule" class="wiki-link">Chip capsule</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>150</td></tr></table><br><br><h3><a href="#/File:Category_plant.png" class="wiki-link">link=</a> Plants</h3><br><table class="wiki-table"><tr><th>Building !! First appearance !! Health</th></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/glowPlant.png/30px-glowPlant.png" alt="Glowplant" class="wiki-image"> <a href="#/Glowplant" class="wiki-link">Glowplant</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>40</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/geotree transp.png/30px-geotree transp.png" alt="Geotree" class="wiki-image"> <a href="#/Geotree" class="wiki-link">Geotree</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>80</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/mushplant transp.png/30px-mushplant transp.png" alt="Mushplant" class="wiki-image"> <a href="#/Mushplant" class="wiki-link">Hydreed</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/stoneplant transp.png/30px-stoneplant transp.png" alt="Stoneplant" class="wiki-image"> <a href="#/Stoneplant" class="wiki-link">Stoneplant</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>200</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/Leadbush transp.png/30px-Leadbush transp.png" alt="Leadbush" class="wiki-image"> <a href="#/Leadbush" class="wiki-link">Leadbush</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>120</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/driedbush transp.png/30px-driedbush transp.png" alt="Dried bush" class="wiki-image"> <a href="#/Dried bush" class="wiki-link">Dried bush</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>100</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/Cactus transp.png/30px-Cactus transp.png" alt="Cactus" class="wiki-image"> <a href="#/Cactus" class="wiki-link">Cactus</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>100</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/Brownshroom transp.png/30px-Brownshroom transp.png" alt="Brownshroom" class="wiki-image"> <a href="#/Brownshroom" class="wiki-link">Brownshroom</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>50</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/Sandrose transp.png/30px-Sandrose transp.png" alt="Sand rose" class="wiki-image"> <a href="#/Sand rose" class="wiki-link">Sand rose</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>80</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/plantation transp.png/30px-plantation transp.png" alt="Plantation" class="wiki-image"> <a href="#/Plantiation" class="wiki-link">Pop</a></td><td><a href="#/Wasteland" class="wiki-link">Wasteland</a></td><td>150</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/Bananaplant transp.png/30px-Bananaplant transp.png" alt="Bananaplant" class="wiki-image"> <a href="#/Banana-plant" class="wiki-link">Banana-plant</a></td><td><a href="#/Overgrown depths" class="wiki-link">Overgrown depths</a></td><td>150</td></tr></table><br><br><h3><img src="https://scavprototype.wiki.gg/images/thumb/Category structure.png/80px-Category structure.png" alt="Category structure.png" class="wiki-image"> Structures</h3><br><table class="wiki-table"><tr><th>Building !! First appearance</th></tr><tr><td><a href="#/Wooden scaffolding" class="wiki-link">Wooden scaffolding</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Wooden bridge" class="wiki-link">Wooden bridge</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Wood cross" class="wiki-link">Wood cross</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Reactor core" class="wiki-link">Reactor core</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Crate pod" class="wiki-link">Crate pod</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Medical pod" class="wiki-link">Mini pod</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Life pod" class="wiki-link">Life pod</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Life pod collapsed" class="wiki-link">Collapsed life pod</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td></tr><tr><td><a href="#/Concrete scaffolding" class="wiki-link">Concrete scaffolding</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td></tr><tr><td><a href="#/Concrete bridge" class="wiki-link">Concrete bridge</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td></tr><tr><td><a href="#/Steel bridge" class="wiki-link">Steel bridge</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td></tr><tr><td><a href="#/Bio-terminal" class="wiki-link">Bio-terminal</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td></tr><tr><td><a href="#/Bio container" class="wiki-link">Bio container</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td></tr><tr><td><a href="#/Lab hallway" class="wiki-link">Lab hallway</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td></tr><tr><td><a href="#/Medical station" class="wiki-link">Medical station</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td></tr><tr><td><a href="#/Scrap-eater" class="wiki-link">Scrap-eater</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td></tr><tr><td><a href="#/Medical building" class="wiki-link">Medical building</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td></tr><tr><td><a href="#/Brick block" class="wiki-link">Brick block</a></td><td><a href="#/Wasteland" class="wiki-link">Wasteland</a></td></tr><tr><td><a href="#/Brick loot" class="wiki-link">Brick loot</a></td><td><a href="#/Overgrown depths" class="wiki-link">Overgrown depths</a></td></tr></table><br><br><h3><img src="https://scavprototype.wiki.gg/images/thumb/Category trap.png/80px-Category trap.png" alt="Category trap.png" class="wiki-image"> Hazards</h3><br><br><table class="wiki-table"><tr><th>Building !! First appearance !! Health</th></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/spikeStabberBase Transp.png/30px-spikeStabberBase Transp.png" alt="Spike trap" class="wiki-image"> <a href="#/Spike trap" class="wiki-link">Spike trap</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>800</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/Jumppad2.png/30px-Jumppad2.png" alt="Jump pad" class="wiki-image"> <a href="#/Jump pad" class="wiki-link">Jump pad</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>600</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/geyser transp.png/30px-geyser transp.png" alt="Geyser" class="wiki-image"> <a href="#/Geyser" class="wiki-link">Geyser</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/beartrap transp.png/30px-beartrap transp.png" alt="Bear trap" class="wiki-image"> <a href="#/Bear trap" class="wiki-link">Bear trap</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td><td>500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/barbedwirefence.png/30px-barbedwirefence.png" alt="Barbed fence" class="wiki-image"> <a href="#/Barbed fence" class="wiki-link">Barbed fence</a></td><td><a href="#/Deeper gravel lands" class="wiki-link">Deeper gravel lands</a></td><td>600</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/landmine.png/30px-landmine.png" alt="Landmine" class="wiki-image"> <a href="#/Landmine" class="wiki-link">Landmine</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>100</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/turret.png/30px-turret.png" alt="Turret" class="wiki-image"> <a href="#/Turret" class="wiki-link">Turret</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/coil transp.png/30px-coil transp.png" alt="Coil" class="wiki-image"> <a href="#/Coil" class="wiki-link">Coil</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/stalactite transp.png/30px-stalactite transp.png" alt="Stalactite" class="wiki-image"> <a href="#/Stalactite" class="wiki-link">Stalactite</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>200</td></tr><tr><td><!-- Has no applicable image, yet. <img src="https://scavprototype.wiki.gg/images/thumb/?.png/30px-?.png" alt="Waste pipe" class="wiki-image"> --> <a href="#/Waste pipe" class="wiki-link">Waste pipe</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/sound cannon.png/30px-sound cannon.png" alt="Sound cannon" class="wiki-image">  <a href="#/Sound cannon" class="wiki-link">Sound cannon</a></td><td><a href="#/Wasteland" class="wiki-link">Wasteland</a></td><td>1500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/spentfuel transp.png/30px-spentfuel transp.png" alt="Spent Fuel" class="wiki-image">  <a href="#/Spent Fuel" class="wiki-link">Spent Fuel</a></td><td><a href="#/Wasteland" class="wiki-link">Wasteland</a></td><td>20000</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/grabberplanttransparent.png/30px-grabberplanttransparent.png" alt="Grabber Plant" class="wiki-image">  <a href="#/Grabber Plant" class="wiki-link">Grabber Plant</a></td><td><a href="#/Overgrown depths" class="wiki-link">Overgrown depths</a></td><td>1500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/skullcrusher.png/30px-skullcrusher.png" alt="Skullcrusher" class="wiki-image"> <a href="#/Skullcrusher" class="wiki-link">Skullcrusher</a></td><td><a href="#/Overgrown depths" class="wiki-link">Overgrown depths</a></td><td>800</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/glassshards.png/30px-glassshards.png" alt="Glass shard" class="wiki-image"> <a href="#/Glass shard" class="wiki-link">Glass shard</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>30</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/sawblade transp.png/30px-sawblade transp.png" alt="Sawblade" class="wiki-image"> <a href="#/Sawblade" class="wiki-link">Sawblade</a></td><td><a href="#/Fungal Pools" class="wiki-link">Fungal Pools</a></td><td>400</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/gunmine.png/30px-gunmine.png" alt="Gunmine" class="wiki-image"> <a href="#/Gunmine" class="wiki-link">Gunmine</a></td><td>Unknown</td><td>400</td></tr></table><br><br><h3><img src="https://scavprototype.wiki.gg/images/thumb/Category other.png/80px-Category other.png" alt="Category other.png" class="wiki-image"> Other</h3><br><table class="wiki-table"><tr><th>Building !! First appearance !! Health</th></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/corpse1.png/30px-corpse1.png" alt="Corpse" class="wiki-image"> <a href="#/Corpse" class="wiki-link">Corpse</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/animalcorpse1.png/30px-animalcorpse1.png" alt="Animal corpse" class="wiki-image"> <a href="#/Animal corpse" class="wiki-link">Animal corpse</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/BloodCrystal transp.png/30px-BloodCrystal transp.png" alt="Blood crystal" class="wiki-image"> <a href="#/Blood crystal" class="wiki-link">Blood crystal</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/DigestionCrystal transp.png/30px-DigestionCrystal transp.png" alt="Digestion crystal" class="wiki-image"> <a href="#/Digestion crystal" class="wiki-link">Digestion crystal</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/drillpod.png/30px-drillpod.png" alt="Drill pod" class="wiki-image"> <a href="#/Drill pod" class="wiki-link">Drill pod</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>10000/300</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/EmissiveCrystal transp.png/30px-EmissiveCrystal transp.png" alt="Emissive crystal" class="wiki-image"> <a href="#/Emissive crystal" class="wiki-link">Emissive crystal</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/OxygenCrystal transp.png/30px-OxygenCrystal transp.png" alt="Oxygen crystal" class="wiki-image"> <a href="#/Oxygen crystal" class="wiki-link">Oxygen crystal</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/ReliefCrystal transp.png/30px-ReliefCrystal transp.png" alt="Relief crystal" class="wiki-image"> <a href="#/Relief crystal" class="wiki-link">Relief crystal</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/SoothingCrystal transp.png/30px-SoothingCrystal transp.png" alt="Soothing crystal" class="wiki-image"> <a href="#/Soothing crystal" class="wiki-link">Soothing crystal</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/TurbulentCrystal transp.png/30px-TurbulentCrystal transp.png" alt="Turbulent crystal" class="wiki-image">  <a href="#/Turbulent crystal" class="wiki-link">Turbulent crystal</a></td><td><a href="#/Gravel lands" class="wiki-link">Gravel lands</a></td><td>250</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/stalagmite.png/30px-stalagmite.png" alt="Stalagmite" class="wiki-image"> <a href="#/Stalagmite" class="wiki-link">Stalagmite</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td>500</td></tr><tr><td><img src="https://scavprototype.wiki.gg/images/thumb/vine.png/30px-vine.png" alt="Vine" class="wiki-image"> <a href="#/Vine" class="wiki-link">Vine</a></td><td><a href="#/Dried desert" class="wiki-link">Dried desert</a></td><td><em>N/A</em></td></tr></table><br><br><a href="#/zh:环境物体" class="wiki-link">zh:环境物体</a>
+            <h2>List of buildings</h2>
+            
+            <h3><img src="https://scavprototype.wiki.gg/images/thumb/C/Category_item.png/32px-Category_item.png" alt="Crates" class="category-icon" onerror="this.style.display='none'"> Crates</h3>
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Building</th>
+                        <th>First appearance</th>
+                        <th>Health</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/d/d1/Dropcapsule.png/14px-Dropcapsule.png" alt="Drop capsule" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Drop_capsule" class="wiki-link" target="_blank">Drop capsule</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">2500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/5/5a/Lifepodchest.png/20px-Lifepodchest.png" alt="Life-pod chest" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Life-pod_chest" class="wiki-link" target="_blank">Life-pod chest</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">2000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/4/4f/Medcrate.png/20px-Medcrate.png" alt="Medical crate" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Medical_crate" class="wiki-link" target="_blank">Medical crate</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">1000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/9/9d/Containercrate.png/20px-Containercrate.png" alt="Container crate" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Container_crate" class="wiki-link" target="_blank">Container crate</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">5000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/0/0a/Foodcrate.png/20px-Foodcrate.png" alt="Food box" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Food_box" class="wiki-link" target="_blank">Food box</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">600</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/d/d3/Chipcapsule.png/20px-Chipcapsule.png" alt="Chip capsule" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Chip_capsule" class="wiki-link" target="_blank">Chip capsule</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">150</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3><img src="https://scavprototype.wiki.gg/images/thumb/C/Category_plant.png/32px-Category_plant.png" alt="Plants" class="category-icon" onerror="this.style.display='none'"> Plants</h3>
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Building</th>
+                        <th>First appearance</th>
+                        <th>Health</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/2/29/GlowPlant.png/20px-GlowPlant.png" alt="Glowplant" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Glowplant" class="wiki-link" target="_blank">Glowplant</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">40</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/1/11/Geotree_transp.png/15px-Geotree_transp.png" alt="Geotree" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Geotree" class="wiki-link" target="_blank">Geotree</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">80</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/4/4a/Mushplant_transp.png/20px-Mushplant_transp.png" alt="Mushplant" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Mushplant" class="wiki-link" target="_blank">Mushplant (Hydreed)</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/9/93/Stoneplant_transp.png/20px-Stoneplant_transp.png" alt="Stoneplant" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Stoneplant" class="wiki-link" target="_blank">Stoneplant</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">200</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/9/91/Leadbush_transp.png/20px-Leadbush_transp.png" alt="Leadbush" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Leadbush" class="wiki-link" target="_blank">Leadbush</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">120</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/5/56/Driedbush_transp.png/20px-Driedbush_transp.png" alt="Dried bush" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Dried_bush" class="wiki-link" target="_blank">Dried bush</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">100</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/c/c3/Cactus_transp.png/20px-Cactus_transp.png" alt="Cactus" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Cactus" class="wiki-link" target="_blank">Cactus</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">100</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/0/0c/Brownshroom_transp.png/20px-Brownshroom_transp.png" alt="Brownshroom" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Brownshroom" class="wiki-link" target="_blank">Brownshroom</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">50</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/9/99/Sandrose_transp.png/20px-Sandrose_transp.png" alt="Sand rose" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Sand_rose" class="wiki-link" target="_blank">Sand rose</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">80</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/f/f4/Plantation_transp.png/20px-Plantation_transp.png" alt="Plantation" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Plantation" class="wiki-link" target="_blank">Plantation (Pop)</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wasteland" class="wiki-link appearance-tag" target="_blank">Wasteland</a></td>
+                        <td class="health-value">150</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/8/8c/Bananaplant_transp.png/20px-Bananaplant_transp.png" alt="Banana-plant" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Banana-plant" class="wiki-link" target="_blank">Banana-plant</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Overgrown_depths" class="wiki-link appearance-tag" target="_blank">Overgrown depths</a></td>
+                        <td class="health-value">150</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3><img src="https://scavprototype.wiki.gg/images/thumb/C/Category_structure.png/32px-Category_structure.png" alt="Structures" class="category-icon" onerror="this.style.display='none'"> Structures</h3>
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Building</th>
+                        <th>First appearance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wooden_scaffolding" class="wiki-link" target="_blank">Wooden scaffolding</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wooden_bridge" class="wiki-link" target="_blank">Wooden bridge</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wood_cross" class="wiki-link" target="_blank">Wood cross</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Reactor_core" class="wiki-link" target="_blank">Reactor core</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Crate_pod" class="wiki-link" target="_blank">Crate pod</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Medical_pod" class="wiki-link" target="_blank">Medical pod (Mini pod)</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Life_pod" class="wiki-link" target="_blank">Life pod</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Life_pod_collapsed" class="wiki-link" target="_blank">Life pod collapsed</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Concrete_scaffolding" class="wiki-link" target="_blank">Concrete scaffolding</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Concrete_bridge" class="wiki-link" target="_blank">Concrete bridge</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Steel_bridge" class="wiki-link" target="_blank">Steel bridge</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Bio-terminal" class="wiki-link" target="_blank">Bio-terminal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Bio_container" class="wiki-link" target="_blank">Bio container</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Lab_hallway" class="wiki-link" target="_blank">Lab hallway</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Medical_station" class="wiki-link" target="_blank">Medical station</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Scrap-eater" class="wiki-link" target="_blank">Scrap-eater</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Medical_building" class="wiki-link" target="_blank">Medical building</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Brick_block" class="wiki-link" target="_blank">Brick block</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wasteland" class="wiki-link appearance-tag" target="_blank">Wasteland</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Brick_loot" class="wiki-link" target="_blank">Brick loot</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Overgrown_depths" class="wiki-link appearance-tag" target="_blank">Overgrown depths</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3><img src="https://scavprototype.wiki.gg/images/thumb/C/Category_trap.png/32px-Category_trap.png" alt="Hazards" class="category-icon" onerror="this.style.display='none'"> Hazards</h3>
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Building</th>
+                        <th>First appearance</th>
+                        <th>Health</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/c/cb/SpikeStabberBase_Transp.png/20px-SpikeStabberBase_Transp.png" alt="Spike trap" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Spike_trap" class="wiki-link" target="_blank">Spike trap</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">800</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/a/a9/Jumppad2.png/20px-Jumppad2.png" alt="Jump pad" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Jump_pad" class="wiki-link" target="_blank">Jump pad</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">600</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/7/71/Geyser_transp.png/20px-Geyser_transp.png" alt="Geyser" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Geyser" class="wiki-link" target="_blank">Geyser</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/8/8e/Beartrap_transp.png/20px-Beartrap_transp.png" alt="Bear trap" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Bear_trap" class="wiki-link" target="_blank">Bear trap</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                        <td class="health-value">500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/e/e3/Barbedwirefence.png/20px-Barbedwirefence.png" alt="Barbed fence" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Barbed_fence" class="wiki-link" target="_blank">Barbed fence</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Deeper_gravel_lands" class="wiki-link appearance-tag" target="_blank">Deeper gravel lands</a></td>
+                        <td class="health-value">600</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/b/b4/Landmine.png/20px-Landmine.png" alt="Landmine" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Landmine" class="wiki-link" target="_blank">Landmine</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">100</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/e/e8/Turret.png/15px-Turret.png" alt="Turret" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Turret" class="wiki-link" target="_blank">Turret</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/a/a7/Coil_transp.png/10px-Coil_transp.png" alt="Coil" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Coil" class="wiki-link" target="_blank">Coil</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/4/47/Stalactite_transp.png/8px-Stalactite_transp.png" alt="Stalactite" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Stalactite" class="wiki-link" target="_blank">Stalactite</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">200</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Waste_pipe" class="wiki-link" target="_blank">Waste pipe</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/3/3a/Sound_cannon.png/20px-Sound_cannon.png" alt="Sound cannon" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Sound_cannon" class="wiki-link" target="_blank">Sound cannon</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wasteland" class="wiki-link appearance-tag" target="_blank">Wasteland</a></td>
+                        <td class="health-value">1500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/f/f1/Spentfuel_transp.png/20px-Spentfuel_transp.png" alt="Spent Fuel" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Spent_Fuel" class="wiki-link" target="_blank">Spent Fuel</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Wasteland" class="wiki-link appearance-tag" target="_blank">Wasteland</a></td>
+                        <td class="health-value">20000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/2/2c/Grabberplanttransparent.png/50px-Grabberplanttransparent.png" alt="Grabber Plant" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Grabber_Plant" class="wiki-link" target="_blank">Grabber Plant</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Overgrown_depths" class="wiki-link appearance-tag" target="_blank">Overgrown depths</a></td>
+                        <td class="health-value">1500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/1/12/Skullcrusher.png/20px-Skullcrusher.png" alt="Skullcrusher" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Skullcrusher" class="wiki-link" target="_blank">Skullcrusher</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Overgrown_depths" class="wiki-link appearance-tag" target="_blank">Overgrown depths</a></td>
+                        <td class="health-value">800</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/9/9b/Glassshards.png/20px-Glassshards.png" alt="Glass shard" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Glass_shard" class="wiki-link" target="_blank">Glass shard</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">30</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/6/66/Sawblade_transp.png/20px-Sawblade_transp.png" alt="Sawblade" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Sawblade" class="wiki-link" target="_blank">Sawblade</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Fungal_Pools" class="wiki-link appearance-tag" target="_blank">Fungal Pools</a></td>
+                        <td class="health-value">400</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/f/f0/Gunmine.png/20px-Gunmine.png" alt="Gunmine" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Gunmine" class="wiki-link" target="_blank">Gunmine</a></td>
+                        <td>Unknown</td>
+                        <td class="health-value">400</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3><img src="https://scavprototype.wiki.gg/images/thumb/C/Category_other.png/32px-Category_other.png" alt="Other" class="category-icon" onerror="this.style.display='none'"> Other</h3>
+            <table class="wiki-table">
+                <thead>
+                    <tr>
+                        <th>Building</th>
+                        <th>First appearance</th>
+                        <th>Health</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/a/a1/Corpse1.png/20px-Corpse1.png" alt="Corpse" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Corpse" class="wiki-link" target="_blank">Corpse</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/c/cd/Animalcorpse1.png/20px-Animalcorpse1.png" alt="Animal corpse" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Animal_corpse" class="wiki-link" target="_blank">Animal corpse</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/f/f8/BloodCrystal_transp.png/15px-BloodCrystal_transp.png" alt="Blood crystal" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Blood_crystal" class="wiki-link" target="_blank">Blood crystal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/6/6f/DigestionCrystal_transp.png/15px-DigestionCrystal_transp.png" alt="Digestion crystal" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Digestion_crystal" class="wiki-link" target="_blank">Digestion crystal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/c/c8/Drillpod.png/8px-Drillpod.png" alt="Drill pod" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Drill_pod" class="wiki-link" target="_blank">Drill pod</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">10000/300</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/a/a6/EmissiveCrystal_transp.png/15px-EmissiveCrystal_transp.png" alt="Emissive crystal" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Emissive_crystal" class="wiki-link" target="_blank">Emissive crystal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/0/01/OxygenCrystal_transp.png/15px-OxygenCrystal_transp.png" alt="Oxygen crystal" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Oxygen_crystal" class="wiki-link" target="_blank">Oxygen crystal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/6/67/ReliefCrystal_transp.png/15px-ReliefCrystal_transp.png" alt="Relief crystal" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Relief_crystal" class="wiki-link" target="_blank">Relief crystal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/5/59/SoothingCrystal_transp.png/15px-SoothingCrystal_transp.png" alt="Soothing crystal" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Soothing_crystal" class="wiki-link" target="_blank">Soothing crystal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/2/21/TurbulentCrystal_transp.png/15px-TurbulentCrystal_transp.png" alt="Turbulent crystal" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Turbulent_crystal" class="wiki-link" target="_blank">Turbulent crystal</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Gravel_lands" class="wiki-link appearance-tag" target="_blank">Gravel lands</a></td>
+                        <td class="health-value">250</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/8/8a/Stalagmite.png/8px-Stalagmite.png" alt="Stalagmite" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Stalagmite" class="wiki-link" target="_blank">Stalagmite</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">500</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://scavprototype.wiki.gg/images/thumb/6/6a/Vine.png/8px-Vine.png" alt="Vine" class="wiki-image" onerror="this.classList.add('hidden')"><a href="https://scavprototype.wiki.gg/wiki/Vine" class="wiki-link" target="_blank">Vine</a></td>
+                        <td><a href="https://scavprototype.wiki.gg/wiki/Dried_desert" class="wiki-link appearance-tag" target="_blank">Dried desert</a></td>
+                        <td class="health-value">N/A</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
